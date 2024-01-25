@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <title>Painting Services</title>
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MPCK2GQFYG');
+</script>
+<meta name="description" content="">
+</head>
+<style>
+
+  *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*{
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  box-sizing: border-box; 
+}
+
+html
+body{
+  font-family:'General Sans', sans-serif;
+  font-style: normal;
+  color: #000000;
+  background: #F7F7F7;
+  height: 100%;
+ }
+h1,h2,h3,p, li,ul{
+  margin:0;
+}
+a{
+  text-decoration: none;
+}
+button{
+  border: 0;
+  cursor: pointer;
+ }
+button,
+a{
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+}
+address{
+  padding-top: 20px;
+}
+.header {
+  position: fixed; /* Fixed positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* High z-index to keep it above other content */
+  background: #F7F7F7;
+}
+
+/* Add top padding to the body equal to the header height */
+/* Adjust '70px' to the actual height of your header */
+body {
+  padding-top: 70px;
+}
+
+.bg_section, .block_about{
+  position: relative;
+}
+.mob-container{
+    display: none;
+}
+.main-container{
+	padding-left:20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  justify-content: space-between;
+	box-sizing: border-box;
+}
+.logo {
+  width: 30%;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  color: #121F66;
+  text-align: center;
+}
+.logo_img{
+  width: 200px;
+}
+.navigation-menu{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.list{
+  display: flex;
+  justify-content: space-around;
+}
+.item{
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.item-menu{
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #353232;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 4s;
+}
+
+.active{
+  color:#578cc6;
+}
+.active::after{  
+  content: ""; 
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #2196F3;;
+  border-radius: 2px;
+  bottom:-10px;
+  right: 0px;
+  color: #2196F3;
+}
+.item-menu:hover,
+.item-menu:focus,
+.item-menu:active{
+  color: #2196F3;
+  cursor: pointer;
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 3s;
+}
+.page{
+  width: 100%;
+  box-sizing: border-box;
+}
+.bg_section{
+  background-color: black;
+  height: 500px;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 78px;
+}
+.bg_image {
+ background-image: url(img/painting/about2.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: left;
+   flex: 0 0 55%;
+   height: 100%;
+   /* clip-path: polygon(0 0, 100% 0, 77% 84%, 0 95%); */
+}
+.bg_content {
+  flex: 1;
+  padding-left: 5%;
+  text-align: left;
+  padding-top: 5%;
+  padding-right: 2%;
+}
+.bg_title{
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+ .bg_text{
+   color: #578cc6;
+   margin-top: 20px;
+   font-size: 22px;
+ }
+.block_about{
+  display: flex;
+    margin-top: 100px;
+    margin-left: 60px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+.about_title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.about_text{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 124%;
+  text-indent: 20px;
+}
+.menu-open{
+  display: none;
+}
+.footer_bg{
+  width: 100%;
+  background: black;
+  /* height: 324px; */
+  padding-top: 60px;
+  position: relative;
+  padding-right: 50px;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+.wrap_logo{
+  text-align: center;
+  margin-left: -40px;
+}
+.footer_logo{
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  color: #121F66;
+  text-align: center;
+}
+.footer_logo img{
+  width: 200px;
+}
+.footer-block{
+  display: flex;
+  justify-content: space-between;
+}
+.footer_item_menu,
+.footer_item_categories{
+  cursor: pointer;
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 4s;
+}
+.footer_menu_link,
+.footer_categories_link{
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 5s;
+}
+.footer_menu_link:hover,
+.footer_menu_link:focus,
+.footer_menu_link:active,
+.footer_categories_link:hover,
+.footer_categories_link:active,
+.footer_categories_link:focus{
+  color: #2196F3;
+  cursor: pointer;
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 1s;
+}
+.footer_navigation-menu,
+.footer-contacts{
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+.footer_list_menu{
+  list-style: none;
+}
+.footer_list_categories{
+  font-style: normal;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  list-style: none;
+  text-transform: uppercase;
+  max-height: 204px;
+  columns: 2;
+  column-gap: 15px;
+}
+.footer_item_categories,
+.list-footer-item,
+.footer_item_menu{
+  margin-bottom:20px;
+}
+.list-footer-item{
+font-size: 16px;
+}
+.footer_services{
+  flex-wrap: wrap;
+}
+.footer-contacts{
+  text-align: right;
+}
+.in_footer{
+  background-color: white;
+  border-radius: 8px;
+}
+.wrap {
+  overflow-x: hidden;
+}
+
+.header-text{
+  font-size: 3pc;
+}
+.dropdown,
+.dropdown2 {
+  position: relative;
+}
+.dropdown-menu,
+.dropdown-menu2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  background-color: #F7F7F7; 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width:200px;
+  border-radius:10px;
+  transition:
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  background-color 1s, 
+  font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dropdown-menu li,
+.dropdown-menu2 li {
+  padding: 8px 12px;
+}
+.dropdown-menu li a,
+.dropdown-menu2 li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms, 
+  background-color 250ms 50ms, 
+  font-size 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li a:hover {
+  color: #2196F3;
+  cursor: pointer;
+  font-size:18px;
+  transition:
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  background-color 1s, 
+  font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about_inform{
+  text-align: center;
+  padding: 60px;
+}
+.methods {
+    text-align: center;
+    padding: 100px 60px 100px 60px;
+    background-color: #eaecec;
+    position: relative;
+  }
+  .methods_title {
+    margin-bottom: 60px;
+    font-size: 32px;
+}
+  .icon-blocks {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .icon-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+  }
+  .icon {
+    /* Тут можна додати стилі для іконок */
+    margin-bottom: 10px;
+  }
+  .methods_text {
+    margin: 20px 0;
+  }
+.icon_title{
+  text-transform: uppercase;
+}
+.icon_text{
+  margin: 40px 100px 0px 100px;
+    text-align: justify;
+}
+
+
+/* ВАТСАП  */
+#whatsapp-icon {
+  position: fixed;
+  top: 139px;
+    left: 50px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+#whatsapp-icon img {
+  width: 70px;
+  height: 70px;
+}
+#whatsapp-icon a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#whatsapp-icon span {
+  color: #122f06;
+  font-size: 14px;
+  background-color: rgb(150 195 166 / 60%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: -82px;
+  margin-top: 95px;
+  z-index: 99999;
+  font-weight: 600;
+}
+#close-button {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background-color: rgb(150 195 166 / 60%);
+  color: #122f06;
+  color: white;
+  padding: 2px 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1600px){
+.dropdown-menu{
+  max-width: 160px;
+}
+.about_inform{
+    text-align: center;
+    padding: 20px;
+    width: 130%;
+}
+}
+
+@media screen and (max-width: 1400px){
+.main-container {
+  padding-left: 40px;
+}
+.item{
+  margin-right: 20px;
+}
+.header-text {
+  font-size: 2pc;
+}
+.bg_title {
+  font-size: 36px;
+}
+.bg_text {
+  font-size: 18px;
+}
+.block_about {
+    margin-bottom: 30px;
+}
+.about_inform{
+  text-align: center;
+  padding: 0px 20px;
+    width: 100%;
+}
+}
+@media screen and (max-width: 1200px){
+.logo{
+  margin-left: 20px;
+}
+.item{
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.item-menu{
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #353232;
+}
+.block_about {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-left: 0px;
+}
+.about_inform{
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+.about_title{
+margin-bottom: 10px;
+  }
+.about_more{
+  margin-top: 10px;
+}
+.footer_navigation-menu, 
+.footer-contacts {
+  font-size: 20px;
+}
+.footer-contacts{
+  padding-right: 70px;
+}
+.dropdown-menu{
+  max-width: 120px;
+}
+.bg_section {
+  height: 500px;
+}
+
+.footer_logo img {
+    width: 150px;
+}
+.img1 {
+ 
+  text-align: center;
+}
+.img1 img{
+  width: 70%;
+  height: 460px;
+}
+.service_image img {
+    max-width: 240px;
+}
+.serv_text_point {
+    font-size: 16px;
+}
+.service_image img {
+    max-width: 220px;
+}
+}
+@media screen and (max-width: 1068px){
+.project_images img {
+    width: 200px;
+}
+}
+@media screen and (max-width: 1015px){
+.second_point_bottom{
+  position: static;
+}
+.second_point_top{
+  position: static;
+}
+.main-container{
+	padding-left:20px;
+}
+.img2{
+  width: 660px;
+  height: 660px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer_bg {
+  padding-right: 0px;
+  padding-left: 100px;
+}
+.contacts_map{
+  padding-top: 40px;
+}
+.bg_title {
+  font-size: 28px;
+  padding-top: 20px;
+}
+.bg_text {
+  font-size: 16px;
+}
+.bg_section {
+  height: 350px;
+}
+.bg_content {
+    padding-top: 0px;
+}
+.block_about {
+    margin-top: 60px;
+}
+}
+
+
+@media screen and (max-width: 900px){
+.logo_img {
+  width: 150px;
+}
+.navigation-menu {
+  width: 100%;
+}
+.list{
+  display: flex;
+  justify-content: space-around;
+}
+.block_about {
+  margin-top: 40px;
+}
+.footer_bg {
+    padding-left: 40px;
+}
+.bg_section {
+  margin-top: 44px;
+}
+}
+
+@media screen and (max-width: 768px){
+.logo_img {
+  width: 110px;
+  padding-right: 10px;
+}
+.item-menu {
+  font-size: 12px;
+}
+.mob-container{
+  display: none;
+}
+.logo {
+margin-left: 0px;
+}
+.img1 img {
+    height: 400px;
+}
+.about_inform{
+  padding-top: 0px;
+  padding-left: 0px;
+}
+.footer_bg {
+    height: 300px;
+}
+.footer-contacts {
+  padding-right: 50px;
+
+}
+.dropdown-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-toggle2 {
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-menu{
+  font-size: 14px;
+}
+.bg_title {
+  font-size: 24px;
+}
+.bg_text {
+  font-size: 14px;
+}
+.bg_section {
+  margin-top: 10px;
+}
+
+
+/* ВАТСАП  */
+#whatsapp-icon {
+  top: 80px;
+    left: 20px;
+}
+#whatsapp-icon img {
+  width: 60px;
+  height: 60px;
+}
+#whatsapp-icon span {
+  font-size: 14px;
+  margin-right: -76px;
+  margin-top: 74px;
+}
+#close-button {
+  font-size: 12px;
+}
+}
+
+@media screen and (max-width: 669px){
+.footer_bg {
+  height: 500px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.footer-block {
+    flex-wrap: wrap;
+}
+.footer_services {
+ padding-left: 50px;
+ padding-right: 50px;
+}
+.footer-contacts {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 20px;
+
+}
+.bg_section {
+  height: 300px;
+}
+.bg_title {
+  font-size: 20px;
+}
+.bg_text {
+  font-size: 12px;
+}
+.footer_list_menu {
+    text-align: center;
+}
+.footer-contacts {
+    text-align: center;
+}
+}
+@media screen and (max-width: 540px){
+.navigation-menu{
+  display: none;
+  margin-left: auto;
+}
+.logo{
+  display: block;
+  order: 2;
+  margin-left: 0px;
+}
+.logo_img {
+  width: 120px;
+  padding-right: 0px;
+}
+.main-container {
+  margin-right: 30px;
+}
+.modal-content_main {
+  width: 260px;
+}
+.mob-container{
+  display: block;
+  padding-left: 25px;
+  padding-right: 20px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  z-index: 10;
+}
+.menu-open{
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding-right: 0px;
+  order: 3;
+  padding-bottom: 30px;
+}
+.mob-menu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color:#ffffff;
+  top: 0;
+  padding-top: 20px;
+}
+.mob-wrapp{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menu-close{
+  background-color:transparent;
+  border:none;
+  margin-left: auto;
+  display: block;
+  margin-right: 10px;
+}
+.mob-list {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+  padding-left: 40px;
+  list-style: none;
+  justify-content: space-between;
+}
+.mob-list_item {
+  margin-bottom: 32px;
+}
+.img1 img {
+    height: 300px;
+}
+.have_account_main {
+  padding-top: 10px;
+}
+.footer_bg {
+  height: 666px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.titel_main,
+.form_input,
+.register {
+  width: 100%;
+}
+.footer_services {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.footer_navigation-menu {
+  margin-top: 20px;
+  text-align: center;
+}
+.footer_list_categories {
+  text-align: center;
+}
+.footer-contacts {
+  text-align: center;
+}
+.footer_logo{
+  padding-bottom: 10px;
+}
+
+.footer_list_categories {
+  columns: 1;
+  height: auto;
+  max-height: 100%;
+}
+.wrap_logo {
+  max-width: 100%;
+  margin-left: 0px;
+}
+.dropdown-menu2 {
+  margin-top: 10px;
+  max-width: 200px;
+  left: 0px;
+}
+.dropdown-menu, .dropdown-menu2 {
+  left: 0px;
+}
+.bg_section {
+  height: 240px;
+}
+.bg_content {
+  padding-top: 0%;
+}
+.bg_title {
+  font-size: 18px;
+  padding-top: 0px;
+}
+.about_title {
+  font-size: 18px;
+}
+.about_text {
+  font-size: 14px;
+  line-height: 140%;
+}
+.about_more {
+  font-size: 18px;
+}
+.bg_section {
+  margin-top: 23px;
+}
+.main-container {
+    margin-bottom: 0px;
+}
+.footer_navigation-menu, .footer-contacts {
+    padding-bottom: 0px; 
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+}
+@media screen and (max-width: 475px){
+ .bg_title {
+    margin-top: 20px;
+}
+}
+@media screen and (max-width: 425px){
+  .bg_content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+}
+@media screen and (max-width: 320px){
+.mob-container{
+  max-width: 320px;
+  height: 100%;
+}
+.logo{
+  width: 120px;
+}
+.logo_img {
+  width: 120px;
+}
+.img1 {
+  width: 320px;
+  height: 267px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form_input,
+.titel_main,
+.register{
+  height: 40px;
+}
+.menu-open {
+  padding-right: 0px;
+}
+.menu-close {
+  margin-right:10px;
+}
+.footer_navigation-menu {
+  margin-left: 0px;
+}
+.footer_list_categories {
+  columns: 1;
+  height: auto;
+max-height: 100%;
+}
+.footer_logo{
+  margin-left: 0px;
+}
+.footer-contacts {
+  padding-left: 0px;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000; /* Change the color as needed */
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  display: block; /* Make sure it's set to block to be visible */
+  width: 50px; /* Increase the width */
+  height: 50px; /* Increase the height */
+  font-size: 30px; /* Increase the size of the arrow icon */
+  text-align: center; /* Center the arrow icon */
+  line-height: 50px; /* Adjust line height to vertically center the arrow icon */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: Adds a shadow for better visibility */
+}
+
+#backToTopBtn:hover {
+  background-color: #555; /* Optional: Change the hover state color */
+}
+}
+
+</style>
+<header class="header">  
+  <div class="container main-container">
+  <a class="logo" href="">
+<img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo">
+</a>
+      <nav class="navigation-menu" id="main-nav">
+        <ul class="list mob-list">
+          <li class="item">
+            <a class="item-menu" href="#home">HOME</a>
+          </li>
+          <li class="item dropdown">
+            <a class="item-menu" href="#serv">SERVICES</a>
+            <ul class="dropdown-menu">
+              <li><a href="#porselain_serv">Wide Format Porcelain Installation</a></li>        
+              <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+              <li><a href="#large_serv">Laying Large Tiles</a></li>
+              <li><a href="#stone_serv">Stone Installation</a></li>
+              <li><a href="#mosaic_serv">Laying Mosaic Tiles</a></li>
+              <li><a href="#exteriol_serv">Exterior Tile Laying</a></li>
+              <li><a href="#restoration_serv">Tile Restoration</a></li>
+              <li><a href="#repair_serv">Tile Repair - Removal and Disposal</a></li>
+              <li><a href="#removal_serv">Mechanical Removal of Deposits</a></li>
+              <li><a href="#heating_serv">Underfloor Heating Installation</a></li>
+              <li><a href="#hydra_serv">Wet Rooms and Tanks/Hydro Insulation</a></li>
+              <li><a href="#fireplace_serv">Fireplace Installation</a></li>
+              <li><a href="#antislip_serv">Anti-Slip and Safety Solutions</a></li>
+        </ul>
+        <li class="item">
+          <a class="item-menu" href="#proj">PROJECTS</a>
+        </li>
+      </nav>
+
+    <div type="text" class="menu-open" data-menu-open>
+      <img class="z" src="img/menu.svg" alt="Mobile menu" width="35" height="35">
+    </div>
+
+  </div> 
+
+
+  <div class="mob-menu is-hidden mob-container" data-menu>
+    <div class="mob-wrapp ">
+      <div type="text" class="menu-close" data-menu-close>
+        <img src="img/clear.svg" alt="Button clear" width="35" height="35" >
+      </div>
+      <nav class="nav-menu">
+        <ul class="mob-list">
+          <li class="mob-list_item">
+            <a class="mob-list_link" href="#home">НOME</a>
+          </li> 
+          <li class="mob-list_item dropdown2">
+            <a class="mob-list_link" href="#serv">SERVICES</a>
+            <button class="dropdown-toggle2">▼</button> <!-- Добавленная кнопка -->
+                      <ul class="dropdown-menu2">
+                        <li><a href="#porselain_serv">Wide Format Porcelain Installation</a></li>        
+                        <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+                        <li><a href="#large_serv">Laying Large Tiles</a></li>
+                        <li><a href="#stone_serv">Stone Installation</a></li>
+                        <li><a href="#mosaic_serv">Laying Mosaic Tiles</a></li>
+                        <li><a href="#exteriol_serv">Exterior Tile Laying</a></li>
+                        <li><a href="#restoration_serv">Tile Restoration</a></li>
+                        <li><a href="#repair_serv">Tile Repair - Removal and Disposal</a></li>
+                        <li><a href="#removal_serv">Mechanical Removal of Deposits</a></li>
+                        <li><a href="#heating_serv">Underfloor Heating Installation</a></li>
+                        <li><a href="#hydra_serv">Wet Rooms and Tanks/Hydro Insulation</a></li>
+                        <li><a href="#fireplace_serv">Fireplace Installation</a></li>
+                        <li><a href="#antislip_serv">Anti-Slip and Safety Solutions</a></li>
+                      </ul>
+          </li>  
+          <li class="mob-list_item">
+            <a class="mob-list_link" href="#proj">PROJECTS</a>
+          </li> 
+ 
+  
+        </ul>
+      </nav>
+    </div>
+    </div>
+
+</header>
+
+
+<body>
+  
+  <div class="wrap">
+    <main class="page">
+        <section class="bg_section">
+          <div class="bg_image"></div>
+          <div class="bg_content">
+            <h1 class="bg_title" id="home">Make your space brighter<br>with our painting experts.</h1>
+            <p class="bg_text">Graceful strokes, timeless elegance</p>
+          </div>
+      </section>
+        <section class="block_about">
+            <div class="img1 wrapper" style="width: 100%;">
+                <img src="img/painting/about2.jpg" alt="ofice" style="width: 100%;">
+            </div>
+            <div class="about_inform" style="text-align: center;">
+                <h2 class="about_title">Welcome to Master Builders VS LTD</h2>
+                <p class="about_text">
+                  Where we bring your tiling dreams to life. Our team consists of artisans in the art of tiling, from laying large-format tiles to creating intricate mosaics and custom tile cutting. We guarantee that every corner of your space will be crafted with unparalleled skill.
+                </p><br>
+                <p class="about_text">
+                  But that's not all; Master Builders VS LTD offers a comprehensive range of construction services. Whether it's repair work or a complete reconstruction, we have the experience and skills to ensure high quality for every aspect of your project. If you are looking for a full range of construction and renovation services, visit our main website to discover how we can assist you:<a style="color: #0056b3; text-decoration: underline;" href="https://www.mbvsltd.com/"> https://www.mbvsltd.com</a>.
+                </p><br>
+                <p class="about_text">
+                  Stay with us, and your next tile installation will be a marvel of beauty and comfort.
+                </p>
+            </div>
+        </section>
+      <section class="methods">
+          <h2 class="methods_title">Methods</h2>
+          <div class="icon-blocks">
+            <div class="icon-block">
+              <div class="icon"><img src="img/spray2_icon.png" alt="spray" style="width: 200px;"></div>
+              <div class="icon_title">Air spray gun</div>
+              <p class="icon_text">The air spray gun is an ideal tool for applying paint quickly and evenly. It uses compressed air to create a fine mist of paint, achieving a smooth and professional finish free from brush or roller marks, particularly useful for working on metal or wooden surfaces.</p>
+            </div>
+            <div class="icon-block">
+              <div class="icon"><img src="img/brush_icon.png" alt="spray" style="width: 200px"></div>
+              <div class="icon_title">Paint roller</div>
+              <p class="icon_text">A paint roller is a practical tool for covering large areas with paint. It allows for quick application with fewer splatters compared to using a brush. Rollers come in various sizes and with different types of nap, making it possible to choose the best tool for the specific type of paint and surface at hand.</p>
+            </div>
+            <div class="icon-block">
+              <div class="icon"><img src="img/roller2_icon.png" alt="spray" style="width: 200px"></div>
+              <div class="icon_title">Paint brush</div>
+              <p class="icon_text"> The paintbrush is a classic choice for detailed work and achieving precision in hard-to-reach places. Brushes of various shapes and sizes allow the painter to control the application of paint, making them ideal for edges, corners, and other complex details.</p>
+            </div>
+          </div>
+          <p class="methods_text"></p>
+      </section>
+
+
+
+    
+    </main>
+</div>
+
+<button id="backToTopBtn" title="Go to top" style="  position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: #000;
+color: white;
+cursor: pointer;
+border-radius: 10px;
+display: block;
+width: 50px;
+height: 50px;
+font-size: 30px;
+text-align: center;
+line-height: 50px; 
+box-shadow: 0 2px 5px rgba(0,0,0,0.3);">⬆️</button>
+
+<div id="whatsapp-icon" style="display:none;">
+  <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
+    <span>start chat...</span>
+    <img src="whatsapp1.png" alt="WhatsApp Icon">
+  </a>
+  <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
+</div>
+
+</body>
+<footer class="footer_bg">
+  <div class="footer-block">
+      <div class="a">
+        <div class="wrap_logo" style="display: flex;flex-direction: column;">
+          <a class="footer_logo_link" href="#home">
+            <span class="footer_logo">
+              <img src="img/logo/8smol.png" alt="Master Builders VS LTD Logo">
+            </span>
+          </a>
+          <a class="footer_logo_link" href="https://www.fastwarm.com/" style="padding-top:20px;">
+            <span class="footer_logo">
+              <img src="fastwarm-logo.png" alt="Fastwarm">
+            </span>
+          </a>
+        </div>
+
+
+
+        
+        <div class="footer-menu">
+          <nav class="footer_navigation-menu">
+            <ul class="footer_list_menu">
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#home">HOME</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#serv">SERVICES</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#proj">PROJECTS</a>
+              </li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="b ">
+        
+        <div class="footer-contacts">
+          <h3 class="title_contacts">Contacts</h3>
+          <address>
+          <ul class="footer_list_menu" >
+            <li class= "list-footer-item"><a class="foter-contacts-mail" href="mailto:project@mbvsltd.com">project@mbvsltd.com</a></li>
+            <li class= "list-footer-item"><a class="foter-contacts-tel" href="tel:075 2545 9552">075 2545 9552</a></li>
+            <li class= "list-footer-item"><a class="foter-contacts-tel" href="tel:020 3539 1924">020 3539 1924</a></li>
+          </ul>
+          </address>
+          <div class="sety_footer">
+      <a href="https://www.yell.com/biz/master-builders-vs-ltd-harrow-8851698/" target="_blank">
+    <img class="yell_footer" src="img/yell-icon.png" alt="Yell" style="width: 35px; height: 35px;background-color: #03031a;border-radius: 8px;">
+      </a>
+      <a href="https://www.linkedin.com/in/vitalii-sopit-8ba5b5162/" target="_blank">
+    <img class="in_footer" src="img/in-icon.png" alt="LinkedIn" style="width: 35px; height: 35px;background-color: #03031a;">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61551452585348" target="_blank">
+    <img class="in_footer" src="img/facebook.png" alt="Facebook" style="width: 35px; height: 35px; background-color: #03031a;">
+      </a>
+      <a href="https://www.instagram.com/masterbuildersvsltd/?next=%2F" target="_blank">
+    <img class="in_footer" src="img/instagram.webp" alt="Instagram" style="width: 35px; height: 35px;background-color: #03031a;">
+      </a>
+      <a href="https://wa.me/447525459552?text=Online%20assistance%20here" target="_blank">
+    <img class="in_footer" src="img/whatsapp1.webp" alt="WhatsApp" style="width: 35px; height: 35px;background-color: #03031a;">
+      </a>
+      </div>
+        </div>
+      </div>
+  </div>
+</footer>
+<script>
+
+
+  // Активне меню та скрол до выдповыдного блоку
+  // Ждем события DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+  var currentUrl = window.location.href;
+  var menuLinks = document.querySelectorAll('.item-menu');
+  
+  for (var i = 0; i < menuLinks.length; i++) {
+  // Получаем URL ссылки
+  var linkUrl = menuLinks[i].getAttribute('href');
+  
+  // Проверяем, соответствует ли текущий URL ссылке в меню
+  if (currentUrl === linkUrl) {
+    // Если да, то добавляем класс "active" к элементу меню
+    menuLinks[i].classList.add('active');
+  }
+  }
+  });
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    var toggles2 = document.querySelectorAll('.dropdown-toggle2');
+    
+    toggles2.forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // чтобы предотвратить всплытие события
+            var menu = this.nextElementSibling;
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    });
+  
+    // Дополнительно: закрыть меню при нажатии вне его на мобильной версии
+    document.body.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown2')) {
+            var menus = document.querySelectorAll('.mob-menu .dropdown-menu2');
+            menus.forEach(function(menu) {
+                menu.style.display = 'none';
+            });
+        }
+    });
+  });
+  
+  (() => {
+  const refs = {
+    openMenuBtn: document.querySelector("[data-menu-open]"),
+    closeMenuBtn: document.querySelector("[data-menu-close]"),
+    menu: document.querySelector("[data-menu]"),
+    body: document.querySelector("body"),
+    menuList: document.querySelector(".mob-list"),
+  };
+
+  refs.openMenuBtn.addEventListener("click", toggleMenu);
+  refs.closeMenuBtn.addEventListener("click", toggleMenu);
+  refs.menuList.addEventListener("click", removeMenu);
+
+  function toggleMenu() {
+    refs.menu.classList.toggle("is-hidden");
+    refs.body.classList.toggle("no-scroll");
+  }
+  function removeMenu() {
+    refs.menu.classList.add("is-hidden");
+    refs.body.classList.remove("no-scroll");
+  }
+})();
+  
+
+
+// Кнопка скролу догори
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("backToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("backToTopBtn").style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+document.getElementById("backToTopBtn").addEventListener("click", function() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let targetId = this.getAttribute('href');
+      let target = document.querySelector(targetId);
+      if (target) {
+        let headerHeight = document.querySelector('.header').offsetHeight;
+        let targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+
+
+  // Мобільне меню
+  document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Закриття мобільного меню
+    const mobMenu = document.querySelector(".mob-menu");
+    mobMenu.classList.add("is-hidden");
+    document.body.classList.remove("no-scroll");
+
+    // Перехід до відповідної секції
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (target) {
+      const headerHeight = document.querySelector('.header').offsetHeight;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
+
+
+
+
+// ватсап
+window.onload = function() {
+  setTimeout(function() {
+      document.getElementById('whatsapp-icon').style.display = 'block';
+  }, 5000);  // 5000 milliseconds = 5 seconds
+}
+
+function closeWhatsAppIcon() {
+  document.getElementById('whatsapp-icon').style.display = 'none';
+}
+  </script>
+
+</html>
