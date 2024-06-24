@@ -6,102 +6,129 @@
   <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Painting Services</title>
   <style>
-.what-we-do-section {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-}
+    .what-we-do-section {
+        padding: 50px 0;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
 
-.section-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-}
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+    }
 
-.section-description {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #666;
-}
+    .section-description {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #666;
+    }
 
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    .swiper-container {
+        width: 30%;
+        height: 1300px; /* Увеличено для размещения новых изображений */
+        overflow: hidden;
+        margin: 0 auto; /* Центрирование Swiper */
+        position: relative;
+    }
 
-.service-item {
-    width: 45%;
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        height: calc(100% / 3); /* Обеспечивает видимость трех слайдов за раз */
+        box-sizing: border-box;
+    }
 
-.service-item:hover {
-    transform: scale(1.05);
-}
+    .swiper-slide:hover {
+        transform: scale(1.05);
+    }
 
-.service-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+    .service-image {
+        width: 100%;
+        height: 300px; /* Увеличено до 400px */
+        object-fit: cover;
+        border-radius: 8px;
+    }
 
-.service-title {
-    font-size: 24px;
-    margin-top: 15px;
-    color: #333;
-}
+    .service-title {
+        font-size: 20px;
+        margin-top: 15px;
+        color: #333;
+    }
 
-.service-description {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #666;
-}
+    .service-description {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #666;
+        text-align: center;
+    }
 
+    .swiper-pagination {
+        margin-top: 20px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: #333;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .swiper-button-next {
+        right: -25px;
+    }
+
+    .swiper-button-prev {
+        left: -25px;
+    }
   </style>
 </head>
 <body>
   <header class="header">  
     <div class="container main-container">
-    <a class="logo" href="https://woodmbvsltd.co.uk/">
-  <img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo" >
-  </a>
-        <nav class="navigation-menu" id="main-nav">
-          <ul class="list mob-list">
-            <li class="item">
-              <a class="item-menu" href="https://woodmbvsltd.co.uk/">HOME</a>
-            </li>
-            <li class="item">
-              <a class="item-menu" href="#about-us">ABOUT US</a>
-            </li>
-            <li class="item">
-              <a class="item-menu" href="#our-services">SERVICES</a>
-            </li>
-            <li class="item">
-              <a class="item-menu" href="#proj">PROJECTS</a>
-            </li>
-            <li class="item">
-              <a class="item-menu" href="contacts.html">CONTACTS</a>
-            </li>
-        </nav>
+      <a class="logo" href="https://woodmbvsltd.co.uk/">
+        <img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo">
+      </a>
+      <nav class="navigation-menu" id="main-nav">
+        <ul class="list mob-list">
+          <li class="item">
+            <a class="item-menu" href="https://woodmbvsltd.co.uk/">HOME</a>
+          </li>
+          <li class="item">
+            <a class="item-menu" href="#about-us">ABOUT US</a>
+          </li>
+          <li class="item">
+            <a class="item-menu" href="#our-services">SERVICES</a>
+          </li>
+          <li class="item">
+            <a class="item-menu" href="#proj">PROJECTS</a>
+          </li>
+          <li class="item">
+            <a class="item-menu" href="contacts.html">CONTACTS</a>
+          </li>
+        </ul>
+      </nav>
   
       <div type="text" class="menu-open" data-menu-open>
         <img class="z" src="img/menu.svg" alt="Mobile menu" width="35" height="35">
       </div>
-  
     </div> 
   
-  
     <div class="mob-menu is-hidden mob-container" data-menu>
-      <div class="mob-wrapp ">
+      <div class="mob-wrapp">
         <div type="text" class="menu-close" data-menu-close>
-          <img src="img/clear.svg" alt="Button clear" width="35" height="35" >
+          <img src="img/clear.svg" alt="Button clear" width="35" height="35">
         </div>
         <nav class="nav-menu">
           <ul class="mob-list">
@@ -115,16 +142,15 @@
               <a class="mob-list_link" href="#our-services">SERVICES</a>
             </li>  
             <li class="mob-list_item">
-              <a class="mob-list_link" href="#proj">PROJECTS</a>
-            </li> 
-            <li class="mob-list_item">
+              <a class="mob-list_link" href="#proj">PROJECTS</а>
+            </ли> 
+            <ли class="mob-list_item">
               <a class="mob-list_link" href="contacts.html">CONTACTS</a>
-          </li>
+            </ли>
           </ul>
-        </nav>
+        </навигация>
       </div>
-  
-  
+    </div>
   </header>
   
   <div class="page">
@@ -136,105 +162,110 @@
       <img src="1.jpg" alt="Painting Image">
     </div>
     <section class="block_about" id="about">
-      <h2 class="about_title"> About Us</h2>
+      <h2 class="about_title">About Us</h2>
       <p class="about_text">
         Master Builders VS LTD is a leading company in the painting and decorating industry, committed to delivering the highest levels of finish to your projects. With over 11 years of combined experience, we have carefully crafted our team to ensure top-notch quality. Throughout this period, we have built strong relationships with clients and collaborated with some of the top companies and interior designers. Our diverse portfolio showcases a wide range of successful projects.
-    </p><br>
-    <p class="about_text">
+      </p>
+      <br>
+      <p class="about_text">
         Based in London, we thrive in the industry with our innovative methods and advanced technologies in painting and decoration. Additionally, we offer a broad spectrum of construction services, handling all types of construction work. We are dedicated to environmental sustainability and always strive to source our products, paints, and other materials from sustainable sources.
-    </p>
+      </p>
     </section>
 
     <div class="image_block2">
       <img src="istockphoto-1147846480-612x612.jpg" alt="Painting Image" style="width: 100%;">
     </div>
 
-
-
-  <section id="what-we-do" class="what-we-do-section">
-    <div class="container">
-        <h2 class="section-title">What we do?</h2>
-        <p class="section-description">We demonstrate our painting services and showcase our full spectrum of expertise to bring your spaces to life.</p>
-        
-        <div class="services-grid">
-            <div class="service-item">
-                <!-- <img src="serv/1.jpg" alt="Interior Painting" class="service-image"> -->
-                <h3 class="service-title">Interior Painting</h3>
-                <p class="service-description">We provide high-quality interior painting services, transforming your indoor spaces with precision and care.</p>
-            </div>
-            <div class="service-item">
-                <!-- <img src="serv/2.jpg" alt="Exterior Painting" class="service-image"> -->
-                <h3 class="service-title">Exterior Painting</h3>
-                <p class="service-description">Our exterior painting services enhance the curb appeal of your property, ensuring durability and style.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image3.jpg" alt="Commercial Painting" class="service-image">
-                <h3 class="service-title">Commercial Painting</h3>
-                <p class="service-description">We specialize in commercial painting projects, delivering professional results for businesses of all sizes.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image4.jpg" alt="Specialty Finishes" class="service-image">
-                <h3 class="service-title">Specialty Finishes</h3>
-                <p class="service-description">Our specialty finishes add a unique touch to your spaces, offering customized solutions to meet your needs.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image5.jpg" alt="Facade Decoration" class="service-image">
-                <h3 class="service-title">Facade Decoration</h3>
-                <p class="service-description">Transforming your building's facade with elegant and durable decoration solutions.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image6.jpg" alt="Plastering and Repairs" class="service-image">
-                <h3 class="service-title">Plastering and Repairs</h3>
-                <p class="service-description">Professional plastering services for walls and ceilings, including repair work.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image7.jpg" alt="Paint Spraying" class="service-image">
-                <h3 class="service-title">Paint Spraying</h3>
-                <p class="service-description">Advanced paint spraying techniques for smooth and even finishes on various surfaces.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image8.jpg" alt="Woodwork Painting" class="service-image">
-                <h3 class="service-title">Woodwork Painting</h3>
-                <p class="service-description">Expert painting services for wooden surfaces, ensuring a high-quality and durable finish.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image9.jpg" alt="Wallpapering and Decorating" class="service-image">
-                <h3 class="service-title">Wallpapering and Decorating</h3>
-                <p class="service-description">Professional wallpaper installation and decorating services to enhance your interior spaces.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image10.jpg" alt="Metalwork Painting" class="service-image">
-                <h3 class="service-title">Metalwork Painting</h3>
-                <p class="service-description">High-quality painting services for metal structures, providing protection and aesthetic appeal.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image11.jpg" alt="Furniture Painting and Finishing" class="service-image">
-                <h3 class="service-title">Furniture Painting and Finishing</h3>
-                <p class="service-description">Custom painting and finishing services for furniture, ensuring a personalized and durable look.</p>
-            </div>
-            <div class="service-item">
-                <img src="path-to-your-image12.jpg" alt="Painting Steps and Railings" class="service-image">
-                <h3 class="service-title">Painting Steps and Railings</h3>
-                <p class="service-description">Expert painting services for steps and railings, enhancing safety and appearance.</p>
-            </div>
-        </div>
-    </div>
-</section>
-  
-
+    <section id="what-we-do" class="what-we-do-section">
+      <div class="container">
+          <h2 class="section-title">What we do?</h2>
+          <p class="section-description">We demonstrate our painting services and showcase our full spectrum of expertise to bring your spaces to life.</p>
+          
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide service-item">
+                      <img src="serv/1.webp" alt="Interior Painting" class="service-image">
+                      <h3 class="service-title">Interior Painting</h3>
+                      <p class="service-description">We provide high-quality interior painting services, transforming your indoor spaces with precision and care.</p>
+                  </div>
+                  <div class="swiper-slide service-item">
+                      <img src="serv/2.webp" alt="Exterior Painting" class="service-image">
+                      <h3 class="service-title">Exterior Painting</h3>
+                      <p class="service-description">Our exterior painting services enhance the curb appeal of your property, ensuring durability and style.</p>
+                  </div>
+                  <div class="swiper-slide service-item">
+                      <img src="serv/3.webp" alt="Commercial Painting" class="service-image">
+                      <h3 class="service-title">Commercial Painting</h3>
+                      <p class="service-description">We specialize in commercial painting projects, delivering professional results for businesses of all sizes.</p>
+                  </div>
+                  <div class="swiper-slide service-item">
+                      <img src="serv/4.webp" alt="Wallpapering and Decorating" class="service-image">
+                      <h3 class="service-title">Wallpapering and Decorating</h3>
+                      <p class="service-description">Professional wallpaper installation and decorating services to enhance your interior spaces.</p>
+                  </div>
+                  <div class="swiper-slide service-item">
+                      <img src="serv/5.jpg" alt="Furniture Painting and Finishing" class="service-image">
+                      <h3 class="service-title">Furniture Painting and Finishing</h3>
+                      <p class="service-description">Custom painting and finishing services for furniture, ensuring a personalized and durable look.</p>
+                  </div>
+                  <div class="swiper-slide service-item">
+                      <img src="serv/7.webp" alt="Plastering and Repairs" class="service-image">
+                      <h3 class="service-title">Plastering and Repairs</h3>
+                      <p class="service-description">Professional plastering services for walls and ceilings, including repair work.</p>
+                  </div>
+                  <div class="swiper-slide service-item">
+                      <img src="serv/6.webp" alt="Woodwork and Metalwork Painting" class="service-image">
+                      <h3 class="service-title">Woodwork and Metalwork Painting</h3>
+                      <p class="service-description">Expert painting services for wooden and metal surfaces, ensuring a high-quality and durable finish.</p>
+                  </div>
+              </div>
+              
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+      </div>
+  </section>
   </div>
   
   <button id="backToTopBtn" title="Go to top">⬆️</button>
 
-<div id="whatsapp-icon" style="display:none;">
-  <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
-    <span>start chat...</span>
-    <img src="whatsapp1.png" alt="WhatsApp Icon">
-  </a>
-  <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
-</div>
+  <div id="whatsapp-icon" style="display:none;">
+    <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
+      <span>start chat...</span>
+      <img src="whatsapp1.png" alt="WhatsApp Icon">
+    </a>
+    <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
+  </div>
 
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3, /* Show only 3 slides at a time */
+            spaceBetween: 30, /* Space between slides */
+            loop: true, /* Enable looping */
+            autoplay: {
+                delay: 2500, /* Autoplay delay */
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+  </script>
+</body>
 </body>
 <footer class="footer_bg">
   <div class="footer-block">
