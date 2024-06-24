@@ -8,6 +8,61 @@
   <link rel="stylesheet" href="style.css">
   <title>Painting Services</title>
   <style>
+.what-we-do-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    width: 45%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-title {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.service-description {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666;
+}
 
   </style>
 </head>
@@ -75,7 +130,7 @@
   <div class="page">
     <section class="text_block" id="home">
       <h1>Make your space brighter with our painting experts.</h1>
-      <p>Graceful strokes, timeless elegance</p>
+      <p>Graceful strokes, timeless elegance.</p>
     </section>
     <div class="image_block">
       <img src="1.jpg" alt="Painting Image">
@@ -93,6 +148,79 @@
     <div class="image_block2">
       <img src="istockphoto-1147846480-612x612.jpg" alt="Painting Image" style="width: 100%;">
     </div>
+
+
+
+  <section id="what-we-do" class="what-we-do-section">
+    <div class="container">
+        <h2 class="section-title">What we do?</h2>
+        <p class="section-description">We demonstrate our painting services and showcase our full spectrum of expertise to bring your spaces to life.</p>
+        
+        <div class="services-grid">
+            <div class="service-item">
+                <!-- <img src="serv/1.jpg" alt="Interior Painting" class="service-image"> -->
+                <h3 class="service-title">Interior Painting</h3>
+                <p class="service-description">We provide high-quality interior painting services, transforming your indoor spaces with precision and care.</p>
+            </div>
+            <div class="service-item">
+                <!-- <img src="serv/2.jpg" alt="Exterior Painting" class="service-image"> -->
+                <h3 class="service-title">Exterior Painting</h3>
+                <p class="service-description">Our exterior painting services enhance the curb appeal of your property, ensuring durability and style.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image3.jpg" alt="Commercial Painting" class="service-image">
+                <h3 class="service-title">Commercial Painting</h3>
+                <p class="service-description">We specialize in commercial painting projects, delivering professional results for businesses of all sizes.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image4.jpg" alt="Specialty Finishes" class="service-image">
+                <h3 class="service-title">Specialty Finishes</h3>
+                <p class="service-description">Our specialty finishes add a unique touch to your spaces, offering customized solutions to meet your needs.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image5.jpg" alt="Facade Decoration" class="service-image">
+                <h3 class="service-title">Facade Decoration</h3>
+                <p class="service-description">Transforming your building's facade with elegant and durable decoration solutions.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image6.jpg" alt="Plastering and Repairs" class="service-image">
+                <h3 class="service-title">Plastering and Repairs</h3>
+                <p class="service-description">Professional plastering services for walls and ceilings, including repair work.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image7.jpg" alt="Paint Spraying" class="service-image">
+                <h3 class="service-title">Paint Spraying</h3>
+                <p class="service-description">Advanced paint spraying techniques for smooth and even finishes on various surfaces.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image8.jpg" alt="Woodwork Painting" class="service-image">
+                <h3 class="service-title">Woodwork Painting</h3>
+                <p class="service-description">Expert painting services for wooden surfaces, ensuring a high-quality and durable finish.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image9.jpg" alt="Wallpapering and Decorating" class="service-image">
+                <h3 class="service-title">Wallpapering and Decorating</h3>
+                <p class="service-description">Professional wallpaper installation and decorating services to enhance your interior spaces.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image10.jpg" alt="Metalwork Painting" class="service-image">
+                <h3 class="service-title">Metalwork Painting</h3>
+                <p class="service-description">High-quality painting services for metal structures, providing protection and aesthetic appeal.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image11.jpg" alt="Furniture Painting and Finishing" class="service-image">
+                <h3 class="service-title">Furniture Painting and Finishing</h3>
+                <p class="service-description">Custom painting and finishing services for furniture, ensuring a personalized and durable look.</p>
+            </div>
+            <div class="service-item">
+                <img src="path-to-your-image12.jpg" alt="Painting Steps and Railings" class="service-image">
+                <h3 class="service-title">Painting Steps and Railings</h3>
+                <p class="service-description">Expert painting services for steps and railings, enhancing safety and appearance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  
 
   </div>
   
@@ -150,43 +278,6 @@
         </div>
       </div>
       <div class="b ">
-
-        <!-- <div class="footer_services">
-          <nav class="footer_nav-menu">
-          <ul class="footer_list_categories">
-            <li class="footer_item_categories">
-            <a class="footer_categories_link" href="windows.html">Windows</a>
-            </li>
-            <li class="footer_item_categories">
-            <a class="footer_categories_link" href="doors.html">Doors</a>
-          </li>
-          <li class="footer_item_categories">
-            <a class="footer_categories_link" href="kitchens.html">Kitchens</a>
-          </li>
-            <li class="footer_item_categories">
-            <a class="footer_categories_link" href="furniture.html">Furniture</a>
-          </li>
-            <li class="footer_item_categories">
-            <a class="footer_categories_link" href="soft.html">Soft furniture</a>
-          </li>
-          <li class="footer_item_categories">
-            <a class="footer_categories_link" href="fences.html">Fences</a>
-          </li>
-            <li class="footer_item_categories">
-            <a class="footer_categories_link" href="stairs.html">Stairs</a>
-          </li>
-          <li class="footer_item_categories">
-            <a class="footer_categories_link" href="flooring.html">Flooring</a>
-          </li>
-            <li class="footer_item_categories">
-            <a class="footer_categories_link" href="woodworking.html">Woodworking</a>
-          </li>
-          </ul>
-        </nav>
-    </div> -->
-
-
-
         
         <div class="footer-contacts">
           <h3 class="title_contacts">Contacts</h3>
