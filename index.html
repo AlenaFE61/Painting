@@ -160,33 +160,102 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0, 0, 0, 0.7);
         padding-top: 60px;
+        transition: opacity 0.3s ease;
     }
 
     .modal-content {
-        background-color: #fefefe;
+        background-color: #f9f9f9;
         margin: 5% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%;
-        max-width: 500px;
-        border-radius: 10px;
+        width: 90%;
+        max-width: 700px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
     }
+
+    .modal-content h3 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .modal-content p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .modal-content ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .modal-content ul li {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 10px;
+    }
+    .modal-image {
+    width: 100%;
+    height: 300px; /* Adjust the height to fit your needs */
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
 
     .close {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
+        transition: color 0.3s ease;
     }
 
     .close:hover,
     .close:focus {
-        color: black;
+        color: #333;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    .brands-section {
+        padding: 100px 0;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .brands-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .brands-description {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #666;
+    }
+
+    .brands-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .brand-logo {
+        width: 150px;
+        height: 100px;
+        object-fit: contain;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .brand-logo:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .techniques-section {
@@ -252,25 +321,25 @@
 <body>
   <header class="header">  
     <div class="container main-container">
-      <a class="logo" href="https://woodmbvsltd.co.uk/">
+      <a class="logo" href="index.html">
         <img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo">
       </a>
       <nav class="navigation-menu" id="main-nav">
         <ul class="list mob-list">
           <li class="item">
-            <a class="item-menu" href="https://woodmbvsltd.co.uk/">HOME</a>
+            <a class="item-menu" href="index.html">HOME</a>
           </li>
           <li class="item">
-            <a class="item-menu" href="#about-us">ABOUT US</a>
+            <a class="item-menu" href="index.html#about-us">ABOUT US</a>
           </li>
           <li class="item">
-            <a class="item-menu" href="#our-services">SERVICES</a>
+            <a class="item-menu" href="index.html#our-services">SERVICES</a>
           </li>
           <li class="item">
-            <a class="item-menu" href="#proj">PROJECTS</a>
+            <a class="item-menu" href="index.html#proj">PROJECTS</a>
           </li>
           <li class="item">
-            <a class="item-menu" href="contacts.html">CONTACTS</a>
+            <a class="item-menu" href="index.html#contacts.html">CONTACTS</a>
           </li>
         </ul>
       </nav>
@@ -288,19 +357,19 @@
         <nav class="nav-menu">
           <ul class="mob-list">
             <li class="mob-list_item">
-              <a class="mob-list_link" href="https://woodmbvsltd.co.uk/">НOME</a>
+              <a class="mob-list_link" href="index.html">НOME</a>
             </li> 
             <li class="mob-list_item">
-              <a class="mob-list_link" href="#about-us">ABOUT US</a>
+              <a class="mob-list_link" href="index.html#about-us">ABOUT US</a>
             </li> 
             <li class="mob-list_item dropdown2">
-              <a class="mob-list_link" href="#our-services">SERVICES</a>
+              <a class="mob-list_link" href="index.html#our-services">SERVICES</a>
             </li>  
             <li class="mob-list_item">
-              <a class="mob-list_link" href="#proj">PROJECTS</a>
+              <a class="mob-list_link" href="index.html#proj">PROJECTS</a>
             </ли> 
             <ли class="mob-list_item">
-              <a class="mob-list_link" href="contacts.html">CONTACTS</a>
+              <a class="mob-list_link" href="index.html#contacts.html">CONTACTS</a>
             </ли>
           </ул>
         </навигация>
@@ -313,11 +382,11 @@
       <h1>Make your space brighter with our painting experts.</h1>
       <p>Graceful strokes, timeless elegance.</p>
     </section>
-    <div class="image_block">
+    <div class="image_block" id="about-us">
       <img src="1.jpg" alt="Painting Image">
     </div>
-    <section class="block_about" id="about">
-      <h2 class="about_title">About Us</h2>
+    <section class="block_about" >
+      <h2 class="about_title">About us</h2>
       <p class="about_text">
         Master Builders VS LTD is a leading company in the painting and decorating industry, committed to delivering the highest levels of finish to your projects. With over 11 years of combined experience, we have carefully crafted our team to ensure top-notch quality. Throughout this period, we have built strong relationships with clients and collaborated with some of the top companies and interior designers. Our diverse portfolio showcases a wide range of successful projects.
       </p>
@@ -340,37 +409,37 @@
               <div class="swiper-wrapper">
                   <div id="interior-painting" class="swiper-slide service-item">
                       <img src="serv/1.webp" alt="Interior Painting" class="service-image">
-                      <h3 class="service-title">Interior Painting</h3>
+                      <h3 class="service-title">Interior painting</h3>
                       <p class="service-description">We provide high-quality interior painting services, transforming your indoor spaces with precision and care.</p>
                   </div>
                   <div id="exterior-painting" class="swiper-slide service-item">
                       <img src="serv/2.webp" alt="Exterior Painting" class="service-image">
-                      <h3 class="service-title">Exterior Painting</h3>
+                      <h3 class="service-title">Exterior painting</h3>
                       <p class="service-description">Our exterior painting services enhance the curb appeal of your property, ensuring durability and style.</p>
                   </div>
                   <div id="commercial-painting" class="swiper-slide service-item">
                       <img src="serv/3.webp" alt="Commercial Painting" class="service-image">
-                      <h3 class="service-title">Commercial Painting</h3>
+                      <h3 class="service-title">Commercial painting</h3>
                       <p class="service-description">We specialize in commercial painting projects, delivering professional results for businesses of all sizes.</p>
                   </div>
                   <div id="wallpapering-decorating" class="swiper-slide service-item">
                       <img src="serv/4.webp" alt="Wallpapering and Decorating" class="service-image">
-                      <h3 class="service-title">Wallpapering and Decorating</h3>
+                      <h3 class="service-title">Wallpapering and decorating</h3>
                       <p class="service-description">Professional wallpaper installation and decorating services to enhance your interior spaces.</p>
                   </div>
                   <div id="furniture-painting-finishing" class="swiper-slide service-item">
                       <img src="serv/5.webp" alt="Furniture Painting and Finishing" class="service-image">
-                      <h3 class="service-title">Furniture Painting and Finishing</h3>
+                      <h3 class="service-title">Furniture Painting and finishing</h3>
                       <p class="service-description">Custom painting and finishing services for furniture, ensuring a personalized and durable look.</p>
                   </div>
                   <div id="plastering-repairs" class="swiper-slide service-item">
                       <img src="serv/7.webp" alt="Plastering and Repairs" class="service-image">
-                      <h3 class="service-title">Plastering and Repairs</h3>
+                      <h3 class="service-title">Plastering and repairs</h3>
                       <p class="service-description">Professional plastering services for walls and ceilings, including repair work.</p>
                   </div>
                   <div id="woodwork-metalwork-painting" class="swiper-slide service-item">
                       <img src="serv/6.webp" alt="Woodwork and Metalwork Painting" class="service-image">
-                      <h3 class="service-title">Woodwork and Metalwork Painting</h3>
+                      <h3 class="service-title">Woodwork and metalwork painting</h3>
                       <p class="service-description">Expert painting services for wooden and metal surfaces, ensuring a high-quality and durable finish.</p>
                   </div>
               </div>
@@ -387,7 +456,7 @@
 
   <section class="techniques-section">
     <div class="container">
-        <h2 class="techniques-title">Painting Techniques</h2>
+        <h2 class="techniques-title">Painting techniques</h2>
         <p class="techniques-description">Explore the various painting techniques we offer to enhance the look and feel of your space.</p>
         <div class="techniques-list">
           <div class="technique-item">
@@ -419,6 +488,27 @@
     </div>
   </section>
 
+
+
+  <section class="brands-section">
+    <div class="container">
+        <h2 class="brands-title">Brands we work with</h2>
+        <p class="brands-description">We collaborate with the most popular brands in painting, wallpapers, and plastering to ensure the highest quality for our clients.</p>
+        <div class="brands-logos">
+            <img src="brends/dulux.jpeg" alt="Dulux" class="brand-logo">
+            <img src="brends/FB.jpeg" alt="Farrow & Ball" class="brand-logo">
+            <img src="brends/grown.png " alt="Crown Paints" class="brand-logo">
+            <img src="brends/wickes.png" alt="Wickes" class="brand-logo">
+            <img src="brends/leyland.png" alt="Leyland" class="brand-logo">
+            <img src="brends/little.png" alt="Little Greene" class="brand-logo">
+            <img src="brends/johnstones.jpg" alt="Johnstone's" class="brand-logo">
+            
+        </div>
+    </div>
+</section>
+
+
+
   </div>
   
   <button id="backToTopBtn" title="Go to top">⬆️</button>
@@ -431,40 +521,46 @@
     <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
   </div>
 
-  <!-- Modal Structure -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <p id="modal-text"></p>
+        <span class="close">&times;</span>
+        <div id="modal-header">
+            <img id="modal-image" src="" alt="Service Image" class="modal-image">
+        </div>
+        <div id="modal-text">
+            <!-- Dynamic content will be inserted here -->
+        </div>
     </div>
-  </div>
+</div>
 
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper-container', {
-            direction: 'vertical',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 3, /* Show only 3 slides at a time */
-            spaceBetween: 30, /* Space between slides */
-            loop: true, /* Enable looping */
-            autoplay: {
-                delay: 2500, /* Autoplay delay */
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-down',
-                prevEl: '.swiper-button-up',
-            },
-        });
+    const swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-down',
+            prevEl: '.swiper-button-up',
+        },
+    });
 
-        // Modal content for each service
-        const servicesContent = {
-            'interior-painting': `
+ // Modal content for each service
+ const servicesContent = {
+        'interior-painting': {
+            image: 'serv/1.webp',
+            content: `
                 <h3>Interior Painting</h3>
                 <p>Our interior painting services aim to refresh and rejuvenate your indoor spaces, bringing a vibrant and inviting look to your home or office. We utilize various painting techniques and high-quality materials to ensure exceptional results.</p>
                 <h4>Services Included:</h4>
@@ -479,8 +575,11 @@
                     <li><strong>Final Touch-Ups:</strong> Detailed touch-ups to ensure every corner and edge is perfect after the main painting is completed.</li>
                 </ul>
                 <p>Our team is dedicated to delivering top-notch interior painting services with minimal disruption to your daily life, ensuring thorough preparation, precise application, and meticulous cleanup.</p>
-            `,
-            'exterior-painting': `
+            `
+        },
+        'exterior-painting': {
+            image: 'serv/2.webp',
+            content: `
                 <h3>Exterior Painting</h3>
                 <p>Our exterior painting services are designed to enhance the curb appeal of your property, providing a durable and stylish finish that withstands the elements.</p>
                 <h4>Services Included:</h4>
@@ -493,8 +592,11 @@
                     <li><strong>Detailed Cleanup:</strong> Thorough cleanup to leave no paint residue or debris behind.</li>
                 </ul>
                 <p>Trust us to deliver a professional finish that enhances the beauty and value of your home.</p>
-            `,
-            'commercial-painting': `
+            `
+        },
+        'commercial-painting': {
+            image: 'serv/3.webp',
+            content: `
                 <h3>Commercial Painting</h3>
                 <p>We specialize in commercial painting projects, providing professional results that meet the specific needs of businesses of all sizes.</p>
                 <h4>Services Included:</h4>
@@ -507,8 +609,11 @@
                     <li><strong>Flexible Scheduling:</strong> Minimizing disruption to your business operations with flexible scheduling options.</li>
                 </ul>
                 <p>Our experienced team ensures your commercial space reflects your company’s professionalism and commitment to quality.</p>
-            `,
-            'wallpapering-decorating': `
+            `
+        },
+        'wallpapering-decorating': {
+            image: 'serv/4.webp',
+            content: `
                 <h3>Wallpapering and Decorating</h3>
                 <p>Our wallpaper installation and decorating services can transform your interior spaces with stylish and high-quality finishes.</p>
                 <h4>Services Included:</h4>
@@ -521,8 +626,11 @@
                     <li><strong>Decorative Painting:</strong> Adding artistic touches to complement your wallpaper.</li>
                 </ul>
                 <p>Our team is dedicated to making your home or office look stylish and sophisticated with high-quality wallpaper and decorative finishes.</p>
-            `,
-            'furniture-painting-finishing': `
+            `
+        },
+        'furniture-painting-finishing': {
+            image: 'serv/5.webp',
+            content: `
                 <h3>Furniture Painting and Finishing</h3>
                 <p>We provide custom painting and finishing services for furniture, ensuring a personalized and durable look that enhances your home's decor.</p>
                 <h4>Services Included:</h4>
@@ -535,8 +643,11 @@
                     <li><strong>Detail Work:</strong> Ensuring intricate details are highlighted and preserved.</li>
                 </ul>
                 <p>Our skilled craftsmen bring new life to your furniture, making it a standout feature in your home.</p>
-            `,
-            'plastering-repairs': `
+            `
+        },
+        'plastering-repairs': {
+            image: 'serv/7.webp',
+            content: `
                 <h3>Plastering and Repairs</h3>
                 <p>Our professional plastering services are ideal for walls and ceilings, including comprehensive repair work to restore and enhance your interior surfaces.</p>
                 <h4>Services Included:</h4>
@@ -549,8 +660,11 @@
                     <li><strong>Ceiling Repairs:</strong> Addressing water damage, cracks, and other issues to ensure a smooth ceiling.</li>
                 </ul>
                 <p>Our team ensures that your walls and ceilings are smooth, durable, and ready for painting or wallpapering.</p>
-            `,
-            'woodwork-metalwork-painting': `
+            `
+        },
+        'woodwork-metalwork-painting': {
+            image: 'serv/6.webp',
+            content: `
                 <h3>Woodwork and Metalwork Painting</h3>
                 <p>We offer expert painting services for wooden and metal surfaces, ensuring a high-quality and durable finish that enhances the beauty and longevity of your property.</p>
                 <h4>Services Included:</h4>
@@ -564,44 +678,53 @@
                 </ul>
                 <p>Our skilled painters enhance the beauty and longevity of your woodwork and metalwork, making them standout features in your home or business.</p>
             `
-        };
-
-        for (const [id, content] of Object.entries(servicesContent)) {
-            const element = document.getElementById(id);
-            if (element) {
-                element.setAttribute('data-modal-content', content);
-            }
         }
+    };
+    for (const [id, content] of Object.entries(servicesContent)) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.setAttribute('data-modal-content', content.content);
+            element.setAttribute('data-modal-image', content.image);
+        }
+    }
 
-        // Modal functionality
-        const modal = document.getElementById("modal");
-        const modalText = document.getElementById("modal-text");
-        const closeModal = document.getElementsByClassName("close")[0];
+    // Modal functionality
+    const modal = document.getElementById("modal");
+    const modalText = document.getElementById("modal-text");
+    const modalImage = document.getElementById("modal-image");
+    const closeModal = document.getElementsByClassName("close")[0];
 
-        document.querySelectorAll('.swiper-slide').forEach(slide => {
-            slide.addEventListener('click', function() {
-                modalText.innerHTML = this.getAttribute('data-modal-content');
-                modal.style.display = "block";
-            });
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+        slide.addEventListener('click', function() {
+            modalText.innerHTML = this.getAttribute('data-modal-content');
+            modalImage.src = this.getAttribute('data-modal-image');
+            modal.style.display = "block";
+            setTimeout(() => modal.style.opacity = 1, 50); // Smooth fade-in effect
         });
-
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
     });
+
+    closeModal.onclick = function() {
+        modal.style.opacity = 0;
+        setTimeout(() => modal.style.display = "none", 300); // Smooth fade-out effect
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.opacity = 0;
+            setTimeout(() => modal.style.display = "none", 300); // Smooth fade-out effect
+        }
+    }
+});
+</script>
+
   </script>
+  
 </body>
 <footer class="footer_bg">
   <div class="footer-block">
       <div class="a">
         <div class="wrap_logo" style="display: flex;flex-direction: column;">
-          <a class="footer_logo_link" href="https://woodmbvsltd.co.uk/">
+          <a class="footer_logo_link" href="index.html">
             <span class="footer_logo">
               <img src="img/logo/8smol.png" alt="Master Builders VS LTD Logo" oncontextmenu="return false;">
             </span>
@@ -612,19 +735,19 @@
           <nav class="footer_navigation-menu">
             <ul class="footer_list_menu">
               <li class="footer_item_menu">
-                <a class="footer_menu_link" href="https://woodmbvsltd.co.uk/">HOME</a>
+                <a class="footer_menu_link" href="index.html">HOME</a>
               </li>
               <li class="footer_item_menu">
-                <a class="footer_menu_link" href="#about-us">ABOUT US</a>
+                <a class="footer_menu_link" href="index.html#about-us">ABOUT US</a>
               </li>
               <li class="footer_item_menu">
-                <a class="footer_menu_link" href="#our-services">SERVICES</a>
+                <a class="footer_menu_link" href="index.html#our-services">SERVICES</a>
               </li>
               <li class="footer_item_menu">
-                <a class="footer_menu_link" href="#proj">PROJECTS</a>
+                <a class="footer_menu_link" href="index.html#proj">PROJECTS</a>
               </li>
               <li class="footer_item_menu">
-                <a class="footer_menu_link" href="contacts.html">CONTACTS</a>
+                <a class="footer_menu_link" href="index.html#contacts.html">CONTACTS</a>
               </li>
               </ul>
           </nav>
