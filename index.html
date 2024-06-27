@@ -10,311 +10,43 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Painting Services</title>
   <style>
-    .what-we-do-section {
-        padding: 50px 0;
-        background-color: #f9f9f9;
-        text-align: center;
+ .projects-section {
+      padding: 50px 0;
+      background-color: #f5f5f5;
     }
-
-    .section-title {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #333;
+    .projects-title {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
     }
-
-    .section-description {
-        font-size: 18px;
-        margin-bottom: 40px;
-        color: #666;
+    .swiper-container-projects {
+      width: 100%;
+      height: 100%;
     }
-
-    .swiper-container {
-        max-width: 40%;
-        height: 1300px;
-        overflow: hidden;
-        margin: 0 auto;
-        position: relative;
+    .swiper-slide-projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 10px;
     }
-
-    .swiper-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        transition: transform 0.3s ease;
-        height: calc(100% / 3);
-        box-sizing: border-box;
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
-
-    .swiper-slide:hover {
-        transform: scale(1.05);
+    .project-title {
+      font-size: 1.5em;
+      margin: 10px 0;
     }
-
-    .service-image {
-        width: 90%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .service-title {
-        font-size: 20px;
-        margin-top: 15px;
-        color: #333;
-    }
-
-    .service-description {
-        font-size: 14px;
-        margin-top: 10px;
-        color: #666;
-        text-align: center;
-    }
-
-    .swiper-pagination {
-        margin-top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .swiper-button-next, .swiper-button-prev,
-    .swiper-button-up, .swiper-button-down {
-        color: #333;
-        position: absolute;
-        font-size: 20px;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    .swiper-button-up {
-        left: 98%;
-        top: calc(51% - 70px);
-        transform: translate(-50%, -50%);
-    }
-
-    .swiper-button-down {
-        left: 98%;
-        bottom: calc(48% - 70px);
-        transform: translate(-50%, 50%);
-    }
-
-    @media screen and (max-width: 1200px){
-        .swiper-container {
-            max-width: 60%;
-        }
-    }
-    @media screen and (max-width: 1000px){
-        .swiper-container {
-            max-width: 70%;
-        }
-    }
-    @media screen and (max-width: 800px){
-        .swiper-container {
-            max-width: 80%;
-        }
-    }
-    @media screen and (max-width: 700px){
-        .swiper-container {
-            max-width: 90%;
-        }
-        .service-image {
-            height: 260px;
-        }
-    }
-    @media screen and (max-width: 540px){
-        .service-image {
-            height: 200px;
-        }
-
-        .swiper-button-up {
-            left: 96%;
-        }
-        .swiper-button-down {
-            left: 96%;
-        }
-    }
-    @media screen and (max-width: 540px){
-        .service-image {
-            height: 160px;
-        }
-    }
-    @media screen and (max-width: 540px){
-        .swiper-container {
-            max-width: 100%;
-        }
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding-top: 60px;
-        transition: opacity 0.3s ease;
-    }
-
-    .modal-content {
-        background-color: #f9f9f9;
-        margin: 5% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 90%;
-        max-width: 700px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-    }
-
-    .modal-content h3 {
-        font-size: 24px;
-        color: #333;
-    }
-
-    .modal-content p {
-        font-size: 16px;
-        color: #666;
-        line-height: 1.6;
-    }
-
-    .modal-content ul {
-        padding: 0;
-        list-style-type: none;
-    }
-
-    .modal-content ul li {
-        font-size: 14px;
-        color: #444;
-        margin-bottom: 10px;
-    }
-    .modal-image {
-    width: 100%;
-    height: 300px; /* Adjust the height to fit your needs */
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #333;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .brands-section {
-        padding: 100px 0;
-        background-color: #fff;
-        text-align: center;
-    }
-
-    .brands-title {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .brands-description {
-        font-size: 18px;
-        margin-bottom: 40px;
-        color: #666;
-    }
-
-    .brands-logos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .brand-logo {
-        width: 150px;
-        height: 100px;
-        object-fit: contain;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .brand-logo:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .techniques-section {
-        width: 100%;
-        background-color: #222222;
-        color: #fff;
-        padding: 50px 0 100px 0;
-        text-align: center;
-    }
-
-    .techniques-title {
-        font-size: 36px;
-        color: #fff;
-        margin-bottom: 20px;
-    }
-
-    .techniques-description {
-        font-size: 18px;
-        color: #ccc;
-        margin-bottom: 40px;
-    }
-
-    .techniques-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .technique-item {
-        background: #444;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 10px;
-        padding: 20px;
-        width: 300px;
-        transition: transform 0.3s ease;
-        color: #fff;
-    }
-
-    .technique-item:hover {
-        transform: scale(1.05);
-    }
-
-    .technique-title {
-        font-size: 24px;
-        color: #fff;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .technique-description {
-        font-size: 14px;
-        color: #ccc;
-    }
-
-    .technique-icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 10px;
+    .project-description {
+      text-align: center;
+      color: #666;
     }
   </style>
 </head>
@@ -332,8 +64,18 @@
           <li class="item">
             <a class="item-menu" href="index.html#about-us">ABOUT US</a>
           </li>
-          <li class="item">
+          <li class="item dropdown">
             <a class="item-menu" href="index.html#our-services">SERVICES</a>
+            <ul class="dropdown-menu">
+              <li><a href="#interior-painting">Interior</a></li>                    <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+              <li><a href="#exterior-painting">Exterior</a></li>
+              <li><a href="#commercial-painting">Commercial</a></li>
+              <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
+              <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
+              <li><a href="#plastering-repairs">Plastering & Repairs</a></li>
+              <li><a href="#woodwork-metalwork-painting">Woodwork & Metalwork</a></li>
+             
+        </ul>
           </li>
           <li class="item">
             <a class="item-menu" href="index.html#proj">PROJECTS</a>
@@ -364,6 +106,16 @@
             </li> 
             <li class="mob-list_item dropdown2">
               <a class="mob-list_link" href="index.html#our-services">SERVICES</a>
+              <button class="dropdown-toggle2">▼</button> <!-- Добавленная кнопка -->
+                      <ul class="dropdown-menu2">
+                        <li><a href="#interior-painting">Interior</a></li>                              <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+                        <li><a href="#exterior-painting">Exterior</a></li>
+                        <li><a href="#commercial-painting">Commercial</a></li>
+                        <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
+                        <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
+                        <li><a href="#plastering-repairs">Plastering & Repairs</a></li>
+                        <li><a href="#woodwork-metalwork-painting">Woodwork & Metalwork</a></li>
+                      </ul>
             </li>  
             <li class="mob-list_item">
               <a class="mob-list_link" href="index.html#proj">PROJECTS</a>
@@ -397,7 +149,7 @@
     </section>
 
     <div class="image_block2">
-      <img src="istockphoto-1147846480-612x612.jpg" alt="Painting Image" style="width: 100%;">
+      <img src="fone.jpg" alt="Painting Image" style="width: 100%;">
     </div>
 
     <section id="what-we-do" class="what-we-do-section">
@@ -462,27 +214,27 @@
           <div class="technique-item">
             <img src="spray2_icon.png" alt="Spraying" class="technique-icon">
             <h3 class="technique-title">Spraying</h3>
-            <p class="technique-description">Quick and even coverage, best for large areas and intricate details.</p>
+            <!-- <p class="technique-description">Quick and even coverage, best for large areas and intricate details.</p> -->
         </div>
             <div class="technique-item">
                 <img src="icon2-removebg-preview.png" alt="Electrostatic Painting" class="technique-icon">
                 <h3 class="technique-title">Electrostatic Painting</h3>
-                <p class="technique-description">Applies paint using an electrostatic charge, ensuring even coverage on metal surfaces.</p>
+                <!-- <p class="technique-description">Applies paint using an electrostatic charge, ensuring even coverage on metal surfaces.</p> -->
             </div>
             <div class="technique-item">
                 <img src="3.png" alt="Textured Painting" class="technique-icon">
                 <h3 class="technique-title">Textured Painting</h3>
-                <p class="technique-description">Creates decorative textures on walls using various techniques like stucco and Venetian plaster.</p>
+                <!-- <p class="technique-description">Creates decorative textures on walls using various techniques like stucco and Venetian plaster.</p> -->
             </div>
             <div class="technique-item">
                 <img src="roller2_icon.png" alt="Rolling" class="technique-icon">
                 <h3 class="technique-title">Rolling</h3>
-                <p class="technique-description">Efficient and smooth, ideal for large surfaces like walls and ceilings.</p>
+                <!-- <p class="technique-description">Efficient and smooth, ideal for large surfaces like walls and ceilings.</p> -->
             </div>
             <div class="technique-item">
                 <img src="5.png" alt="Sponging" class="technique-icon">
                 <h3 class="technique-title">Sponging</h3>
-                <p class="technique-description">Creates a textured, decorative finish for walls and furniture.</p>
+                <!-- <p class="technique-description">Creates a textured, decorative finish for walls and furniture.</p> -->
             </div>
         </div>
     </div>
@@ -754,7 +506,34 @@
         </div>
       </div>
       <div class="b ">
-        
+        <div class="footer_services">
+          <nav class="footer_nav-menu">
+          <ul class="footer_list_categories">
+            <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#interior-painting">Interior</a>
+            </li>
+            <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#exterior-painting">Exterior</a>
+          </li>
+          <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#commercial-painting">Commercial</a>
+          </li>
+            <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#wallpapering-decorating">Wallpapering & Decorating</a>
+          </li>
+            <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#furniture-painting-finishing">Furniture & Finishing</a>
+          </li>
+            <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#plastering-repairs">Plastering & Repairs</a>
+          </li>
+            <li class="footer_item_categories">
+            <a class="footer_categories_link" href="#woodwork-metalwork-painting">Woodwork & Metalwork</a>
+          </li>
+          </ul>
+        </nav>
+    </div>
+
         <div class="footer-contacts">
           <h3 class="title_contacts">Contacts</h3>
           <address>
