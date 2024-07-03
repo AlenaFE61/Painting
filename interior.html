@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Interior Services | MBVS LTD</title>
+</head>
+<style>
+  .hero{
+    height: 800px;
+    background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+  }
+ 
+  .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .about-service, .services-gallery, .quote {
+            padding: 50px 0;
+            text-align: center;
+        }
+.about-service{
+  width: 40%;
+  margin: 0 auto;
+}
+.about-service p{
+  font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #353232;
+
+
+}
+.services-gallery{
+  background-color: #222222;
+  color:white;
+}
+.services-gallery p{
+  color:#F7F7F7;
+}
+.services-gallery h2{
+  padding: 50px;
+}
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item img {
+          width: 100px;
+            border-radius: 10px;
+        }
+
+        .gallery-item-info {
+            margin-top: 10px;
+        }
+
+        .quote form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .quote form input, .quote form textarea {
+            width: 80%;
+            max-width: 500px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .quote form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+        }
+            /* Add your custom styles here */
+    .contact-form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 60px;
+    }
+    .contact-form-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    }
+    .contact-form {
+    width: 30%;
+    padding: 20px;
+    margin: 0 auto;
+    }
+    .contact-form h2 {
+      margin-bottom: 26px;
+      font-size: 1.5em;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #333;
+    }
+    .consultation-text{
+      width: 30%;
+      margin: 0 auto;
+      font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #353232;
+    text-align: justify;
+    text-justify: inter-word;
+    }
+    .about-service h2{
+      padding: 20px;
+      font-size: 28px;
+    }
+    .consultation-text h2{
+      padding-bottom: 20px;
+      font-size: 28px;
+    }
+    .consultation-text-second{
+      padding-top: 20px;
+    }
+    .gallery-item-info h3 {
+    margin-bottom: 10px;
+  }
+  .gallery-item-info ul {
+    margin-top: 0;
+  }
+</style>
+<body>
+  <header class="header">
+    <div class="container main-container">
+      <a class="logo" href="index.html">
+        <img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo">
+      </a>
+      <nav class="navigation-menu" id="main-nav">
+        <ul class="list mob-list">
+          <li class="item">
+            <a class="item-menu" href="index.html">HOME</a>
+          </li>
+          <li class="item">
+            <a class="item-menu" href="index.html#about-us">ABOUT US</a>
+          </li>
+          <li class="item dropdown">
+            <a class="item-menu" href="index.html#our-services">SERVICES</a>
+            <ul class="dropdown-menu">
+              <li><a href="interior.html">Interior</a></li>
+              <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+              <li><a href="#exterior-painting">Exterior</a></li>
+              <li><a href="#commercial-painting">Commercial</a></li>
+              <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
+              <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
+              <li><a href="#plastering-repairs">Plastering & Repairs</a></li>
+              <li><a href="#woodwork-metalwork-painting">Woodwork & Metalwork</a></li>
+            </ul>
+          </li>
+          <!-- <li class="item">
+            <a class="item-menu" href="index.html#proj">PROJECTS</a>
+          </li> -->
+          <li class="item">
+            <a class="item-menu" href="contacts.html">CONTACTS</a>
+          </li>
+        </ul>
+      </nav>
+      <div type="text" class="menu-open" data-menu-open>
+        <img class="z" src="img/menu.svg" alt="Mobile menu" width="35" height="35">
+      </div>
+    </div>
+    <div class="mob-menu is-hidden mob-container" data-menu>
+      <div class="mob-wrapp">
+        <div type="text" class="menu-close" data-menu-close>
+          <img src="img/clear.svg" alt="Button clear" width="35" height="35">
+        </div>
+        <nav class="nav-menu">
+          <ul class="mob-list">
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="index.html">НOME</a>
+            </li>
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="index.html#about-us">ABOUT US</a>
+            </li>
+            <li class="mob-list_item dropdown2">
+              <a class="mob-list_link" href="index.html#our-services">SERVICES</a>
+              <button class="dropdown-toggle2">▼</button>
+              <ul class="dropdown-menu2">
+                <li><a href="interior.html">Interior</a></li>
+                <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+                <li><a href="#exterior-painting">Exterior</a></li>
+                <li><a href="#commercial-painting">Commercial</a></li>
+                <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
+                <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
+                <li><a href="#plastering-repairs">Plastering & Repairs</a></li>
+                <li><a href="#woodwork-metalwork-painting">Woodwork & Metalwork</a></li>
+              </ul>
+            </li>
+            <!-- <li class="mob-list_item">
+              <a class="mob-list_link" href="index.html#proj">PROJECTS</a>
+            </li> -->
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="contacts.html">CONTACTS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="background-image: url('serv/1.webp');">
+    <div class="hero-content">
+    </div>
+  </section>
+
+  <!-- About Service Section -->
+  <section class="about-service">
+    <div class="container">
+        <h2>Interior painting</h2>
+        <p>Interior painting is more than just a cosmetic upgrade; it’s about transforming spaces to enhance the overall ambiance and functionality. Our interior painting services are designed to deliver high-quality finishes, whether you're looking to refresh a single room or undertake a complete home makeover.</p>
+        <p>The MBVSLTD team strives to transform your space into a stylish and functional environment that meets your needs and preferences. With over 11 years of combined experience, we guarantee top-notch workmanship and meticulous attention to detail in every project.</p>
+        <p>From modern minimalism to classic elegance, we work closely with our clients to understand their vision and bring it to life through innovative design solutions and advanced techniques.</p>
+    </div>
+  </section>
+
+
+
+  <section class="services-gallery">
+    <div class="container">
+      <h2>Types of interior paints and finishes</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="icon/1.png" alt="Emulsion Paint">
+          <div class="gallery-item-info">
+            <h3>Emulsion Paint</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Water-Based: Environmentally friendly and easy to clean.</li>
+                  <li>Quick Drying: Allows faster project completion.</li>
+                  <li>Durable: Resistant to moisture and stains.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Living Rooms</li>
+                  <li>Bedrooms</li>
+                  <li>Kitchens</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/2.png" alt="Acrylic Paint">
+          <div class="gallery-item-info">
+            <h3>Acrylic Paint</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Flexible: Resistant to cracking.</li>
+                  <li>Quick Drying: Fast application process.</li>
+                  <li>Versatile: Suitable for various surfaces.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Living Rooms</li>
+                  <li>Bedrooms</li>
+                  <li>Bathrooms</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/3.png" alt="Oil Paint">
+          <div class="gallery-item-info">
+            <h3>Oil Paint</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Durable: Long-lasting finish.</li>
+                  <li>Rich Texture: Smooth and glossy finish.</li>
+                  <li>High Coverage: Excellent opacity.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Trim</li>
+                  <li>Doors</li>
+                  <li>Cabinetry</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/4.png" alt="Silicone Paint">
+          <div class="gallery-item-info">
+            <h3>Silicone Paint</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Water-Repellent: Prevents moisture damage.</li>
+                  <li>Breathable: Allows walls to breathe.</li>
+                  <li>Weather Resistant: Suitable for harsh conditions.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Bathrooms</li>
+                  <li>Kitchens</li>
+                  <li>Exteriors</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/5 (1).png" alt="Latex Paint">
+          <div class="gallery-item-info">
+            <h3>Latex Paint</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Low VOC: Environmentally friendly.</li>
+                  <li>Easy Application: Smooth and even coverage.</li>
+                  <li>Durable: Long-lasting finish.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Living Rooms</li>
+                  <li>Bedrooms</li>
+                  <li>Hallways</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/6.png" alt="Decorative Plaster">
+          <div class="gallery-item-info">
+            <h3>Decorative Plaster (Venetian Plaster)</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Luxurious Finish: High-end, marble-like look.</li>
+                  <li>Durable: Resistant to cracking and peeling.</li>
+                  <li>Customizable: Matches any color scheme.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Feature Walls</li>
+                  <li>Hallways</li>
+                  <li>Living Rooms</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/7.png" alt="Wallpaper">
+          <div class="gallery-item-info">
+            <h3>Wallpaper</h3>
+            <ul>
+              <li><strong>Advantages:</strong>
+                <ul>
+                  <li>Versatile Designs: Wide range of patterns and colors.</li>
+                  <li>Easy to Install: Simple application and removal.</li>
+                  <li>Durable: Resistant to wear and tear.</li>
+                </ul>
+              </li>
+              <li><strong>Best For:</strong>
+                <ul>
+                  <li>Accent Walls</li>
+                  <li>Children's Rooms</li>
+                  <li>Bedrooms</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+
+
+<!-- Quote Section -->
+<section class="contact-form-section">
+  <div class="contact-form-container">
+    <div class="consultation-text">
+      <div>
+      <h2>Choosing the right finish for your space</h2>
+      <p>When selecting finishes for your interior project, consider the specific needs and style of each room. High-traffic areas like hallways and kitchens benefit from durable, easy-to-clean finishes like satin or semi-gloss paint. For living rooms and bedrooms, matte or eggshell paints offer a rich, inviting look, while decorative plaster and wallpaper can add unique textures and patterns to enhance the overall aesthetic.</p>
+    </div>
+      <div class="consultation-text-second">
+      <h2>Professional consultation</h2>
+      <p>Not sure which finish is best for your project? Our experts at MBVSLTD are here to help. Contact us for a consultation, and we'll guide you in choosing the perfect materials to transform your space.</p>
+    </div>
+    </div>
+    <form class="contact-form">
+      <h2>Get a quote from our expert team today</h2>
+      <label for="fullName">Full Name *</label>
+      <input type="text" id="fullName" name="fullName" required>
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+      <label for="phone">Phone *</label>
+      <input type="tel" id="phone" name="phone" required>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location">
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">SEND NOW</button>
+    </form>
+  </div>
+</section>
+
+
+  <footer class="footer_bg">
+    <div class="footer-block">
+      <div class="a">
+        <div class="wrap_logo" style="display: flex;flex-direction: column;">
+          <a class="footer_logo_link" href="index.html">
+            <span class="footer_logo">
+              <img src="img/logo/8smol.png" alt="Master Builders VS LTD Logo" oncontextmenu="return false;">
+            </span>
+          </a>
+        </div>
+        <div class="footer-menu">
+          <nav class="footer_navigation-menu">
+            <ul class="footer_list_menu">
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html">HOME</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html#about-us">ABOUT US</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html#our-services">SERVICES</a>
+              </li>
+              <!-- <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html#proj">PROJECTS</a>
+              </li> -->
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="contacts.html">CONTACTS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="b">
+        <div class="footer_services">
+          <nav class="footer_nav-menu">
+            <ul class="footer_list_categories">
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="interior.html">Interior</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="#exterior-painting">Exterior</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="#commercial-painting">Commercial</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="#wallpapering-decorating">Wallpapering & Decorating</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="#furniture-painting-finishing">Furniture & Finishing</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="#plastering-repairs">Plastering & Repairs</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="#woodwork-metalwork-painting">Woodwork & Metalwork</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-contacts">
+          <h3 class="title_contacts">Contacts</h3>
+          <address>
+            <ul class="footer_list_menu">
+              <li class="list-footer-item"><a class="foter-contacts-mail" href="mailto:project@mbvsltd.com">project@mbvsltd.com</a></li>
+              <li class="list-footer-item"><a class="foter-contacts-tel" href="tel:075 2545 9552">075 2545 9552</a></li>
+              <li class="list-footer-item"><a class="foter-contacts-tel" href="tel:020 3539 1924">020 3539 1924</a></li>
+            </ul>
+          </address>
+          <div class="sety_footer">
+            <a href="https://www.yell.com/biz/master-builders-vs-ltd-harrow-8851698/" target="_blank">
+              <img class="yell_footer" src="440-4400705_find-us-on-yell-clipart-png-download-yell.png" alt="Yell" style="width: 35px; height: 35px;background-color: #03031a;border-radius: 8px;">
+            </a>
+            <a href="https://www.linkedin.com/in/vitalii-sopit-8ba5b5162/" target="_blank">
+              <img class="in_footer" src="in.jpeg" alt="LinkedIn" style="width: 35px; height: 35px;background-color: #03031a;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61551452585348" target="_blank">
+              <img class="in_footer" src="facebook1.webp" alt="Facebook" style="width: 35px; height: 35px; background-color: #03031a;">
+            </a>
+            <a href="https://www.instagram.com/masterbuildersvsltd/?next=%2F" target="_blank">
+              <img class="in_footer" src="new-instagram-logo-white-border-icon-png-large.png" alt="Instagram" style="width: 35px; height: 35px;background-color: #03031a;">
+            </a>
+            <a href="https://wa.me/447525459552?text=Online%20assistance%20here" target="_blank">
+              <img class="in_footer" src="whaapp.jpg" alt="WhatsApp" style="width: 35px; height: 35px;background-color: #03031a;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
