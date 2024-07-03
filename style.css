@@ -144,11 +144,10 @@ body {
   width: 100%;
 }
 .b{
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding-right: 100px;
 }
 .wrap_logo{
   text-align: center;
@@ -367,7 +366,7 @@ font-size: 16px;
   text-align: center;
 }
 .text_block h1 {
-  font-size: 2.5em;
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -396,7 +395,7 @@ max-width: 1200px;
 margin: 0 auto;
 }
 .block_about .about_title {
-  font-size: 2.5em;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #000000;
@@ -406,6 +405,8 @@ margin: 0 auto;
   line-height: 1.5;
   margin-bottom: 20px;
   color: #353232;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 
@@ -416,7 +417,7 @@ margin: 0 auto;
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 20px;
   color: #333;
 }
@@ -580,7 +581,7 @@ border-radius: 15px 15px 0 0;
 }
 
 .brands-title {
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 20px;
   color: #333;
 }
@@ -622,7 +623,7 @@ border-radius: 15px 15px 0 0;
 }
 
 .techniques-title {
-  font-size: 36px;
+  font-size: 28px;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -795,10 +796,17 @@ border-radius: 15px 15px 0 0;
 .swiper-container {
   max-width: 60%;
 }
+.block_about {
+  padding: 30px 20px 30px;
 }
-@media screen and (max-width: 1015px){
-  .b {
-  padding-right: 0px;
+.what-we-do-section {
+  padding: 30px 0;
+}
+.techniques-section {
+  padding: 30px 0 30px 0;
+}
+.brands-section {
+  padding: 30px 0;
 }
 }
 @media screen and (max-width: 1000px){
@@ -822,6 +830,9 @@ border-radius: 15px 15px 0 0;
   .swiper-container {
       max-width: 80%;
   }
+  .text_block h1 {
+    font-size: 32px;
+}
 }
 @media screen and (max-width: 768px){
 .logo_img {
@@ -913,9 +924,6 @@ margin-left: 0px;
 .footer-contacts {
     text-align: center;
 }
-.b {
-padding-right: 0px;
-}
 .image_block {
   position: relative;
   height: 260px;
@@ -957,7 +965,7 @@ padding-right: 0px;
   margin-bottom: 20px;
 }
   .footer_bg {
-      height: 523px;
+      /* height: 523px; */
       padding-right: 50px;
       padding-left: 50px;
   }
@@ -981,6 +989,7 @@ padding-right: 0px;
 }
 .swiper-container {
   max-width: 100%;
+  height: 1000px;
 }
   }
 
@@ -1102,8 +1111,20 @@ padding-right: 0px;
 .wrap_logo {
   margin-left: 0px;
 }
-.footer_bg {
+/* .footer_bg {
   height: 615px;
+} */
+
+.b {
+  display: block;
+  text-align: center;
+}
+.a {
+  display: block;
+  text-align: center;
+}
+.wrap_logo {
+  margin-left: 0px;
 }
 }
 @media screen and (max-width: 360px){

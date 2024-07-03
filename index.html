@@ -10,53 +10,102 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Painting Services</title>
   <style>
-    /* Add your custom styles here */
-    .contact-form-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: self-start;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-top: 60px;
-    }
-    .contact-form-container img {
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    }
-    .contact-form {
+.contact-form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* padding: 60px 20px 20px 20px; */
+  position: relative;
+  min-height: 600px;
+}
+
+.contact-form-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.contact-form {
+  width: 30%;
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+}
+
+.contact-form h2 {
+  margin-bottom: 28px;
+  font-size: 1.5em;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+.contact-form {
     width: 30%;
-    padding: 20px;
-    margin: 0 auto;
-    }
-    .contact-form h2 {
-      margin-bottom: 20px;
-      font-size: 1.5em;
-    }
-    .contact-form label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact-form button {
-      padding: 10px 20px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .contact-form button:hover {
-      background-color: #333;
-    }
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+}
+@media screen and (max-width: 1200px){
+  .contact-form-container {
+    min-height: 580px;
+}
+}
+
+@media screen and (max-width: 1000px){
+  .contact-form {
+    width: 40%;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+}
+}
+
+@media screen and (max-width: 800px){
+  .contact-form {
+    width: 90%;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+}
+.contact-form-container img {
+    display: none;
+}
+}
+
+
   </style>
 </head>
 <body>

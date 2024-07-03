@@ -12,90 +12,87 @@
   .hero{
     height: 800px;
     background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
   }
- 
-  .hero-content {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .about-service, .services-gallery, .quote {
-            padding: 50px 0;
-            text-align: center;
-        }
-.about-service{
-  width: 40%;
-  margin: 0 auto;
-}
-.about-service p{
-  font-size: 1.2em;
+  .about-service, .services-gallery, .quote {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .about-service{
+    width: 40%;
+    margin: 0 auto;
+  }
+  .about-service p{
+    font-size: 1.2em;
     line-height: 1.5;
     margin-bottom: 20px;
     color: #353232;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .services-gallery{
+    background-color: #222222;
+    color:white;
+  }
+  .services-gallery p{
+    color:#F7F7F7;
+  }
+  .services-gallery h2{
+    padding: 50px;
+  }
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .gallery-item {
+    padding: 20px;
+    background: #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  transition: transform 0.3s ease;
+  color: #fff;
+  }
+  .gallery-item:hover{
+    transform: scale(1.05);
+  }
+  .gallery-item img {
+    width: 100px;
+    border-radius: 10px;
+  }
+  .gallery-item-info {
+    margin-top: 10px;
+  }
+  .quote form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .quote form input, .quote form textarea {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .quote form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    }
 
-
-}
-.services-gallery{
-  background-color: #222222;
-  color:white;
-}
-.services-gallery p{
-  color:#F7F7F7;
-}
-.services-gallery h2{
-  padding: 50px;
-}
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .gallery-item {
-            margin-bottom: 30px;
-            padding: 20px;
-        }
-
-        .gallery-item img {
-          width: 100px;
-            border-radius: 10px;
-        }
-
-        .gallery-item-info {
-            margin-top: 10px;
-        }
-
-        .quote form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .quote form input, .quote form textarea {
-            width: 80%;
-            max-width: 500px;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .quote form button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #000;
-            color: white;
-            cursor: pointer;
-        }
-            /* Add your custom styles here */
     .contact-form-container {
     display: flex;
     justify-content: flex-start;
@@ -103,6 +100,7 @@
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding-top: 60px;
+    padding-bottom: 60px;
     }
     .contact-form-container img {
     width: 50%;
@@ -111,12 +109,11 @@
     }
     .contact-form {
     width: 30%;
-    padding: 20px;
     margin: 0 auto;
     }
     .contact-form h2 {
       margin-bottom: 26px;
-      font-size: 1.5em;
+      font-size: 28px;
     }
     .contact-form label {
       display: block;
@@ -168,6 +165,126 @@
   }
   .gallery-item-info ul {
     margin-top: 0;
+  }
+  .advantages_list{
+    padding: 10px;
+  }
+  .bold-text{
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  ul{
+    list-style: none;
+  }
+  @media screen and (max-width: 1600px){
+    .hero {
+    height: 600px;
+}
+    .consultation-text{
+      width: 40%;
+    }
+    .contact-form {
+    width: 40%;
+    }
+
+  }
+
+  @media screen and (max-width: 1200px){
+  
+    .about-service {
+    width: 60%;
+}
+
+  }
+
+
+
+  @media screen and (max-width: 1000px){
+    .contact-form-container {
+display: block;
+    }
+    .consultation-text{
+      width: 60%;
+    }
+    .contact-form {
+    width: 60%;
+    }
+    .about-service {
+    width: 80%;
+}
+.about-service h2 {
+    font-size: 24px;
+}
+.consultation-text h2 {
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.contact-form h2 {
+    font-size: 24px;
+}
+.about-service, .services-gallery, .quote {
+    padding: 30px 0;
+}
+.services-gallery h2 {
+    padding: 30px;
+}
+.gallery-item {
+    margin-bottom: 0px;
+}
+.contact-form-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+  }
+
+  @media screen and (max-width: 700px){
+    .consultation-text{
+      width: 80%;
+    }
+    .contact-form {
+    width: 80%;
+    }
+    .hero {
+        height: 500px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .hero {
+        height: 460px;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    .hero {
+        height: 400px;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    .consultation-text{
+      width: 90%;
+    }
+    .contact-form {
+    width: 90%;
+    }
+    .hero {
+        height: 360px;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .consultation-text{
+      width: 96%;
+    }
+    .contact-form {
+    width: 96%;
+    }
+    .about-service{
+    width: 96%;
+  }
+  .hero {
+        height: 300px;
+    }
   }
 </style>
 <body>
@@ -263,8 +380,6 @@
     </div>
   </section>
 
-
-
   <section class="services-gallery">
     <div class="container">
       <h2>Types of interior paints and finishes</h2>
@@ -274,18 +389,14 @@
           <div class="gallery-item-info">
             <h3>Emulsion Paint</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Water-Based: Environmentally friendly and easy to clean.</li>
-                  <li>Quick Drying: Allows faster project completion.</li>
-                  <li>Durable: Resistant to moisture and stains.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Living Rooms</li>
-                  <li>Bedrooms</li>
-                  <li>Kitchens</li>
+                  <li>Water-based</li>
+                  <li>Environmentally friendly</li>
+                  <li>Easy to clean</li>
+                  <li>Quick-drying</li>
+                  <li>Durable</li>
+                  <li>Moisture-resistant</li>
                 </ul>
               </li>
             </ul>
@@ -297,18 +408,13 @@
           <div class="gallery-item-info">
             <h3>Acrylic Paint</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Flexible: Resistant to cracking.</li>
-                  <li>Quick Drying: Fast application process.</li>
-                  <li>Versatile: Suitable for various surfaces.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Living Rooms</li>
-                  <li>Bedrooms</li>
-                  <li>Bathrooms</li>
+                  <li>Flexible</li>
+                  <li>Does not crack</li>
+                  <li>Quick-drying</li>
+                  <li>Easy to apply</li>
+                  <li>Versatile</li>
                 </ul>
               </li>
             </ul>
@@ -320,18 +426,12 @@
           <div class="gallery-item-info">
             <h3>Oil Paint</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Durable: Long-lasting finish.</li>
-                  <li>Rich Texture: Smooth and glossy finish.</li>
-                  <li>High Coverage: Excellent opacity.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Trim</li>
-                  <li>Doors</li>
-                  <li>Cabinetry</li>
+                  <li>Strong</li>
+                  <li>Durable</li>
+                  <li>Smooth</li>
+                  <li>Opaque</li>
                 </ul>
               </li>
             </ul>
@@ -343,18 +443,12 @@
           <div class="gallery-item-info">
             <h3>Silicone Paint</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Water-Repellent: Prevents moisture damage.</li>
-                  <li>Breathable: Allows walls to breathe.</li>
-                  <li>Weather Resistant: Suitable for harsh conditions.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Bathrooms</li>
-                  <li>Kitchens</li>
-                  <li>Exteriors</li>
+                  <li>Water-repellent</li>
+                  <li>Air-premeable</li>
+                  <li>Resistant</li>
+                  <li>Verstile</li>
                 </ul>
               </li>
             </ul>
@@ -366,18 +460,14 @@
           <div class="gallery-item-info">
             <h3>Latex Paint</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Low VOC: Environmentally friendly.</li>
-                  <li>Easy Application: Smooth and even coverage.</li>
-                  <li>Durable: Long-lasting finish.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Living Rooms</li>
-                  <li>Bedrooms</li>
-                  <li>Hallways</li>
+                  <li>Eco-friendly.</li>
+                  <li>Easy to use</li>
+                  <li>Strong</li>
+                  <li>Durable</li>
+                  <li>Smooth</li>
+                  <li>Even in application</li>
                 </ul>
               </li>
             </ul>
@@ -387,20 +477,15 @@
         <div class="gallery-item">
           <img src="icon/6.png" alt="Decorative Plaster">
           <div class="gallery-item-info">
-            <h3>Decorative Plaster (Venetian Plaster)</h3>
+            <h3>Decorative Plaster</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Luxurious Finish: High-end, marble-like look.</li>
-                  <li>Durable: Resistant to cracking and peeling.</li>
-                  <li>Customizable: Matches any color scheme.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Feature Walls</li>
-                  <li>Hallways</li>
-                  <li>Living Rooms</li>
+                  <li>High quality</li>
+                  <li>Presentable</li>
+                  <li>Strong</li>
+                  <li>Resistant</li>
+                  <li>Marble-like</li>
                 </ul>
               </li>
             </ul>
@@ -412,18 +497,14 @@
           <div class="gallery-item-info">
             <h3>Wallpaper</h3>
             <ul>
-              <li><strong>Advantages:</strong>
+              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
-                  <li>Versatile Designs: Wide range of patterns and colors.</li>
-                  <li>Easy to Install: Simple application and removal.</li>
-                  <li>Durable: Resistant to wear and tear.</li>
-                </ul>
-              </li>
-              <li><strong>Best For:</strong>
-                <ul>
-                  <li>Accent Walls</li>
-                  <li>Children's Rooms</li>
-                  <li>Bedrooms</li>
+                  <li>Diverse</li>
+                  <li>Simple</li>
+                  <li>Durable</li>
+                  <li>Resistant</li>
+                  <li>Easy to use</li>
+                  <li>Washble</li>
                 </ul>
               </li>
             </ul>
