@@ -741,11 +741,6 @@ border-radius: 15px 15px 0 0;
   background-color: #555;
 }
 
-@media screen and (max-width: 1600px){
-.dropdown-menu{
-  max-width: 160px;
-}
-}
 
 @media screen and (max-width: 1400px){
 .item{
@@ -778,9 +773,6 @@ border-radius: 15px 15px 0 0;
 .footer_navigation-menu, 
 .footer-contacts {
   font-size: 18px;
-}
-.dropdown-menu{
-  max-width: 120px;
 }
 .footer_logo img {
     width: 150px;
@@ -971,9 +963,6 @@ margin-left: 0px;
   }
 }
   @media screen and (max-width: 540px){
-    .dropdown-menu2-mob {
-      width: 162px;
-  }
   .image_block {
     margin-top: -100px;
 }
