@@ -385,11 +385,9 @@ display: block;
       <h2>Types of interior paints and finishes</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="icon/1.png" alt="Emulsion Paint">
+          <img src="icon/emulsion.png" alt="Emulsion Paint">
           <div class="gallery-item-info">
             <h3>Emulsion Paint</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
                 <ul>
                   <li>Water-based</li>
                   <li>Environmentally friendly</li>
@@ -399,7 +397,6 @@ display: block;
                   <li>Moisture-resistant</li>
                 </ul>
               </li>
-            </ul>
           </div>
         </div>
   
@@ -421,22 +418,6 @@ display: block;
           </div>
         </div>
   
-        <div class="gallery-item">
-          <img src="icon/3.png" alt="Oil Paint">
-          <div class="gallery-item-info">
-            <h3>Oil Paint</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
-                <ul>
-                  <li>Strong</li>
-                  <li>Durable</li>
-                  <li>Smooth</li>
-                  <li>Opaque</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
   
         <div class="gallery-item">
           <img src="icon/4.png" alt="Silicone Paint">
@@ -641,5 +622,140 @@ display: block;
       </div>
     </div>
   </footer>
+  <button id="backToTopBtn" title="Go to top">⬆️</button>
+  <div id="whatsapp-icon" style="display:none;">
+    <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
+      <span>start chat...</span>
+      <img src="whatsapp1.png" alt="WhatsApp Icon">
+    </a>
+    <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
+  </div>
+  <script>
+    // Active menu and smooth scroll to section
+    document.addEventListener('DOMContentLoaded', function() {
+      var currentUrl = window.location.href;
+      var menuLinks = document.querySelectorAll('.item-menu');
+      for (var i = 0; i < menuLinks.length; i++) {
+        var linkUrl = menuLinks[i].getAttribute('href');
+        if (currentUrl === linkUrl) {
+          menuLinks[i].classList.add('active');
+        }
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var toggles2 = document.querySelectorAll('.dropdown-toggle2');
+
+      toggles2.forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+          event.stopPropagation();
+          var menu = this.nextElementSibling;
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        });
+      });
+
+      document.body.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown2')) {
+          var menus = document.querySelectorAll('.mob-menu .dropdown-menu2');
+          menus.forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+        }
+      });
+    });
+
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector("[data-menu-open]"),
+        closeMenuBtn: document.querySelector("[data-menu-close]"),
+        menu: document.querySelector("[data-menu]"),
+        body: document.querySelector("body"),
+        menuList: document.querySelector(".mob-list"),
+      };
+
+      refs.openMenuBtn.addEventListener("click", toggleMenu);
+      refs.closeMenuBtn.addEventListener("click", toggleMenu);
+      refs.menuList.addEventListener("click", removeMenu);
+
+      function toggleMenu() {
+        refs.menu.classList.toggle("is-hidden");
+        refs.body.classList.toggle("no-scroll");
+      }
+      function removeMenu() {
+        refs.menu.classList.add("is-hidden");
+        refs.body.classList.remove("no-scroll");
+      }
+    })();
+
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("backToTopBtn").style.display = "block";
+      } else {
+        document.getElementById("backToTopBtn").style.display = "none";
+      }
+    }
+
+    document.getElementById("backToTopBtn").addEventListener("click", function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        let targetId = this.getAttribute('href');
+        let target = document.querySelector(targetId);
+        if (target) {
+          let headerHeight = document.querySelector('.header').offsetHeight;
+          let targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Mobile menu
+    document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const mobMenu = document.querySelector(".mob-menu");
+        mobMenu.classList.add("is-hidden");
+        document.body.classList.remove("no-scroll");
+
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerHeight = document.querySelector('.header').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // WhatsApp button
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('whatsapp-icon').style.display = 'block';
+      }, 5000);
+    }
+
+    function closeWhatsAppIcon() {
+      document.getElementById('whatsapp-icon').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
