@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Exterior Painting Services | MBVS LTD</title>
+</head>
+<style>
+  .hero{
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .about-service, .services-gallery, .quote {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .about-service{
+    width: 40%;
+    margin: 0 auto;
+  }
+  .about-service p{
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #353232;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .services-gallery{
+    background-color: #222222;
+    color:white;
+  }
+  .services-gallery p{
+    color:#F7F7F7;
+  }
+  .services-gallery h2{
+    padding: 50px;
+  }
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .gallery-item {
+    padding: 20px;
+    background: #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  transition: transform 0.3s ease;
+  color: #fff;
+  }
+  .gallery-item:hover{
+    transform: scale(1.05);
+  }
+  .gallery-item img {
+    width: 100px;
+    border-radius: 10px;
+  }
+  .gallery-item-info {
+    margin-top: 10px;
+  }
+  .quote form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .quote form input, .quote form textarea {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .quote form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    }
+
+    .contact-form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }
+    .contact-form-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    }
+    .contact-form {
+    width: 30%;
+    margin: 0 auto;
+    }
+    .contact-form h2 {
+      margin-bottom: 26px;
+      font-size: 28px;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #333;
+    }
+    .consultation-text{
+      width: 30%;
+      margin: 0 auto;
+      font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #353232;
+    text-align: justify;
+    text-justify: inter-word;
+    }
+    .about-service h2{
+      padding: 20px;
+      font-size: 28px;
+    }
+    .consultation-text h2{
+      padding-bottom: 20px;
+      font-size: 28px;
+    }
+    .consultation-text-second{
+      padding-top: 20px;
+    }
+    .gallery-item-info h3 {
+    margin-bottom: 10px;
+  }
+  .gallery-item-info ul {
+    margin-top: 0;
+  }
+  .advantages_list{
+    padding: 10px;
+  }
+  .bold-text{
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  ul{
+    list-style: none;
+  }
+  @media screen and (max-width: 1600px){
+    .hero {
+    height: 600px;
+}
+    .consultation-text{
+      width: 40%;
+    }
+    .contact-form {
+    width: 40%;
+    }
+
+  }
+
+  @media screen and (max-width: 1200px){
+  
+    .about-service {
+    width: 60%;
+}
+
+  }
+
+
+
+  @media screen and (max-width: 1000px){
+    .contact-form-container {
+display: block;
+    }
+    .consultation-text{
+      width: 60%;
+    }
+    .contact-form {
+    width: 60%;
+    }
+    .about-service {
+    width: 80%;
+}
+.about-service h2 {
+    font-size: 24px;
+}
+.consultation-text h2 {
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.contact-form h2 {
+    font-size: 24px;
+}
+.about-service, .services-gallery, .quote {
+    padding: 30px 0;
+}
+.services-gallery h2 {
+    padding: 30px;
+}
+.gallery-item {
+    margin-bottom: 0px;
+}
+.contact-form-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+  }
+
+  @media screen and (max-width: 700px){
+    .consultation-text{
+      width: 80%;
+    }
+    .contact-form {
+    width: 80%;
+    }
+    .hero {
+        height: 500px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .hero {
+        height: 460px;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    .hero {
+        height: 400px;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    .consultation-text{
+      width: 90%;
+    }
+    .contact-form {
+    width: 90%;
+    }
+    .hero {
+        height: 360px;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .consultation-text{
+      width: 96%;
+    }
+    .contact-form {
+    width: 96%;
+    }
+    .about-service{
+    width: 96%;
+  }
+  .hero {
+        height: 300px;
+    }
+  }
+</style>
+<body>
+  <header class="header">
+    <div class="container main-container">
+      <a class="logo" href="index.html">
+        <img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo">
+      </a>
+      <nav class="navigation-menu" id="main-nav">
+        <ul class="list mob-list">
+          <li class="item">
+            <a class="item-menu" href="index.html">HOME</a>
+          </li>
+          <li class="item">
+            <a class="item-menu" href="index.html#about-us">ABOUT US</a>
+          </li>
+          <li class="item dropdown">
+            <a class="item-menu" href="index.html#our-services">SERVICES</a>
+            <ul class="dropdown-menu">
+              <li><a href="interior.html">Interior</a></li>
+              <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
+              <li><a href="#exterior-painting">Exterior</a></li>
+              <li><a href="#commercial-painting">Commercial</a></li>
+              <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
+              <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
+              <li><a href="#plastering-repairs">Plastering & Repairs</a></li>
+              <li><a href="#woodwork-metalwork-painting">Woodwork & Metalwork</a></li>
+            </ul>
+          </li>
+          <!-- <li class="item">
+            <a class="item-menu" href="index.html#proj">PROJECTS</a>
+          </li> -->
+          <li class="item">
+            <a class="item-menu" href="contacts.html">CONTACTS</a>
+          </li>
+        </ul>
+      </nav>
+      <div type="text" class="menu-open" data-menu-open>
+        <img class="z" src="img/menu.svg" alt="Mobile menu" width="35" height="35">
+      </div>
+    </div>
+    <div class="mob-menu is-hidden mob-container" data-menu>
+      <div class="mob-wrapp">
+        <div type="text" class="menu-close" data-menu-close>
+          <img src="img/clear.svg" alt="Button clear" width="35" height="35">
+        </div>
+        <nav class="nav-menu">
+          <ul class="mob-list">
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="index.html">НOME</a>
+            </li>
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="index.html#about-us">ABOUT US</a>
+            </li>
+            <li class="mob-list_item dropdown2">
+              <a class="mob-list_link" href="index.html#our-services">SERVICES</a>
+              <button class="dropdown-toggle2">▼</button>
+              <ul class="dropdown-menu2">
+                <li><a href="interior.html">Interior</a></li>
+                <li><a href="exterior.html">Exterior</a></li>
+                <li><a href="commercial.html">Commercial</a></li>
+                <li><a href="wallpapering.html">Wallpapering & Decorating</a></li>
+                <li><a href="furniture.html">Furniture & Finishing</a></li>
+                <li><a href="plastering.html">Plastering & Repairs</a></li>
+                <li><a href="woodwork.html">Woodwork & Metalwork</a></li>
+              </ul>
+            </li>
+            <!-- <li class="mob-list_item">
+              <a class="mob-list_link" href="index.html#proj">PROJECTS</a>
+            </li> -->
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="contacts.html">CONTACTS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="background-image: url('serv/2.webp');">
+    <div class="hero-content">
+    </div>
+  </section>
+
+  <!-- About Service Section -->
+  <section class="about-service">
+    <div class="container">
+        <h2>Exterior Painting</h2>
+        <p>Our exterior painting services are designed to protect and enhance the beauty of your property. We use high-quality paints and materials to ensure a durable and long-lasting finish. Whether it's a residential or commercial project, our team is equipped to handle all your exterior painting needs.</p>
+        <p>At MBVSLTD, we understand the importance of proper surface preparation and the application of the right paint for different surfaces and weather conditions. Our experts are committed to delivering exceptional results that not only improve the appearance of your property but also provide protection against the elements.</p>
+        <p>From color consultation to final inspection, we work closely with our clients to achieve their desired look and ensure complete satisfaction with our services.</p>
+    </div>
+  </section>
+
+  <section class="services-gallery">
+    <div class="container">
+      <h2>Types of Exterior Paints and Finishes</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="icon/exterior_acrylic.png" alt="Acrylic Exterior Paint">
+          <div class="gallery-item-info">
+            <h3>Acrylic Exterior Paint</h3>
+                <ul>
+                  <li>Durable</li>
+                  <li>UV resistant</li>
+                  <li>Water-resistant</li>
+                  <li>Quick-drying</li>
+                </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/exterior_oil.png" alt="Oil-Based Exterior Paint">
+          <div class="gallery-item-info">
+            <h3>Oil-Based Exterior Paint</h3>
+            <ul>
+              <li>Highly durable</li>
+              <li>Glossy finish</li>
+              <li>Excellent adhesion</li>
+              <li>Great for harsh climates</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/exterior_elastomeric.png" alt="Elastomeric Paint">
+          <div class="gallery-item-info">
+            <h3>Elastomeric Paint</h3>
+            <ul>
+              <li>Weather-resistant</li>
+              <li>High flexibility</li>
+              <li>Crack bridging</li>
+              <li>Waterproof</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/exterior_stain.png" alt="Exterior Stain">
+          <div class="gallery-item-info">
+            <h3>Exterior Stain</h3>
+            <ul>
+              <li>Deep penetration</li>
+              <li>Natural wood appearance</li>
+              <li>UV protection</li>
+              <li>Water-resistant</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/exterior_masonry.png" alt="Masonry Paint">
+          <div class="gallery-item-info">
+            <h3>Masonry Paint</h3>
+            <ul>
+              <li>Weather-resistant</li>
+              <li>Protects against moisture</li>
+              <li>Breathable</li>
+              <li>Durable finish</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="gallery-item">
+          <img src="icon/exterior_waterproofing.png" alt="Waterproofing Paint">
+          <div class="gallery-item-info">
+            <h3>Waterproofing Paint</h3>
+            <ul>
+              <li>High waterproofing ability</li>
+              <li>Resists mold and mildew</li>
+              <li>Durable</li>
+              <li>Long-lasting protection</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Quote Section -->
+<section class="contact-form-section">
+  <div class="contact-form-container">
+    <div class="consultation-text">
+      <div>
+      <h2>Choosing the Right Paint for Your Exterior</h2>
+      <p>Selecting the right paint for your exterior project is crucial for ensuring durability and a great appearance. Factors like the material of your surfaces, the local climate, and your personal preferences all play a role. Our team at MBVSLTD can help you make the best choice to achieve lasting and beautiful results.</p>
+    </div>
+      <div class="consultation-text-second">
+      <h2>Professional Consultation</h2>
+      <p>Not sure which paint is best for your exterior project? Our experts at MBVSLTD are here to help. Contact us for a consultation, and we'll guide you in choosing the perfect materials to transform your property.</p>
+    </div>
+    </div>
+    <form class="contact-form">
+      <h2>Get a quote from our expert team today</h2>
+      <label for="fullName">Full Name *</label>
+      <input type="text" id="fullName" name="fullName" required>
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+      <label for="phone">Phone *</label>
+      <input type="tel" id="phone" name="phone" required>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location">
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">SEND NOW</button>
+    </form>
+  </div>
+</section>
+
+
+  <footer class="footer_bg">
+    <div class="footer-block">
+      <div class="a">
+        <div class="wrap_logo" style="display: flex;flex-direction: column;">
+          <a class="footer_logo_link" href="index.html">
+            <span class="footer_logo">
+              <img src="img/logo/8smol.png" alt="Master Builders VS LTD Logo" oncontextmenu="return false;">
+            </span>
+          </a>
+        </div>
+        <div class="footer-menu">
+          <nav class="footer_navigation-menu">
+            <ul class="footer_list_menu">
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html">HOME</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html#about-us">ABOUT US</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html#our-services">SERVICES</a>
+              </li>
+              <!-- <li class="footer_item_menu">
+                <a class="footer_menu_link" href="index.html#proj">PROJECTS</a>
+              </li> -->
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="contacts.html">CONTACTS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="b">
+        <div class="footer_services">
+          <nav class="footer_nav-menu">
+            <ul class="footer_list_categories">
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="interior.html">Interior</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="exterior.html">Exterior</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="commercial.html">Commercial</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="wallpapering.html">Wallpapering & Decorating</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="furniture.html">Furniture & Finishing</a>
+              </li>
+              <li class="footer_item_categories">
+                <a class="footer_categories_link" href="plastering.html">Plastering & Repairs</a>
+              </li>
+              <li class="footer_item_categories"> 
+                <a class="footer_categories_link" href="woodwork.html">Woodwork & Metalwork</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-contacts">
+          <h3 class="title_contacts">Contacts</h3>
+          <address>
+            <ul class="footer_list_menu">
+              <li class="list-footer-item"><a class="foter-contacts-mail" href="mailto:project@mbvsltd.com">project@mbvsltd.com</a></li>
+              <li class="list-footer-item"><a class="foter-contacts-tel" href="tel:075 2545 9552">075 2545 9552</a></li>
+              <li class="list-footer-item"><a class="foter-contacts-tel" href="tel:020 3539 1924">020 3539 1924</a></li>
+            </ul>
+          </address>
+          <div class="sety_footer">
+            <a href="https://www.yell.com/biz/master-builders-vs-ltd-harrow-8851698/" target="_blank">
+              <img class="yell_footer" src="440-4400705_find-us-on-yell-clipart-png-download-yell.png" alt="Yell" style="width: 35px; height: 35px;background-color: #03031a;border-radius: 8px;">
+            </a>
+            <a href="https://www.linkedin.com/in/vitalii-sopit-8ba5b5162/" target="_blank">
+              <img class="in_footer" src="in.jpeg" alt="LinkedIn" style="width: 35px; height: 35px;background-color: #03031a;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61551452585348" target="_blank">
+              <img class="in_footer" src="facebook1.webp" alt="Facebook" style="width: 35px; height: 35px; background-color: #03031a;">
+            </a>
+            <a href="https://www.instagram.com/masterbuildersvsltd/?next=%2F" target="_blank">
+              <img class="in_footer" src="new-instagram-logo-white-border-icon-png-large.png" alt="Instagram" style="width: 35px; height: 35px;background-color: #03031a;">
+            </a>
+            <a href="https://wa.me/447525459552?text=Online%20assistance%20here" target="_blank">
+              <img class="in_footer" src="whaapp.jpg" alt="WhatsApp" style="width: 35px; height: 35px;background-color: #03031a;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTopBtn" title="Go to top">⬆️</button>
+  <div id="whatsapp-icon" style="display:none;">
+    <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
+      <!-- <span>start chat...</span> -->
+      <img src="whaapp.png" alt="WhatsApp Icon">
+    </a>
+    <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
+  </div>
+  <script>
+    // Active menu and smooth scroll to section
+    document.addEventListener('DOMContentLoaded', function() {
+      var currentUrl = window.location.href;
+      var menuLinks = document.querySelectorAll('.item-menu');
+      for (var i = 0; i < menuLinks.length; i++) {
+        var linkUrl = menuLinks[i].getAttribute('href');
+        if (currentUrl === linkUrl) {
+          menuLinks[i].classList.add('active');
+        }
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var toggles2 = document.querySelectorAll('.dropdown-toggle2');
+
+      toggles2.forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+          event.stopPropagation();
+          var menu = this.nextElementSibling;
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        });
+      });
+
+      document.body.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown2')) {
+          var menus = document.querySelectorAll('.mob-menu .dropdown-menu2');
+          menus.forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+        }
+      });
+    });
+
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector("[data-menu-open]"),
+        closeMenuBtn: document.querySelector("[data-menu-close]"),
+        menu: document.querySelector("[data-menu]"),
+        body: document.querySelector("body"),
+        menuList: document.querySelector(".mob-list"),
+      };
+
+      refs.openMenuBtn.addEventListener("click", toggleMenu);
+      refs.closeMenuBtn.addEventListener("click", toggleMenu);
+      refs.menuList.addEventListener("click", removeMenu);
+
+      function toggleMenu() {
+        refs.menu.classList.toggle("is-hidden");
+        refs.body.classList.toggle("no-scroll");
+      }
+      function removeMenu() {
+        refs.menu.classList.add("is-hidden");
+        refs.body.classList.remove("no-scroll");
+      }
+    })();
+
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("backToTopBtn").style.display = "block";
+      } else {
+        document.getElementById("backToTopBtn").style.display = "none";
+      }
+    }
+
+    document.getElementById("backToTopBtn").addEventListener("click", function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        let targetId = this.getAttribute('href');
+        let target = document.querySelector(targetId);
+        if (target) {
+          let headerHeight = document.querySelector('.header').offsetHeight;
+          let targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Mobile menu
+    document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const mobMenu = document.querySelector(".mob-menu");
+        mobMenu.classList.add("is-hidden");
+        document.body.classList.remove("no-scroll");
+
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerHeight = document.querySelector('.header').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // WhatsApp button
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('whatsapp-icon').style.display = 'block';
+      }, 5000);
+    }
+
+    function closeWhatsAppIcon() {
+      document.getElementById('whatsapp-icon').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
