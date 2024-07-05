@@ -6,11 +6,11 @@
     <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Exterior Painting Services | MBVS LTD</title>
+    <title>Exterior Services | MBVSLTD</title>
 </head>
 <style>
   .hero{
-    height: 800px;
+    height: 700px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -43,7 +43,7 @@
     color:#F7F7F7;
   }
   .services-gallery h2{
-    padding: 50px;
+    padding-bottom: 50px;
   }
   .gallery {
     display: flex;
@@ -176,6 +176,75 @@
   ul{
     list-style: none;
   }
+
+
+
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    width: 60%;
+    margin: 0 auto;
+
+  }
+  .image-gallery img {
+width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+
+  .image-gallery img:hover {
+  transform: scale(1.05);
+
+  }
+  .image_block2 {
+    position: relative;
+    width: 100%;
+  }
+  .text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(26 22 22 / 50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    flex-direction: row; /* Вирівнювання в рядок */
+    justify-content: space-around; /* Розподіл простору між блоками */
+    color: #ccc;
+    border-radius: 20px;
+    width: 90%; /* Ширина контейнера з блоками */
+}
+
+.text-block-item {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-right: 10px; /* Відступ між блоками */
+    flex: 1; /* Гнучка ширина блоків */
+    max-width: 30%; /* Максимальна ширина кожного блоку */
+    border-radius: 20px;
+}
+
+.text-block-item:last-child {
+    margin-right: 0; /* Відсутність відступу у останнього блоку */
+}
+
+.text-block h3 {
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
   @media screen and (max-width: 1600px){
     .hero {
     height: 600px;
@@ -194,7 +263,23 @@
     .about-service {
     width: 60%;
 }
+.image-gallery {
+    width: 80%;
+}
+.image_bl img{
+  height: 600px;
+}
+.text-block {
+        flex-direction: column; /* Зміна напрямку на стовпчик */
+        width: 90%; /* Ширина контейнера з блоками */
+    }
 
+    .text-block-item {
+        margin-right: 0; /* Відсутність відступу між блоками */
+        margin-bottom: 10px; /* Відступ знизу між блоками */
+        max-width: 100%; /* Максимальна ширина кожного блоку */
+        display: flex;
+    }
   }
 
 
@@ -235,8 +320,26 @@ display: block;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.hero {
+        height: 500px;
+    }
+.text-block {
+    width: 100%;
+}
   }
 
+  @media screen and (max-width: 800px){
+    .text-block {
+    width: 100%;
+}
+    .text-block-item {
+        display: block;
+        text-align: center;
+    }
+    .image_bl img {
+        height: 1200px;
+    }
+}
   @media screen and (max-width: 700px){
     .consultation-text{
       width: 80%;
@@ -245,13 +348,17 @@ display: block;
     width: 80%;
     }
     .hero {
-        height: 500px;
+        height: 400px;
     }
+
+.text-block h2 {
+    padding-bottom: 10px;
+  }
   }
 
   @media screen and (max-width: 600px){
     .hero {
-        height: 460px;
+        height: 360px;
     }
   }
 
@@ -270,6 +377,15 @@ display: block;
     }
     .hero {
         height: 360px;
+    }
+    .text-block {
+        width: 100%;
+    }
+    .text-block ul {
+    font-size: 1em;
+}
+.image_bl img {
+        height: 1400px;
     }
   }
   @media screen and (max-width: 320px){
@@ -305,7 +421,6 @@ display: block;
             <a class="item-menu" href="index.html#our-services">SERVICES</a>
             <ul class="dropdown-menu">
               <li><a href="interior.html">Interior</a></li>
-              <li><a href="#gutting_serv">Custom Tile Cutting</a></li>
               <li><a href="#exterior-painting">Exterior</a></li>
               <li><a href="#commercial-painting">Commercial</a></li>
               <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
@@ -364,7 +479,7 @@ display: block;
     </div>
   </header>
 
-  <section class="hero" style="background-image: url('serv/2.webp');">
+  <section class="hero" style="background-image: url('serv/2.jpg');">
     <div class="hero-content">
     </div>
   </section>
@@ -372,111 +487,166 @@ display: block;
   <!-- About Service Section -->
   <section class="about-service">
     <div class="container">
-        <h2>Exterior Painting</h2>
-        <p>Our exterior painting services are designed to protect and enhance the beauty of your property. We use high-quality paints and materials to ensure a durable and long-lasting finish. Whether it's a residential or commercial project, our team is equipped to handle all your exterior painting needs.</p>
-        <p>At MBVSLTD, we understand the importance of proper surface preparation and the application of the right paint for different surfaces and weather conditions. Our experts are committed to delivering exceptional results that not only improve the appearance of your property but also provide protection against the elements.</p>
-        <p>From color consultation to final inspection, we work closely with our clients to achieve their desired look and ensure complete satisfaction with our services.</p>
+        <h2>Exterior painting</h2>
+        <p>Interior painting is more than just a cosmetic upgrade; it’s about transforming spaces to enhance the overall ambiance and functionality. Our interior painting services are designed to deliver high-quality finishes, whether you're looking to refresh a single room or undertake a complete home makeover.</p>
+        <p>The MBVSLTD team strives to transform your space into a stylish and functional environment that meets your needs and preferences. With over 11 years of combined experience, we guarantee top-notch workmanship and meticulous attention to detail in every project.</p>
+        <p>From modern minimalism to classic elegance, we work closely with our clients to understand their vision and bring it to life through innovative design solutions and advanced techniques.</p>
     </div>
   </section>
 
   <section class="services-gallery">
     <div class="container">
-      <h2>Types of Exterior Paints and Finishes</h2>
+      <h2>Types of interior paints and finishes</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="icon/exterior_acrylic.png" alt="Acrylic Exterior Paint">
+          <!-- <img src="icon/mineral.png" alt="Mineral Paint"> -->
           <div class="gallery-item-info">
-            <h3>Acrylic Exterior Paint</h3>
-                <ul>
-                  <li>Durable</li>
-                  <li>UV resistant</li>
-                  <li>Water-resistant</li>
-                  <li>Quick-drying</li>
-                </ul>
-          </div>
-        </div>
-  
-        <div class="gallery-item">
-          <img src="icon/exterior_oil.png" alt="Oil-Based Exterior Paint">
-          <div class="gallery-item-info">
-            <h3>Oil-Based Exterior Paint</h3>
+            <h3>Mineral Paint</h3>
             <ul>
-              <li>Highly durable</li>
-              <li>Glossy finish</li>
-              <li>Excellent adhesion</li>
-              <li>Great for harsh climates</li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="gallery-item">
-          <img src="icon/exterior_elastomeric.png" alt="Elastomeric Paint">
-          <div class="gallery-item-info">
-            <h3>Elastomeric Paint</h3>
-            <ul>
+              <li>Air-permeable</li>
+              <li>UV-resistant</li>
               <li>Weather-resistant</li>
-              <li>High flexibility</li>
-              <li>Crack bridging</li>
-              <li>Waterproof</li>
+              <li>Radiation protection</li>
             </ul>
           </div>
         </div>
   
         <div class="gallery-item">
-          <img src="icon/exterior_stain.png" alt="Exterior Stain">
+          <!-- <img src="icon/acrylic.png" alt="Acrylic Paint"> -->
           <div class="gallery-item-info">
-            <h3>Exterior Stain</h3>
+            <h3>Acrylic Paint</h3>
             <ul>
-              <li>Deep penetration</li>
-              <li>Natural wood appearance</li>
-              <li>UV protection</li>
+              <li>Highly elastic</li>
+              <li>Crack-resistant</li>
+              <li>Quick-drying</li>
               <li>Water-resistant</li>
             </ul>
           </div>
         </div>
   
         <div class="gallery-item">
-          <img src="icon/exterior_masonry.png" alt="Masonry Paint">
+          <!-- <img src="icon/silicone.png" alt="Silicone Paint"> -->
           <div class="gallery-item-info">
-            <h3>Masonry Paint</h3>
+            <h3>Silicone Paint</h3>
             <ul>
-              <li>Weather-resistant</li>
-              <li>Protects against moisture</li>
-              <li>Breathable</li>
-              <li>Durable finish</li>
+              <li>Stain-resistant</li>
+              <li>Self-cleaning</li>
+              <li>Long-lasting</li>
+              <li>Elegant appearance</li>
             </ul>
           </div>
         </div>
   
         <div class="gallery-item">
-          <img src="icon/exterior_waterproofing.png" alt="Waterproofing Paint">
+          <!-- <img src="icon/silicate.png" alt="Silicate Paint"> -->
           <div class="gallery-item-info">
-            <h3>Waterproofing Paint</h3>
+            <h3>Silicate Paint</h3>
             <ul>
-              <li>High waterproofing ability</li>
-              <li>Resists mold and mildew</li>
-              <li>Durable</li>
-              <li>Long-lasting protection</li>
+              <li>Made from liquid glass</li>
+              <li>Highly durable</li>
+              <li>Weather-resistant</li>
+              <li>Requires special surface preparation</li>
             </ul>
           </div>
         </div>
-        
       </div>
     </div>
   </section>
   
   
-  <!-- Quote Section -->
+  <section class="image-gallery">
+
+    <img src="img/interior/istockphoto-1043549632-612x612.jpg" alt="Gallery Image 2">
+    <img src="img/interior/istockphoto-883706618-612x612.jpg" alt="Gallery Image 1">
+    <img src="img/interior/istockphoto-486919821-612x612.jpg" alt="Gallery Image 3">
+    <img src="img/interior/istockphoto-991245820-612x612.jpg" alt="Gallery Image 4">
+    <img src="img/interior/istockphoto-1210123439-612x612.jpg" alt="Gallery Image 5">
+    <img src="img/interior/istockphoto-1933752815-612x612.jpg" alt="Gallery Image 6">
+    <img src="img/interior/istockphoto-1194761614-612x612.jpg" alt="Gallery Image 7">
+    <img src="img/interior/istockphoto-1208205959-612x612.jpg" alt="Gallery Image 8">
+    <img src="img/interior/istockphoto-828530074-612x612.jpg" alt="Gallery Image 9">
+  </section>
+  
+  <div class="image_block2 image_bl" style="position: relative;">
+    <img src="istockphoto-1040476622-612x612.jpg" alt="Painting Image" style="width: 100%;">
+    <div class="text-block">
+        <div class="text-block-item">
+          <div>
+            <h3>By Surface Type:</h3>
+            <p><strong>Mineral Surfaces</strong></p>
+            <p>Brick, concrete, stone painting.</p>
+            <p>Use high breathability paints to prevent moisture buildup.</p>
+          </div>
+            <br>
+
+            <div>
+            <p><strong>Organic Surfaces</strong></p>
+            <p>Wood, plywood, fiberboard.</p>
+            <p>Select highly elastic paints to accommodate material expansion and contraction.</p>
+          </div> <br>
+            <div>
+            <p><strong>Metal Surfaces</strong></p>
+            <p>Metal facades, fences.</p>
+            <p>Use anti-corrosion primers and paints.</p>
+          </div>
+        </div>
+        
+        <div class="text-block-item">
+          <div>
+            <h3>By Application Method:</h3>
+            <p><strong>Mechanized Application</strong></p>
+            <p>Using paint sprayers.</p>
+            <p>Suitable for large areas, ensures even coverage.</p>
+          </div>
+            <br>
+            <div>
+            <p><strong>Manual Application</strong></p>
+            <p>Using brushes, rollers.</p>
+            <p>Suitable for details and hard-to-reach places.</p>
+          </div>
+            <br>
+            <div>
+            <p><strong>Combined Application</strong></p>
+            <p>Combining different methods for optimal results.</p>
+          </div>
+        </div>
+        
+        <div class="text-block-item">
+          <div>
+            <h3>By Work Stages:</h3>
+            <p><strong>Preparatory Work</strong></p>
+            <p>Cleaning surface from dust, dirt, old paint.</p>
+            <p>Priming the surface.</p>
+          </div>
+            <br>
+            <div>
+            <p><strong>Main Work</strong></p>
+            <p>Applying the base coat of paint.</p>
+            <p>Using multiple layers for even coverage.</p>
+          </div>
+            <br>
+            <div>
+            <p><strong>Finishing Work</strong></p>
+            <p>Applying protective coatings (varnishes, water repellents).</p>
+            <p>Removing masking tape, cleaning the workspace.</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+  
+
+<!-- Quote Section -->
 <section class="contact-form-section">
   <div class="contact-form-container">
     <div class="consultation-text">
       <div>
-      <h2>Choosing the Right Paint for Your Exterior</h2>
-      <p>Selecting the right paint for your exterior project is crucial for ensuring durability and a great appearance. Factors like the material of your surfaces, the local climate, and your personal preferences all play a role. Our team at MBVSLTD can help you make the best choice to achieve lasting and beautiful results.</p>
+      <h2>Choosing the right finish for your space</h2>
+      <p>When selecting finishes for your interior project, consider the specific needs and style of each room. High-traffic areas like hallways and kitchens benefit from durable, easy-to-clean finishes like satin or semi-gloss paint. For living rooms and bedrooms, matte or eggshell paints offer a rich, inviting look, while decorative plaster and wallpaper can add unique textures and patterns to enhance the overall aesthetic.</p>
     </div>
       <div class="consultation-text-second">
-      <h2>Professional Consultation</h2>
-      <p>Not sure which paint is best for your exterior project? Our experts at MBVSLTD are here to help. Contact us for a consultation, and we'll guide you in choosing the perfect materials to transform your property.</p>
+      <h2>Professional consultation</h2>
+      <p>Not sure which finish is best for your project? Our experts at MBVSLTD are here to help. Contact us for a consultation, and we'll guide you in choosing the perfect materials to transform your space.</p>
     </div>
     </div>
     <form class="contact-form">
