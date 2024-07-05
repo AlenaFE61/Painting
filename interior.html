@@ -10,7 +10,7 @@
 </head>
 <style>
   .hero{
-    height: 800px;
+    height: 700px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -43,7 +43,7 @@
     color:#F7F7F7;
   }
   .services-gallery h2{
-    padding: 50px;
+    padding-bottom: 50px;
   }
   .gallery {
     display: flex;
@@ -176,6 +176,78 @@
   ul{
     list-style: none;
   }
+
+
+
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    width: 60%;
+    margin: 0 auto;
+
+  }
+  .image-gallery img {
+width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+
+  .image-gallery img:hover {
+  transform: scale(1.05);
+
+  }
+  .image_block2 {
+    position: relative;
+    width: 100%;
+  }
+
+  .image_block2 img {
+    width: 100%;
+    height: 500px;
+  }
+
+  .text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 40%; */
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ccc;
+    border-radius: 20px;
+  }
+
+  .text-block h2 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .text-block ul {
+    text-align: left;
+    padding: 20px;
+    font-size: 1.2em;
+  }
+
+  .text-block ul li::before {
+    content: "\2714"; /* Unicode for checkmark */
+    position: absolute;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
   @media screen and (max-width: 1600px){
     .hero {
     height: 600px;
@@ -194,7 +266,9 @@
     .about-service {
     width: 60%;
 }
-
+.image-gallery {
+    width: 80%;
+}
   }
 
 
@@ -235,6 +309,12 @@ display: block;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.image_block2 img {
+    height: 400px;
+}
+.text-block {
+    width: 60%;
+}
   }
 
   @media screen and (max-width: 700px){
@@ -247,6 +327,17 @@ display: block;
     .hero {
         height: 500px;
     }
+
+    .image_block2 img {
+    height: 300px;
+}
+.text-block h2 {
+    padding-bottom: 10px;
+  }
+    .text-block {
+    width: 80%;
+    color:white;
+}
   }
 
   @media screen and (max-width: 600px){
@@ -271,6 +362,12 @@ display: block;
     .hero {
         height: 360px;
     }
+    .text-block {
+        width: 100%;
+    }
+    .text-block ul {
+    font-size: 1em;
+}
   }
   @media screen and (max-width: 320px){
     .consultation-text{
@@ -384,7 +481,7 @@ display: block;
       <h2>Types of interior paints and finishes</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="icon/emulsion.png" alt="Emulsion Paint">
+          <!-- <img src="icon/emulsion.png" alt="Emulsion Paint"> -->
           <div class="gallery-item-info">
             <h3>Emulsion Paint</h3>
                 <ul>
@@ -400,11 +497,10 @@ display: block;
         </div>
   
         <div class="gallery-item">
-          <img src="icon/2.png" alt="Acrylic Paint">
+          <!-- <img src="icon/2.png" alt="Acrylic Paint"> -->
           <div class="gallery-item-info">
             <h3>Acrylic Paint</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
+
                 <ul>
                   <li>Flexible</li>
                   <li>Does not crack</li>
@@ -412,35 +508,31 @@ display: block;
                   <li>Easy to apply</li>
                   <li>Versatile</li>
                 </ul>
-              </li>
-            </ul>
+
           </div>
         </div>
   
   
         <div class="gallery-item">
-          <img src="icon/4.png" alt="Silicone Paint">
+          <!-- <img src="icon/4.png" alt="Silicone Paint"> -->
           <div class="gallery-item-info">
             <h3>Silicone Paint</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
+
                 <ul>
                   <li>Water-repellent</li>
                   <li>Air-premeable</li>
                   <li>Resistant</li>
                   <li>Verstile</li>
                 </ul>
-              </li>
-            </ul>
+
           </div>
         </div>
   
         <div class="gallery-item">
-          <img src="icon/5 (1).png" alt="Latex Paint">
+          <!-- <img src="icon/5 (1).png" alt="Latex Paint"> -->
           <div class="gallery-item-info">
             <h3>Latex Paint</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
+
                 <ul>
                   <li>Eco-friendly.</li>
                   <li>Easy to use</li>
@@ -449,17 +541,15 @@ display: block;
                   <li>Smooth</li>
                   <li>Even in application</li>
                 </ul>
-              </li>
-            </ul>
+
           </div>
         </div>
   
         <div class="gallery-item">
-          <img src="icon/6.png" alt="Decorative Plaster">
+          <!-- <img src="icon/6.png" alt="Decorative Plaster"> -->
           <div class="gallery-item-info">
             <h3>Decorative Plaster</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
+
                 <ul>
                   <li>High quality</li>
                   <li>Presentable</li>
@@ -467,17 +557,15 @@ display: block;
                   <li>Resistant</li>
                   <li>Marble-like</li>
                 </ul>
-              </li>
-            </ul>
+
           </div>
         </div>
   
         <div class="gallery-item">
-          <img src="icon/7.png" alt="Wallpaper">
+          <!-- <img src="icon/7.png" alt="Wallpaper"> -->
           <div class="gallery-item-info">
             <h3>Wallpaper</h3>
-            <ul>
-              <li class="advantages_list"><strong>Advantages:</strong><br><br>
+
                 <ul>
                   <li>Diverse</li>
                   <li>Simple</li>
@@ -486,8 +574,7 @@ display: block;
                   <li>Easy to use</li>
                   <li>Washble</li>
                 </ul>
-              </li>
-            </ul>
+
           </div>
         </div>
         
@@ -496,9 +583,32 @@ display: block;
   </section>
   
   
-  
-  
+  <section class="image-gallery">
 
+    <img src="img/interior/istockphoto-1043549632-612x612.jpg" alt="Gallery Image 2">
+    <img src="img/interior/istockphoto-883706618-612x612.jpg" alt="Gallery Image 1">
+    <img src="img/interior/istockphoto-486919821-612x612.jpg" alt="Gallery Image 3">
+    <img src="img/interior/istockphoto-991245820-612x612.jpg" alt="Gallery Image 4">
+    <img src="img/interior/istockphoto-1210123439-612x612.jpg" alt="Gallery Image 5">
+    <img src="img/interior/istockphoto-1933752815-612x612.jpg" alt="Gallery Image 6">
+    <img src="img/interior/istockphoto-1194761614-612x612.jpg" alt="Gallery Image 7">
+    <img src="img/interior/istockphoto-1208205959-612x612.jpg" alt="Gallery Image 8">
+    <img src="img/interior/istockphoto-828530074-612x612.jpg" alt="Gallery Image 9">
+  </section>
+  
+  <div class="image_block2">
+    <img src="img/interior/istockphoto-1155326285-612x612.jpg" alt="Painting Image">
+    <div class="text-block">
+      <h2>What you get by choosing us</h2>
+      <ul>
+        <li>Professional consultation on paint and material selection</li>
+        <li>Use of high-quality paints and equipment</li>
+        <li>Strict adherence to project deadlines</li>
+        <li>Cleanliness and order after job completion</li>
+        <li>Warranty on completed work</li>
+      </ul>
+    </div>
+  </div>
 
 <!-- Quote Section -->
 <section class="contact-form-section">
