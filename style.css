@@ -428,8 +428,7 @@ margin: 0 auto;
 }
 
 .swiper-container {
-  max-width: 40%;
-  height: 1300px;
+
   overflow: hidden;
   margin: 0 auto;
   position: relative;

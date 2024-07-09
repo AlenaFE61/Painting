@@ -6,7 +6,10 @@
     <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Interior Services | MBVSLTD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Commercial Painting | MBVSLTD</title>
 </head>
 <style>
   .hero{
@@ -57,7 +60,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 220px;
+  width: 320px;
   transition: transform 0.3s ease;
   color: #fff;
   }
@@ -65,7 +68,7 @@
     transform: scale(1.05);
   }
   .gallery-item img {
-    width: 100px;
+    width: 100%;
     border-radius: 10px;
   }
   .gallery-item-info {
@@ -206,47 +209,131 @@ width: 300px;
     position: relative;
     width: 100%;
   }
-/* 
-  .image_block2 img {
-    width: 100%;
-    height: 500px;
-  } */
-
   .text-block {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* width: 40%; */
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(26 22 22 / 50%);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /* Вирівнювання в рядок */
+    justify-content: space-around; /* Розподіл простору між блоками */
     color: #ccc;
     border-radius: 20px;
-  }
+    width: 90%; /* Ширина контейнера з блоками */
+}
 
-  .text-block h2 {
-    text-align: center;
-    padding-bottom: 30px;
-  }
-
-  .text-block ul {
-    text-align: left;
+.text-block-item {
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    font-size: 1.2em;
-  }
+    margin-right: 10px; /* Відступ між блоками */
+    flex: 1; /* Гнучка ширина блоків */
+    max-width: 30%; /* Максимальна ширина кожного блоку */
+    border-radius: 20px;
+}
 
-  .text-block ul li::before {
-    content: "\2714"; /* Unicode for checkmark */
-    position: absolute;
-    left: 20px;
-    color: white;
-    font-weight: bold;
-  }
+.text-block-item:last-child {
+    margin-right: 0; /* Відсутність відступу у останнього блоку */
+}
+
+.text-block h3 {
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.highlighted {
+        color: blue; /* Задає синій колір тексту */
+    }
+
+
+    .why-choose-us .container {
+            text-align: left;
+            max-width: 40%;
+            margin: 50px auto;
+        }
+        .why-choose-us h2 {
+          padding: 20px;
+          font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .why-choose-us ul {
+            list-style: none;
+            padding: 0;
+        }
+        .why-choose-us li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .why-choose-us i {
+            color: #007bff;
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        .why-choose-us p {
+            margin-top: 0;
+            color: #666;
+        }
+
+        .features-list li {
+    padding: 20px 0; /* Збільшення відступів між елементами списку */
+    display: grid; /* Використання сітки для кращого контролю розташування елементів */
+    grid-template-columns: auto 1fr; /* Визначення двох колонок: одна для іконки, одна для тексту */
+    align-items: center; /* Вирівнювання елементів по центру по вертикалі */
+    gap: 20px; /* Встановлення відстані між іконкою і текстом */
+}
+
+.features-list i {
+    font-size: 1.5em; /* Збільшення розміру іконок */
+    color: #007BFF; /* Зміна кольору іконок */
+}
+
+.features-list h3 {
+    margin-bottom: 5px; /* Маленький відступ між заголовком і текстом */
+}
+
+.features-list p {
+    margin: 0; /* Видалення зовнішніх відступів абзацу */
+}
+
+.why-choose-us .container ul li h3{
+width: 40%;
+}
+.why-choose-us .container ul li p{
+width: 60%;
+font-size: 1.2em;
+line-height: 1.5;
+color: #353232;
+}
+
+.mySwiper {
+    max-height: 600px;
+    overflow: hidden;
+    background-color: #222222;
+    padding: 50px;
+}
+.swiper-slide{
+  background: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the images cover the slide area */
+}
+.mySwiper {
+    width: 100%;
+    height: auto;
+}
 
   @media screen and (max-width: 1600px){
     .hero {
@@ -269,6 +356,20 @@ width: 300px;
 .image-gallery {
     width: 80%;
 }
+.image_bl img{
+  height: 600px;
+}
+.text-block {
+        flex-direction: column; /* Зміна напрямку на стовпчик */
+        width: 90%; /* Ширина контейнера з блоками */
+    }
+
+    .text-block-item {
+        margin-right: 0; /* Відсутність відступу між блоками */
+        margin-bottom: 10px; /* Відступ знизу між блоками */
+        max-width: 100%; /* Максимальна ширина кожного блоку */
+        display: flex;
+    }
   }
 
 
@@ -313,10 +414,22 @@ display: block;
         height: 500px;
     }
 .text-block {
-    width: 60%;
+    width: 100%;
 }
   }
 
+  @media screen and (max-width: 800px){
+    .text-block {
+    width: 100%;
+}
+    .text-block-item {
+        display: block;
+        text-align: center;
+    }
+    .image_bl img {
+        height: 1200px;
+    }
+}
   @media screen and (max-width: 700px){
     .consultation-text{
       width: 80%;
@@ -331,10 +444,6 @@ display: block;
 .text-block h2 {
     padding-bottom: 10px;
   }
-    .text-block {
-    width: 80%;
-    color:white;
-}
   }
 
   @media screen and (max-width: 600px){
@@ -365,6 +474,9 @@ display: block;
     .text-block ul {
     font-size: 1em;
 }
+.image_bl img {
+        height: 1400px;
+    }
   }
   @media screen and (max-width: 320px){
     .consultation-text{
@@ -381,7 +493,7 @@ display: block;
     }
   }
 </style>
-<body>
+<>
   <header class="header">
     <div class="container main-container">
       <a class="logo" href="index.html">
@@ -399,7 +511,7 @@ display: block;
             <a class="item-menu" href="index.html#our-services">SERVICES</a>
             <ul class="dropdown-menu">
               <li><a href="interior.html">Interior</a></li>
-              <li><a href="exterior.html">Exterior</a></li>
+              <li><a href="#exterior-painting">Exterior</a></li>
               <li><a href="#commercial-painting">Commercial</a></li>
               <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
               <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
@@ -457,7 +569,7 @@ display: block;
     </div>
   </header>
 
-  <section class="hero" style="background-image: url('serv/1.webp');">
+  <section class="hero" style="background-image: url('img/comercial/bg3\ \(1\).jpg');">
     <div class="hero-content">
     </div>
   </section>
@@ -465,160 +577,106 @@ display: block;
   <!-- About Service Section -->
   <section class="about-service">
     <div class="container">
-        <h2>Interior painting</h2>
-        <p>Our exterior painting services are designed to protect and enhance the beauty of your property. We use high-quality paints and materials to ensure a durable and long-lasting finish. Whether it's a residential or commercial project, our team is equipped to handle all your exterior painting needs.</p>
-        <p>At MBVSLTD, we understand the importance of proper surface preparation and the application of the right paint for different surfaces and weather conditions. Our experts are committed to delivering exceptional results that not only improve the appearance of your property but also provide protection against the elements.</p>
-        <p>From color consultation to final inspection, we work closely with our clients to achieve their desired look and ensure complete satisfaction with our services.</p>
+        <h2>Commercial painting</h2>
+        <p>Explore the transformative power of professional painting with MBVSLTD's dedicated commercial services. Tailored to enhance and protect your business environment, our specialized approach ensures that every project reflects your brand's uniqueness and professionalism. With a focus on quality and durability, our skilled painters use only the best materials to achieve a polished and lasting finish.</p>
+        <p>Understanding the critical need for a swift and non-disruptive process, we prioritize your business's operational hours, delivering our services at times that suit you best. This meticulous planning and execution minimize downtime and ensure that your business continues to run smoothly without interruption.</p>
+        <p>Furthermore, <a href="https://www.mbvsltd.com/ua" target="_blank" class="highlighted"> as a full-service construction and renovation company, MBVSLTD</a> is equipped to handle complete building and renovation projects. From the initial design phase to the final touches, we provide a one-stop solution for all your construction and renovation needs, ensuring consistency and quality throughout every stage of the project.</p>
     </div>
   </section>
 
   <section class="services-gallery">
     <div class="container">
-      <h2>Types of interior paints and finishes</h2>
+      <h2>Professional Painting for Various Premises</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <!-- <img src="icon/emulsion.png" alt="Emulsion Paint"> -->
+          <img src="img/comercial/1.jpg" alt="Retail Spaces">
           <div class="gallery-item-info">
-            <h3>Emulsion Paint</h3>
-                <ul>
-                  <li>Water-based</li>
-                  <li>Environmentally friendly</li>
-                  <li>Easy to clean</li>
-                  <li>Quick-drying</li>
-                  <li>Durable</li>
-                  <li>Moisture-resistant</li>
-                </ul>
-              </li>
+            <h3>Retail Spaces</h3>
+            <p>Shops, supermarkets, pharmacies, boutiques, salons, and more...</p>
           </div>
         </div>
   
         <div class="gallery-item">
-          <!-- <img src="icon/2.png" alt="Acrylic Paint"> -->
+          <img src="img/comercial/bg.jpg" alt="Office Spaces">
           <div class="gallery-item-info">
-            <h3>Acrylic Paint</h3>
-
-                <ul>
-                  <li>Flexible</li>
-                  <li>Does not crack</li>
-                  <li>Quick-drying</li>
-                  <li>Easy to apply</li>
-                  <li>Versatile</li>
-                </ul>
-
-          </div>
-        </div>
-  
-  
-        <div class="gallery-item">
-          <!-- <img src="icon/4.png" alt="Silicone Paint"> -->
-          <div class="gallery-item-info">
-            <h3>Silicone Paint</h3>
-
-                <ul>
-                  <li>Water-repellent</li>
-                  <li>Air-premeable</li>
-                  <li>Resistant</li>
-                  <li>Verstile</li>
-                </ul>
-
+            <h3>Office Spaces</h3>
+            <p>Offices, leased spaces, medical centers, beauty salons, and more...</p>
           </div>
         </div>
   
         <div class="gallery-item">
-          <!-- <img src="icon/5 (1).png" alt="Latex Paint"> -->
+          <img src="img/comercial/3.jpg" alt="Industrial Facilities">
           <div class="gallery-item-info">
-            <h3>Latex Paint</h3>
-
-                <ul>
-                  <li>Eco-friendly.</li>
-                  <li>Easy to use</li>
-                  <li>Strong</li>
-                  <li>Durable</li>
-                  <li>Smooth</li>
-                  <li>Even in application</li>
-                </ul>
-
+            <h3>Industrial Facilities</h3>
+            <p>Manufacturing plants, warehouses, large commercial spaces, and more...</p>
           </div>
         </div>
   
         <div class="gallery-item">
-          <!-- <img src="icon/6.png" alt="Decorative Plaster"> -->
+          <img src="img/comercial/4.jpg" alt="Government Buildings">
           <div class="gallery-item-info">
-            <h3>Decorative Plaster</h3>
-
-                <ul>
-                  <li>High quality</li>
-                  <li>Presentable</li>
-                  <li>Strong</li>
-                  <li>Resistant</li>
-                  <li>Marble-like</li>
-                </ul>
-
+            <h3>Government Buildings</h3>
+            <p>Medical, educational, administrative, technical facilities, and more...</p>
           </div>
         </div>
-  
-        <div class="gallery-item">
-          <!-- <img src="icon/7.png" alt="Wallpaper"> -->
-          <div class="gallery-item-info">
-            <h3>Wallpaper</h3>
-
-                <ul>
-                  <li>Diverse</li>
-                  <li>Simple</li>
-                  <li>Durable</li>
-                  <li>Resistant</li>
-                  <li>Easy to use</li>
-                  <li>Washble</li>
-                </ul>
-
-          </div>
-        </div>
-        
       </div>
     </div>
-  </section>
-  
-  
-  <section class="image-gallery">
+</section>
 
-    <img src="img/interior/istockphoto-1043549632-612x612.jpg" alt="Gallery Image 2">
-    <img src="img/interior/istockphoto-883706618-612x612.jpg" alt="Gallery Image 1">
-    <img src="img/interior/istockphoto-486919821-612x612.jpg" alt="Gallery Image 3">
-    <img src="img/interior/istockphoto-991245820-612x612.jpg" alt="Gallery Image 4">
-    <img src="img/interior/istockphoto-1210123439-612x612.jpg" alt="Gallery Image 5">
-    <img src="img/interior/istockphoto-1933752815-612x612.jpg" alt="Gallery Image 6">
-    <img src="img/interior/istockphoto-1194761614-612x612.jpg" alt="Gallery Image 7">
-    <img src="img/interior/istockphoto-1208205959-612x612.jpg" alt="Gallery Image 8">
-    <img src="img/interior/istockphoto-828530074-612x612.jpg" alt="Gallery Image 9">
-  </section>
-  
-  <div class="image_block2">
-    <img src="img/interior/istockphoto-1155326285-612x612.jpg" alt="Painting Image">
-    <div class="text-block">
-      <h2>What you get by choosing us</h2>
+<section class="why-choose-us">
+  <div class="container">
+      <h2>Why choose us?</h2>
       <ul>
-        <li>Professional consultation on paint and material selection</li>
-        <li>Use of high-quality paints and equipment</li>
-        <li>Strict adherence to project deadlines</li>
-        <li>Cleanliness and order after job completion</li>
-        <li>Warranty on completed work</li>
+          <li><i class="fas fa-medal"></i><h3>Guaranteed quality:</h3> <p>We use only high-quality materials and the latest techniques to ensure top-notch finishes that last.</p></li>
+          <li><i class="fas fa-comments"></i><h3>Free consultation:</h3> <p>Get started with a no-obligation consultation to discuss your needs and how we can meet them.</p></li>
+          <li><i class="fas fa-cogs"></i><h3>Comprehensive services:</h3> <p>From initial assessment to the final touch-up, we manage every aspect of your project, ensuring a seamless experience.</p></li>
+          <li><i class="fas fa-user-cog"></i><h3>Custom solutions:</h3> <p>Every space is unique, and so are your needs. We offer tailored solutions that perfectly suit your requirements.</p></li>
+          <li><i class="fas fa-leaf"></i><h3>Environmentally friendly options:</h3> <p>We are committed to sustainability, offering eco-friendly paint options and practices.</p></li>
+          <li><i class="fas fa-users"></i><h3>Experienced professionals:</h3> <p>Our team comprises experienced professionals who are skilled in various techniques and styles.</p></li>
+          <li><i class="fas fa-clock"></i><h3>Timely completion:</h3> <p>We respect your time. Our projects are always completed on schedule without compromising on quality.</p></li>
       </ul>
-    </div>
   </div>
+</section>
+
+  
+<div class="swiper-container mySwiper" style="width: 100%; height: auto;">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/comercial/1.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img/comercial/3.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/1.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img/comercial/3.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/1.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img/comercial/3.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 3"></div>
+      <!-- More slides as needed -->
+  </div>
+  <!-- Optional navigation -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+
+
+  
 
 <!-- Quote Section -->
 <section class="contact-form-section">
   <div class="contact-form-container">
-    <div class="consultation-text">
+    <!-- <div class="consultation-text">
       <div>
-      <h2>Choosing the right finish for your space</h2>
-      <p>When selecting finishes for your interior project, consider the specific needs and style of each room. High-traffic areas like hallways and kitchens benefit from durable, easy-to-clean finishes like satin or semi-gloss paint. For living rooms and bedrooms, matte or eggshell paints offer a rich, inviting look, while decorative plaster and wallpaper can add unique textures and patterns to enhance the overall aesthetic.</p>
-    </div>
+        <h2>Optimal facade coatings</h2>
+        <p>Exterior painting protects your home from the elements, enhancing both appearance and durability. Properly executed, it prevents mold and extends the lifespan of your property.</p>
+      </div>
       <div class="consultation-text-second">
-      <h2>Professional consultation</h2>
-      <p>Not sure which finish is best for your project? Our experts at MBVSLTD are here to help. Contact us for a consultation, and we'll guide you in choosing the perfect materials to transform your space.</p>
-    </div>
-    </div>
+        <h2>Expert facade consultation</h2>
+        <p>Choosing the right materials for your facade is critical. Our experts at MBVSLTD have years of experience ensuring quality results. Contact us for expert guidance and durable solutions.</p>
+      </div>
+      
+      
+    </div> -->
     <form class="contact-form">
       <h2>Get a quote from our expert team today</h2>
       <label for="fullName">Full Name *</label>
@@ -736,131 +794,119 @@ display: block;
     <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
   </div>
   <script>
-    // Active menu and smooth scroll to section
     document.addEventListener('DOMContentLoaded', function() {
-      var currentUrl = window.location.href;
-      var menuLinks = document.querySelectorAll('.item-menu');
-      for (var i = 0; i < menuLinks.length; i++) {
-        var linkUrl = menuLinks[i].getAttribute('href');
-        if (currentUrl === linkUrl) {
-          menuLinks[i].classList.add('active');
-        }
-      }
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-      var toggles2 = document.querySelectorAll('.dropdown-toggle2');
-
-      toggles2.forEach(function(toggle) {
-        toggle.addEventListener('click', function(event) {
-          event.stopPropagation();
-          var menu = this.nextElementSibling;
-          if (menu.style.display === 'block') {
-            menu.style.display = 'none';
-          } else {
-            menu.style.display = 'block';
-          }
+        // Active menu and smooth scroll to section
+        const currentUrl = window.location.href;
+        const menuLinks = document.querySelectorAll('.item-menu');
+        menuLinks.forEach((link) => {
+            if (currentUrl === link.getAttribute('href')) {
+                link.classList.add('active');
+            }
         });
-      });
-
-      document.body.addEventListener('click', function(event) {
-        if (!event.target.closest('.dropdown2')) {
-          var menus = document.querySelectorAll('.mob-menu .dropdown-menu2');
-          menus.forEach(function(menu) {
-            menu.style.display = 'none';
-          });
-        }
-      });
+    
+        // Dropdown menus
+        document.querySelectorAll('.dropdown-toggle2').forEach(toggle => {
+            toggle.addEventListener('click', function(event) {
+                event.stopPropagation();
+                const menu = this.nextElementSibling;
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    
+        document.body.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown2')) {
+                document.querySelectorAll('.mob-menu .dropdown-menu2').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+            }
+        });
+    
+        // Mobile menu management
+        const refs = {
+            openMenuBtn: document.querySelector("[data-menu-open]"),
+            closeMenuBtn: document.querySelector("[data-menu-close]"),
+            menu: document.querySelector("[data-menu]"),
+            body: document.querySelector("body"),
+            menuList: document.querySelector(".mob-list"),
+        };
+    
+        refs.openMenuBtn.addEventListener("click", () => {
+            refs.menu.classList.toggle("is-hidden");
+            refs.body.classList.toggle("no-scroll");
+        });
+    
+        refs.closeMenuBtn.addEventListener("click", () => {
+            refs.menu.classList.add("is-hidden");
+            refs.body.classList.remove("no-scroll");
+        });
+    
+        // Scroll to top button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        };
+    
+        document.getElementById("backToTopBtn").addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    
+        // Anchor smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    
+        // WhatsApp button delayed display
+        setTimeout(() => {
+            document.getElementById('whatsapp-icon').style.display = 'block';
+        }, 5000);
+    
+        document.getElementById('whatsapp-icon').addEventListener('click', () => {
+            document.getElementById('whatsapp-icon').style.display = 'none';
+        });
+    
+        // Initialize Swiper
+        var swiper = new Swiper('.mySwiper', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            speed: 500,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
     });
-
-    (() => {
-      const refs = {
-        openMenuBtn: document.querySelector("[data-menu-open]"),
-        closeMenuBtn: document.querySelector("[data-menu-close]"),
-        menu: document.querySelector("[data-menu]"),
-        body: document.querySelector("body"),
-        menuList: document.querySelector(".mob-list"),
-      };
-
-      refs.openMenuBtn.addEventListener("click", toggleMenu);
-      refs.closeMenuBtn.addEventListener("click", toggleMenu);
-      refs.menuList.addEventListener("click", removeMenu);
-
-      function toggleMenu() {
-        refs.menu.classList.toggle("is-hidden");
-        refs.body.classList.toggle("no-scroll");
-      }
-      function removeMenu() {
-        refs.menu.classList.add("is-hidden");
-        refs.body.classList.remove("no-scroll");
-      }
-    })();
-
-    // Scroll to top button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("backToTopBtn").style.display = "block";
-      } else {
-        document.getElementById("backToTopBtn").style.display = "none";
-      }
-    }
-
-    document.getElementById("backToTopBtn").addEventListener("click", function() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        let targetId = this.getAttribute('href');
-        let target = document.querySelector(targetId);
-        if (target) {
-          let headerHeight = document.querySelector('.header').offsetHeight;
-          let targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Mobile menu
-    document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const mobMenu = document.querySelector(".mob-menu");
-        mobMenu.classList.add("is-hidden");
-        document.body.classList.remove("no-scroll");
-
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (target) {
-          const headerHeight = document.querySelector('.header').offsetHeight;
-          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // WhatsApp button
-    window.onload = function() {
-      setTimeout(function() {
-        document.getElementById('whatsapp-icon').style.display = 'block';
-      }, 5000);
-    }
-
-    function closeWhatsAppIcon() {
-      document.getElementById('whatsapp-icon').style.display = 'none';
-    }
-  </script>
+    </script>
+    
+    
 </body>
 </html>
