@@ -113,6 +113,7 @@
     .contact-form {
     width: 30%;
     margin: 0 auto;
+    text-align: center;
     }
     .contact-form h2 {
       margin-bottom: 26px;
@@ -122,6 +123,7 @@
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
+      text-align: left;
     }
     .contact-form input,
     .contact-form textarea {
@@ -312,17 +314,21 @@ width: 60%;
 font-size: 1.2em;
 line-height: 1.5;
 color: #353232;
+text-align: justify;
+text-justify: inter-word;
 }
 .projects-section {
-  text-align: center;
-  background-color: #222222;
+    overflow: hidden; 
+        max-width: 100%;  
+    background-color: #222222;
+    padding: 20px 0;  
 }
 
 .projects-title {
-  font-size: 28px;
-  color: white;
-  padding-top: 50px;
-
+    font-size: 28px;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
 }
 
 .mySwiper {
@@ -336,15 +342,17 @@ color: #353232;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the images cover the slide area */
-}
+
 .mySwiper {
     width: 100%;
-    height: auto;
+    min-height: 400px;
 }
+
+.swiper-slide img {
+    width: 100%; 
+    object-fit: cover; 
+}
+
 
   @media screen and (max-width: 1600px){
     .hero {
@@ -356,6 +364,18 @@ color: #353232;
     .contact-form {
     width: 40%;
     }
+    .why-choose-us .container {
+    max-width: 60%;
+}
+.projects-title {
+    font-size: 24px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.mySwiper {
+    min-height: auto;
+    padding: 10px;
+}
 
   }
 
@@ -381,6 +401,9 @@ color: #353232;
         max-width: 100%; /* Максимальна ширина кожного блоку */
         display: flex;
     }
+    .why-choose-us .container {
+    max-width: 80%;
+}
   }
 
 
@@ -440,6 +463,20 @@ display: block;
     .image_bl img {
         height: 1200px;
     }
+    .why-choose-us .container {
+        text-align: center;
+    }
+    .why-choose-us li {
+    display: block;
+    padding-bottom: 20px;
+}
+.why-choose-us .container ul li h3 {
+    width: 100%;
+    padding: 10px 10px;
+}
+.why-choose-us .container ul li p {
+  width: 100%;
+}
 }
   @media screen and (max-width: 700px){
     .consultation-text{
@@ -460,6 +497,9 @@ display: block;
   @media screen and (max-width: 600px){
     .hero {
         height: 360px;
+    }
+    .mySwiper{
+      padding: 10px;
     }
   }
 
@@ -488,7 +528,12 @@ display: block;
 .image_bl img {
         height: 1400px;
     }
+    .why-choose-us h2 {
+   padding: 0px;
+    font-size: 24px;
+
   }
+}
   @media screen and (max-width: 320px){
     .consultation-text{
       width: 96%;
@@ -504,7 +549,7 @@ display: block;
     }
   }
 </style>
-<>
+
   <header class="header">
     <div class="container main-container">
       <a class="logo" href="index.html">
@@ -653,15 +698,23 @@ display: block;
   <h2 class="projects-title">Projects</h2> 
 <div class="swiper-container mySwiper" style="width: 100%; height: auto;">
   <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img/comercial/1.jpg" alt="Project 1"></div>
-      <div class="swiper-slide"><img src="img/comercial/3.jpg" alt="Project 2"></div>
-      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 3"></div>
-      <div class="swiper-slide"><img src="img/comercial/1.jpg" alt="Project 1"></div>
-      <div class="swiper-slide"><img src="img/comercial/3.jpg" alt="Project 2"></div>
-      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 3"></div>
-      <div class="swiper-slide"><img src="img/comercial/1.jpg" alt="Project 1"></div>
-      <div class="swiper-slide"><img src="img/comercial/3.jpg" alt="Project 2"></div>
-      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/4.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1201000692-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1208394432-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1223835717-612x612.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1267935072-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1332615450-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1352502104-612x612.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1355222630-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1406763619-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1426609993-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1443855709-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-1785718396-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-583976714-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-847883890-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-867872522-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img/comercial/istockphoto-896916870-612x612.jpg" alt="Project 2"></div>
+
       <!-- More slides as needed -->
   </div>
   <!-- Optional navigation -->
@@ -805,119 +858,110 @@ display: block;
     </a>
     <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Active menu and smooth scroll to section
-        const currentUrl = window.location.href;
-        const menuLinks = document.querySelectorAll('.item-menu');
-        menuLinks.forEach((link) => {
-            if (currentUrl === link.getAttribute('href')) {
-                link.classList.add('active');
-            }
-        });
-    
-        // Dropdown menus
-        document.querySelectorAll('.dropdown-toggle2').forEach(toggle => {
-            toggle.addEventListener('click', function(event) {
-                event.stopPropagation();
-                const menu = this.nextElementSibling;
-                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-            });
-        });
-    
-        document.body.addEventListener('click', function(event) {
-            if (!event.target.closest('.dropdown2')) {
-                document.querySelectorAll('.mob-menu .dropdown-menu2').forEach(menu => {
-                    menu.style.display = 'none';
-                });
-            }
-        });
-    
-        // Mobile menu management
-        const refs = {
-            openMenuBtn: document.querySelector("[data-menu-open]"),
-            closeMenuBtn: document.querySelector("[data-menu-close]"),
-            menu: document.querySelector("[data-menu]"),
-            body: document.querySelector("body"),
-            menuList: document.querySelector(".mob-list"),
-        };
-    
-        refs.openMenuBtn.addEventListener("click", () => {
-            refs.menu.classList.toggle("is-hidden");
-            refs.body.classList.toggle("no-scroll");
-        });
-    
-        refs.closeMenuBtn.addEventListener("click", () => {
-            refs.menu.classList.add("is-hidden");
-            refs.body.classList.remove("no-scroll");
-        });
-    
-        // Scroll to top button
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("backToTopBtn").style.display = "block";
-            } else {
-                document.getElementById("backToTopBtn").style.display = "none";
-            }
-        };
-    
-        document.getElementById("backToTopBtn").addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    
-        // Anchor smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    
-        // WhatsApp button delayed display
-        setTimeout(() => {
-            document.getElementById('whatsapp-icon').style.display = 'block';
-        }, 5000);
-    
-        document.getElementById('whatsapp-icon').addEventListener('click', () => {
-            document.getElementById('whatsapp-icon').style.display = 'none';
-        });
-    
-        // Initialize Swiper
-        var swiper = new Swiper('.mySwiper', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            speed: 500,
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 50,
-                },
-            },
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Active menu and smooth scroll to section
+    const currentUrl = window.location.href;
+    const menuLinks = document.querySelectorAll('.item-menu');
+    menuLinks.forEach((link) => {
+        if (currentUrl === link.getAttribute('href')) {
+            link.classList.add('active');
+        }
+    });
+
+    // Dropdown menus
+    document.querySelectorAll('.dropdown-toggle2').forEach(toggle => {
+        toggle.addEventListener('click', function(event) {
+            event.stopPropagation();
+            const menu = this.nextElementSibling;
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         });
     });
-    </script>
+
+    document.body.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown2')) {
+            document.querySelectorAll('.mob-menu .dropdown-menu2').forEach(menu => {
+                menu.style.display = 'none';
+            });
+        }
+    });
+
+    // Mobile menu management
+    const refs = {
+        openMenuBtn: document.querySelector("[data-menu-open]"),
+        closeMenuBtn: document.querySelector("[data-menu-close]"),
+        menu: document.querySelector("[data-menu]"),
+        body: document.querySelector("body"),
+        menuList: document.querySelector(".mob-list"),
+    };
+
+    refs.openMenuBtn.addEventListener("click", () => {
+        refs.menu.classList.toggle("is-hidden");
+        refs.body.classList.toggle("no-scroll");
+    });
+
+    refs.closeMenuBtn.addEventListener("click", () => {
+        refs.menu.classList.add("is-hidden");
+        refs.body.classList.remove("no-scroll");
+    });
+
+    // Scroll to top button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("backToTopBtn").style.display = "block";
+        } else {
+            document.getElementById("backToTopBtn").style.display = "none";
+        }
+    };
+
+    document.getElementById("backToTopBtn").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // WhatsApp button delayed display
+    setTimeout(() => {
+        document.getElementById('whatsapp-icon').style.display = 'block';
+    }, 5000);
+
+    document.getElementById('whatsapp-icon').addEventListener('click', () => {
+        document.getElementById('whatsapp-icon').style.display = 'none';
+    });
+
+    // Initialize Swiper
+    var swiper = new Swiper('.mySwiper', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        speed: 500,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            630: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+            
+        }
+    });
+});
+</script>
     
     
 </body>
