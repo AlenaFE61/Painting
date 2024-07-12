@@ -6,6 +6,7 @@
   <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Painting Services</title>
@@ -118,6 +119,7 @@ margin: 0 auto;
   margin-top: 20px;
   left: 50%;
   transform: translateX(-50%);
+  color: #41657a; /* Колір стрілочок */
 }
 .swiper-button-next, .swiper-button-prev,
 .swiper-button-up, .swiper-button-down {
@@ -129,8 +131,8 @@ margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  background-color:transparent;
 }
 .swiper-button-up {
   left: 98%;
@@ -142,6 +144,25 @@ margin: 0 auto;
   bottom: calc(48% - 70px);
   transform: translate(-50%, 50%);
 }
+.swiper-button-up i, .swiper-button-down i {
+    color: #41657a; /* Колір стрілочок */
+    font-size: 24px; /* Розмір стрілочок */
+    cursor: pointer; /* Курсор у вигляді руки при наведенні */
+}
+
+.swiper-button-up, .swiper-button-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ширина контейнера */
+    height: 40px; /* Висота контейнера */
+
+    background-color:transparent;
+}
+  
+
+
+
 .modal {
   display: none;
   position: fixed;
@@ -205,18 +226,18 @@ border-radius: 15px 15px 0 0;
 }
 .brands-section {
   padding: 100px 0;
-  background-color: #fff;
+  background-color: #222222;;
   text-align: center;
 }
 .brands-title {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333;
+  color: white;
 }
 .brands-description {
   font-size: 18px;
   margin-bottom: 40px;
-  color: #666;
+  color: white;
 }
 .brands-logos {
   display: flex;
@@ -226,10 +247,12 @@ border-radius: 15px 15px 0 0;
   gap: 20px;
 }
 .brand-logo {
-  width: 150px;
-  height: 100px;
+  width: 220px;
+  height: 120px;
   object-fit: contain;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color:#4444;
+  border-radius: 8px;
 }
 .brand-logo:hover {
   transform: scale(1.1);
@@ -260,7 +283,7 @@ border-radius: 15px 15px 0 0;
   justify-content: center;
 }
 .technique-item {
-  background: #444;
+  background: #577a8f;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
@@ -292,37 +315,71 @@ border-radius: 15px 15px 0 0;
   height: 700px;
 }
 
+.why-choose-us .container {
+            text-align: left;
+            max-width: 40%;
+            margin: 50px auto;
+        }
+        .why-choose-us h2 {
+          padding: 20px;
+          font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .why-choose-us ul {
+            list-style: none;
+            padding: 0;
+        }
+        .why-choose-us li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .why-choose-us i {
+            color: #577a8f;
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        .why-choose-us p {
+            margin-top: 0;
+            color: #666;
+        }
+        .why-choose-us .container ul li h3{
+width: 40%;
+}
+.why-choose-us .container ul li p{
+width: 60%;
+font-size: 1.2em;
+line-height: 1.5;
+color: #353232;
+text-align: justify;
+text-justify: inter-word;
+}
+
 .contact-form-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  min-height: 600px;
+  text-align: center;
+  padding: 50px;
 }
-.contact-form-container img {
-  width: 50%;
-  max-height: 600px;
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-}
+
 .contact-form {
   width: 30%;
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  right: 10%;
+margin: 0 auto;
 }
 .contact-form h2 {
   margin-bottom: 28px;
   font-size: 1.5em;
 }
 .contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
 }
 .contact-form input,
 .contact-form textarea {
@@ -349,6 +406,12 @@ border-radius: 15px 15px 0 0;
   width: 100%;
   height: 600px;
 }
+.why-choose-us .container {
+    max-width: 60%;
+}
+.contact-form {
+        width: 40%;
+    }
 }
 @media screen and (max-width: 1400px){
   .swiper-container {
@@ -384,6 +447,9 @@ border-radius: 15px 15px 0 0;
 .block_about {
 width: 60%;
 }
+.why-choose-us .container {
+    max-width: 80%;
+}
 }
 
 @media screen and (max-width: 1000px){
@@ -394,13 +460,9 @@ width: 60%;
     width: 100%;
     height: 400px;
 }
-  .contact-form {
-    width: 40%;
-    position: absolute;
-    top: 5%;
-    bottom: 5%;
-    right: 5%;
-  }
+.contact-form {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -410,17 +472,21 @@ width: 60%;
   .text_block h1 {
     font-size: 32px;
 }
-.contact-form {
-        width: 90%;
-        position: absolute;
-        top: 5%;
-        bottom: 5%;
-        right: 5%;
+.why-choose-us .container {
         text-align: center;
     }
-  .contact-form-container img {
-    display: none;
-  }
+    .why-choose-us li {
+    display: block;
+    padding-bottom: 20px;
+}
+.why-choose-us .container ul li h3 {
+    width: 100%;
+    padding: 10px 10px;
+}
+.why-choose-us .container ul li p {
+  width: 100%;
+}
+
   .block_about {
     width: 80%;
   }
@@ -428,9 +494,7 @@ width: 60%;
     margin-bottom: 24px;
     font-size: 1.5em;
 }
-.contact-form label {
-    text-align: left;
-}
+
 }
 @media screen and (max-width: 768px){
 .image_block2 img {
@@ -453,6 +517,12 @@ width: 60%;
   .swiper-container {
     max-width: 80%;
   }
+  .why-choose-us .container {
+    margin: 10px auto;
+}
+.contact-form {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 669px){
@@ -525,6 +595,16 @@ width: 60%;
     .technique-item {
     width: 100%;
 }
+.why-choose-us h2 {
+   padding: 0px;
+    font-size: 24px;
+  }
+  .contact-form-container {
+   padding: 0px 0px 20px 0px; 
+}
+  .contact-form {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 475px){
   .image_block img {
@@ -541,7 +621,10 @@ width: 60%;
 }
 @media screen and (max-width: 475px){
   .brands-logos {
-    gap: 100px;
+    gap: 10px;
+}
+.brand-logo {
+  width: 96%;
 }
 }
 @media screen and (max-width: 320px){
@@ -639,7 +722,7 @@ width: 60%;
       </p>
     </section>
     <div class="image_block2">
-      <img src="fone.jpg" alt="Painting Image">
+      <img src="img/interior/7.jpg" alt="Painting Image">
     </div>
     <section id="what-we-do" class="what-we-do-section">
       <div class="container">
@@ -648,7 +731,7 @@ width: 60%;
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div id="interior-painting" class="swiper-slide service-item">
-              <img src="serv/1.webp" alt="Interior Painting" class="service-image">
+              <img src="img/interior/1.jpg" alt="Interior Painting" class="service-image">
               <h3 class="service-title">Interior painting</h3>
               <p class="service-description">We provide high-quality interior painting services, transforming your indoor spaces with precision and care.</p>
             </div>
@@ -684,8 +767,8 @@ width: 60%;
             </div>
           </div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-up">⬆️</div>
-          <div class="swiper-button-down">⬇️</div>
+          <div class="swiper-button-up"><i class="fas fa-arrow-up"></i></div>
+          <div class="swiper-button-down"><i class="fas fa-arrow-down"></i></div>
         </div>
       </div>
     </section>
@@ -718,6 +801,22 @@ width: 60%;
         </div>
       </div>
     </section>
+
+    <section class="why-choose-us">
+      <div class="container">
+          <h2>Why choose us?</h2>
+          <ul>
+              <li><i class="fas fa-medal"></i><h3>Guaranteed quality:</h3> <p>We use only high-quality materials and the latest techniques to ensure top-notch finishes that last.</p></li>
+              <li><i class="fas fa-comments"></i><h3>Free consultation:</h3> <p>Get started with a no-obligation consultation to discuss your needs and how we can meet them.</p></li>
+              <li><i class="fas fa-cogs"></i><h3>Comprehensive services:</h3> <p>From initial assessment to the final touch-up, we manage every aspect of your project, ensuring a seamless experience.</p></li>
+              <li><i class="fas fa-user-cog"></i><h3>Custom solutions:</h3> <p>Every space is unique, and so are your needs. We offer tailored solutions that perfectly suit your requirements.</p></li>
+              <li><i class="fas fa-leaf"></i><h3>Environmentally friendly options:</h3> <p>We are committed to sustainability, offering eco-friendly paint options and practices.</p></li>
+              <li><i class="fas fa-users"></i><h3>Experienced professionals:</h3> <p>Our team comprises experienced professionals who are skilled in various techniques and styles.</p></li>
+              <li><i class="fas fa-clock"></i><h3>Timely completion:</h3> <p>We respect your time. Our projects are always completed on schedule without compromising on quality.</p></li>
+          </ul>
+      </div>
+    </section>
+
     <section class="brands-section">
       <div class="container">
         <h2 class="brands-title">Brands we work with</h2>
@@ -734,13 +833,13 @@ width: 60%;
       </div>
     </section>
 
-    <div class="image_block2">
+    <!-- <div class="image_block2">
       <img src="fone2.jpeg" alt="Painting Image">
-    </div>
+    </div> -->
 
     <section class="contact-form-section">
       <div class="contact-form-container">
-        <img src="form/istockphoto-941504146-612x612.jpg" alt="Living room with large window">
+        <!-- <img src="form/istockphoto-941504146-612x612.jpg" alt="Living room with large window"> -->
         <form class="contact-form">
           <h2>Get a quote from our expert team today</h2>
           <label for="fullName">Full Name *</label>
