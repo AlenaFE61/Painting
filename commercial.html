@@ -333,24 +333,42 @@ text-justify: inter-word;
 
 .mySwiper {
     max-height: 600px;
-    overflow: hidden;
-
-    padding: 50px;
-}
-.swiper-slide{
-  background: #444;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.mySwiper {
     width: 100%;
-    min-height: 400px;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+}
+
+.swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide img {
-    width: 100%; 
-    object-fit: cover; 
+    width: 100%; /* Make sure image takes full width */
+    height: auto; /* Adjust height automatically */
+    object-fit: cover; /* Cover the area without stretching the image */
+    border-radius: 8px;
+
+}
+
+.swiper-pagination {
+  bottom: 10px; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: #fff; /* White color for the bullets */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff; /* Active bullet color */
 }
 
 
@@ -492,6 +510,19 @@ display: block;
 .text-block h2 {
     padding-bottom: 10px;
   }
+  .about-service, .services-gallery, .quote {
+        padding: 0px 0px 30px 0px;
+    }
+    .why-choose-us .container {
+    margin: 10px auto;
+}
+.projects-section {
+    padding: 0px;
+}
+.gallery-item {
+        width: 100%;
+        padding: 10px;
+    }
   }
 
   @media screen and (max-width: 600px){
@@ -859,7 +890,7 @@ display: block;
     <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
   </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Active menu and smooth scroll to section
     const currentUrl = window.location.href;
     const menuLinks = document.querySelectorAll('.item-menu');
@@ -928,6 +959,9 @@ display: block;
     });
 
     // Initialize Swiper
+    const swiperContainer = document.querySelector('.mySwiper .swiper-wrapper');
+    const slides = swiperContainer.querySelectorAll('.swiper-slide');
+
     var swiper = new Swiper('.mySwiper', {
         loop: true,
         autoplay: {
@@ -944,23 +978,35 @@ display: block;
             prevEl: '.swiper-button-prev',
         },
         speed: 500,
+        slidesPerView: slides.length > 1 ? 3 : 'auto', // Adjusted for full width on single slide
+        spaceBetween: slides.length > 1 ? 30 : 0, // No space between slides if only one
+        centeredSlides: slides.length === 1, // Center the single slide
         breakpoints: {
+          100: {
+                slidesPerView: slides.length > 1 ? 1 : 'auto',
+                spaceBetween: slides.length > 1 ? 10 : 0
+            },
             320: {
-                slidesPerView: 1,
-                spaceBetween: 10
+                slidesPerView: slides.length > 1 ? 1 : 'auto',
+                spaceBetween: slides.length > 1 ? 10 : 0
             },
-            630: {
-                slidesPerView: 2,
-                spaceBetween: 20
+            640: {
+                slidesPerView: slides.length > 1 ? 2 : 'auto',
+                spaceBetween: slides.length > 1 ? 20 : 0
             },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 30
+            1024: {
+                slidesPerView: slides.length > 1 ? 3 : 'auto',
+                spaceBetween: slides.length > 1 ? 30 : 0
             }
-            
         }
     });
+
+    // Update swiper on window resizing
+    window.onresize = function() {
+        swiper.update();
+    };
 });
+
 </script>
     
     

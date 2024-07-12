@@ -280,6 +280,9 @@ width: 300px;
         max-width: 100%; /* Максимальна ширина кожного блоку */
         display: flex;
     }
+    .text-block-item div{
+      padding-right: 20px;
+    }
   }
 
 
@@ -293,6 +296,7 @@ display: block;
     }
     .contact-form {
     width: 60%;
+    text-align: center;
     }
     .about-service {
     width: 80%;
@@ -303,6 +307,10 @@ display: block;
 .consultation-text h2 {
     padding-bottom: 10px;
     font-size: 24px;
+    text-align: center;
+}
+.contact-form label {
+   text-align: left;
 }
 .contact-form h2 {
     font-size: 24px;
@@ -338,6 +346,9 @@ display: block;
     }
     .image_bl img {
         height: 1200px;
+    }
+    .text-block-item div{
+      padding-right: 0px;
     }
 }
   @media screen and (max-width: 700px){
@@ -387,6 +398,16 @@ display: block;
 .image_bl img {
         height: 1400px;
     }
+    .gallery-item {
+        width: 100%;
+    }
+    .image-gallery {
+        width: 96%;
+        padding: 10px 0;
+    }
+    .image-gallery img {
+      width: 100%;
+    }
   }
   @media screen and (max-width: 320px){
     .consultation-text{
@@ -421,8 +442,8 @@ display: block;
             <a class="item-menu" href="index.html#our-services">SERVICES</a>
             <ul class="dropdown-menu">
               <li><a href="interior.html">Interior</a></li>
-              <li><a href="#exterior-painting">Exterior</a></li>
-              <li><a href="#commercial-painting">Commercial</a></li>
+              <li><a href="exterior.html">Exterior</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
               <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
               <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
               <li><a href="#plastering-repairs">Plastering & Repairs</a></li>

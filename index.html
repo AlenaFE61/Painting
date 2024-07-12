@@ -10,17 +10,297 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Painting Services</title>
   <style>
+    .text_block {
+  background-color: black;
+  color: white;
+  padding: 250px 20px;
+  text-align: center;
+}
+.text_block h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.text_block p {
+  font-size: 1.2em;
+}
+.image_block {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px; /* Adjust to position correctly */
+  z-index: 1; /* Ensure image is above sections */
+}
+.image_block img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.block_about {
+   padding: 60px 20px 50px;
+   text-align: center;
+position: relative;
+z-index: 0;
+width: 40%;
+margin: 0 auto;
+}
+.block_about .about_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.block_about .about_text {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #353232;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.what-we-do-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.section-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #666;
+}
+.swiper-container {
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  max-width: 40%; 
+  height: 1300px;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  height: calc(100% / 3);
+  box-sizing: border-box;
+}
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
+.service-image {
+  width: 90%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.service-title {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #333;
+}
+.service-description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #666;
+  text-align: center;
+}
+.swiper-pagination {
+  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-button-next, .swiper-button-prev,
+.swiper-button-up, .swiper-button-down {
+  color: #333;
+  position: absolute;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.swiper-button-up {
+  left: 98%;
+  top: calc(51% - 70px);
+  transform: translate(-50%, -50%);
+}
+.swiper-button-down {
+  left: 98%;
+  bottom: calc(48% - 70px);
+  transform: translate(-50%, 50%);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 60px;
+  transition: opacity 0.3s ease;
+}
+.modal-content {
+  background-color: #f9f9f9;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.modal-content h3 {
+  font-size: 24px;
+  color: #333;
+}
+.modal-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+.modal-content ul {
+  padding: 0;
+  list-style-type: none;
+}
+.modal-content ul li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+.modal-image {
+width: 100%;
+height: 300px; /* Adjust the height to fit your needs */
+object-fit: cover;
+border-radius: 15px 15px 0 0;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.brands-section {
+  padding: 100px 0;
+  background-color: #fff;
+  text-align: center;
+}
+.brands-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.brands-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #666;
+}
+.brands-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.brand-logo {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.brand-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.techniques-section {
+  width: 100%;
+  background-color: #222222;
+  color: #fff;
+  padding: 50px 0 100px 0;
+  text-align: center;
+}
+.techniques-title {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.techniques-description {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+.techniques-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.technique-item {
+  background: #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+.technique-item:hover {
+  transform: scale(1.05);
+}
+.technique-title {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.technique-description {
+  font-size: 14px;
+  color: #ccc;
+}
+.technique-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.image_block2 img{
+  width: 100%;
+  height: 700px;
+}
+
 .contact-form-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* padding: 60px 20px 20px 20px; */
   position: relative;
   min-height: 600px;
 }
-
 .contact-form-container img {
   width: 50%;
   max-height: 600px;
@@ -28,26 +308,22 @@
   position: absolute;
   left: 0;
 }
-
 .contact-form {
   width: 30%;
-    position: absolute;
-    top: 10%;
-    bottom: 10%;
-    right: 10%;
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: 10%;
 }
-
 .contact-form h2 {
   margin-bottom: 28px;
   font-size: 1.5em;
 }
-
 .contact-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -56,7 +332,6 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 .contact-form button {
   padding: 10px 20px;
   background-color: #000;
@@ -65,59 +340,214 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
 .contact-form button:hover {
   background-color: #333;
 }
-.contact-form {
-    width: 30%;
-    position: absolute;
-    top: 10%;
-    bottom: 10%;
-    right: 10%;
+
+@media screen and (max-width: 1600px){
+.image_block2 img {
+  width: 100%;
+  height: 600px;
+}
 }
 @media screen and (max-width: 1400px){
-  swiper-container {
-max-width: 40%;
+  .swiper-container {
+    max-width: 40%;
     height: 1300px;
+  }
 }
-}
+
 @media screen and (max-width: 1200px){
   .contact-form-container {
     min-height: 580px;
+  }
+  
+.swiper-container {
+  max-width: 60%;
+}
+.block_about {
+  padding: 30px 20px 30px;
+}
+.what-we-do-section {
+  padding: 30px 0;
+}
+.techniques-section {
+  padding: 30px 0 30px 0;
+}
+.brands-section {
+  padding: 30px 0;
+}
+.image_block2 img {
+  width: 100%;
+  height: 500px;
+}
+.block_about {
+width: 60%;
 }
 }
 
 @media screen and (max-width: 1000px){
+  .swiper-container {
+      max-width: 70%;
+  }
+  .image_block2 img {
+    width: 100%;
+    height: 400px;
+}
   .contact-form {
     width: 40%;
     position: absolute;
     top: 5%;
     bottom: 5%;
     right: 5%;
-}
+  }
 }
 
 @media screen and (max-width: 800px){
-  .contact-form {
-    width: 90%;
-    position: absolute;
-    top: 5%;
-    bottom: 5%;
-    right: 5%;
+  .swiper-container {
+      max-width: 80%;
+  }
+  .text_block h1 {
+    font-size: 32px;
 }
-.contact-form-container img {
-    display: none;
-}
-.block_about {
-        width: 80%;
+.contact-form {
+        width: 90%;
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        right: 5%;
+        text-align: center;
     }
+  .contact-form-container img {
+    display: none;
+  }
+  .block_about {
+    width: 80%;
+  }
+  .contact-form h2 {
+    margin-bottom: 24px;
+    font-size: 1.5em;
+}
+.contact-form label {
+    text-align: left;
+}
+}
+@media screen and (max-width: 768px){
+.image_block2 img {
+  width: 100%;
+  height: 360px;
+}
+}
+@media screen and (max-width: 700px){
+  .swiper-container {
+      max-width: 90%;
+  }
+  .service-image {
+      height: 260px;
+  }
+  .section-title,
+  .brands-title,
+  .techniques-title{
+    font-size: 24px;
+  }
+  .swiper-container {
+    max-width: 80%;
+  }
 }
 
+@media screen and (max-width: 669px){
+  .image_block {
+  position: relative;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+  z-index: 1;
+}
+.text_block {
+  padding: 160px 20px;
+}
+.image_block {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -120px;
+  z-index: 1;
+}
+.image_block img {
+  max-width: 70%;
+  border-radius: 10px;
+}
+.text_block h1 {
+  font-size: 24px;
+}
+.block_about {
+  padding: 40px 20px 50px;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.block_about .about_title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+}
+@media screen and (max-width: 540px){
+  .image_block {
+    margin-top: -100px;
+}
+.service-image {
+  height: 160px;
+}
+
+.swiper-button-up {
+  left: 96%;
+}
+.swiper-button-down {
+  left: 96%;
+}
+.swiper-container {
+  height: 1000px;
+}
+  }
 @media screen and (max-width: 480px){
   .block_about {
-        width: 90%;
+    width: 90%;
+  }
+  .swiper-container {
+        max-width: 90%;
     }
+    .technique-item {
+    width: 100%;
+}
+}
+@media screen and (max-width: 475px){
+  .image_block img {
+  max-width: 90%;
+  border-radius: 10px;
+}
+.text_block {
+  padding: 130px 20px;
+}
+.image_block2 img {
+        width: 100%;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 475px){
+  .brands-logos {
+    gap: 100px;
+}
+}
+@media screen and (max-width: 320px){
+  .block_about {
+  width: 96%;
+  }
 }
   </style>
 </head>
@@ -182,9 +612,6 @@ max-width: 40%;
                 <li><a href="woodwork.html">Woodwork & Metalwork</a></li>
               </ul>
             </li>
-            <!-- <li class="mob-list_item">
-              <a class="mob-list_link" href="index.html#proj">PROJECTS</a>
-            </li> -->
             <li class="mob-list_item">
               <a class="mob-list_link" href="contacts.html">CONTACTS</a>
             </li>
@@ -218,8 +645,7 @@ max-width: 40%;
       <div class="container">
         <h2 class="section-title">What we do?</h2>
         <p class="section-description">We demonstrate our painting services and showcase our full spectrum of expertise to bring your spaces to life.</p>
-        <div class="swiper-container" style="  max-width: 60%;
-  height: 1300px;">
+        <div class="swiper-container">
           <div class="swiper-wrapper">
             <div id="interior-painting" class="swiper-slide service-item">
               <img src="serv/1.webp" alt="Interior Painting" class="service-image">
@@ -257,9 +683,7 @@ max-width: 40%;
               <p class="service-description">Expert painting services for wooden and metal surfaces, ensuring a high-quality and durable finish.</p>
             </div>
           </div>
-          <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
-          <!-- Add Navigation -->
           <div class="swiper-button-up">⬆️</div>
           <div class="swiper-button-down">⬇️</div>
         </div>
@@ -333,12 +757,10 @@ max-width: 40%;
         </form>
       </div>
     </section>
-
   </div>
   <button id="backToTopBtn" title="Go to top">⬆️</button>
   <div id="whatsapp-icon" style="display:none;">
     <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
-      <!-- <span>start chat...</span> -->
       <img src="whaapp.png" alt="WhatsApp Icon">
     </a>
     <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
@@ -375,7 +797,6 @@ max-width: 40%;
         },
       });
 
-      // Modal content for each service
       const servicesContent = {
         'interior-painting': {
           image: 'serv/1.webp',
@@ -508,7 +929,6 @@ max-width: 40%;
         }
       }
 
-      // Modal functionality
       const modal = document.getElementById("modal");
       const modalText = document.getElementById("modal-text");
       const modalImage = document.getElementById("modal-image");
@@ -536,8 +956,7 @@ max-width: 40%;
       }
     });
 
-    // Active menu and smooth scroll to section
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       var currentUrl = window.location.href;
       var menuLinks = document.querySelectorAll('.item-menu');
       for (var i = 0; i < menuLinks.length; i++) {
@@ -633,20 +1052,25 @@ max-width: 40%;
     document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
+        console.log("Navigating to: ", this.getAttribute('href'));
 
         const mobMenu = document.querySelector(".mob-menu");
         mobMenu.classList.add("is-hidden");
         document.body.classList.remove("no-scroll");
 
         const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (target) {
-          const headerHeight = document.querySelector('.header').offsetHeight;
-          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
+        if (targetId.startsWith('#')) {
+          const target = document.querySelector(targetId);
+          if (target) {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        } else {
+          window.location.href = targetId;
         }
       });
     });
@@ -685,9 +1109,6 @@ max-width: 40%;
             <li class="footer_item_menu">
               <a class="footer_menu_link" href="index.html#our-services">SERVICES</a>
             </li>
-            <!-- <li class="footer_item_menu">
-              <a class="footer_menu_link" href="index.html#proj">PROJECTS</a>
-            </li> -->
             <li class="footer_item_menu">
               <a class="footer_menu_link" href="contacts.html">CONTACTS</a>
             </li>
