@@ -46,8 +46,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  padding: 20px;
-  width: 320px;
+  padding: 0px;
+  width: 220px;
   transition: transform 0.3s ease;
   color: #fff;
 }
@@ -60,6 +60,7 @@
 }
 .gallery-item-info {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .gallery-item-info h3 {
   margin-bottom: 10px;
