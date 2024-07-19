@@ -29,74 +29,7 @@
             color: #3b8d8d;
         }
 
-        .coating-types {
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping */
-            background: #222222;
-            height: auto; /* Adjust height to content */
-        }
-
-        .coating-types .image-container {
-            flex: 1 1 50%;
-            height: auto;
-            overflow: hidden;
-        }
-
-        .coating-types .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image covers the entire container */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .coating-types .container {
-            flex: 1 1 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 20px;
-            color: white;
-        }
-
-        .coating-types .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .coating-types .gallery-item {
-            flex: 1 1 calc(50% - 20px);
-            margin: 10px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            text-align: center;
-            padding: 20px;
-            color: black;
-        }
-
-        .coating-types .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .coating-types .gallery-item h3 {
-            margin-top: 15px;
-            text-align: center; /* Center align subtitles */
-        }
-
-        .coating-types .gallery-item p {
-            text-align: justify; /* Justify text alignment for descriptions */
-        }
-
-        .coating-types div h2 {
-            text-align: center;
-            color: #f7f7f7;
-            padding-bottom: 30px;
-            padding-top: 30px;
-        }
+    
 
         .fa, .fas {
             font-weight: 900;
@@ -146,22 +79,7 @@
         }
 
         @media screen and (max-width: 700px) {
-            .coating-types {
-                display: block;
-            }
-            .coating-types .container {
-                padding: 0 0px;
-            }
-            .coating-types .gallery {
-                justify-content: center;
-            }
-
-            .coating-types .gallery-item {
-                flex: none;
-                width: 96%;
-                margin: 5px;
-                padding: 10px;
-            }
+     
             .work-process {
                 padding: 30px 0;
             }

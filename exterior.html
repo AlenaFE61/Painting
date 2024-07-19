@@ -29,33 +29,28 @@
   .gallery-item {
   background: #7c6e99f2;
 }
-  .image_block2 {
-  background-color:#222222;
+.image_block2{
+width: 40%;
+margin: 0 auto;
+background-color:#F7F7F7;
 }
-  .image_block2 img{
-  width: 100%;
-  height: 500px;
+.text-block {
+    padding: 20px;
+    display: block;
+    color: #ccc;
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 auto;
 }
-  .text-block {
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-around; 
-  color: #ccc;
-  border-radius: 20px;
-  width: 90%;
-  margin: 0 auto;
-}
-  .text-block-item {
-  background: rgb(98 96 96 / 51%);
-  padding: 20px;
-  margin-right: 10px; 
-  flex: 1; 
-  max-width: 30%; 
-  border-radius: 20px;
-  border: solid 20px #7c6e99f2;
+.text-block-item {
+    padding: 20px;
+    margin-right: 10px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: solid 10px #7c6e99f2;
+    color: black;
+    background: white;
 }
   .text-block-item:last-child {
   margin-right: 0; 
@@ -67,6 +62,12 @@
   margin: 0;
   padding-bottom: 10px;
 }
+
+
+.fa, .fas {
+            font-weight: 900;
+            color: #7c6e99f2;
+        }
 
 
   @media screen and (max-width: 1200px){
@@ -86,6 +87,9 @@
   .text-block-item div{
   padding-right: 20px;
 }
+.image_block2 {
+    width: 60%;
+}
   .image_block2 img{
   width: 100%;
   height: 600px;
@@ -95,6 +99,9 @@
   @media screen and (max-width: 1000px){
   .text-block {
   width: 100%;
+}
+.image_block2 {
+    width: 80%;
 }
 }
 
@@ -133,7 +140,9 @@
   .image_bl img {
   height: 1300px;
 }
-
+.image_block2 {
+    width: 96%;
+}
 }
   @media screen and (max-width: 360px){
   .text-block {
@@ -280,6 +289,14 @@
             </div>
         
             <div class="gallery-item">
+                <img src="img3/6.jpg" alt="Fences">
+                <div class="gallery-item-info">
+                    <h3>Fences</h3>
+                    <p>Fences require paints that can withstand weather conditions and provide long-lasting protection and aesthetic appeal.</p>
+                </div>
+            </div>
+          
+            <div class="gallery-item">
                 <img src="img3/5.jpg" alt="Decorative Elements">
                 <div class="gallery-item-info">
                     <h3>Decorative Elements</h3>
@@ -287,10 +304,10 @@
                 </div>
             </div>
         
-        
         </div>
     </div>
 </section>
+
 
 <section class="why-choose-us">
   <div class="container">
@@ -307,6 +324,73 @@
       </ul>
   </div>
 </section>
+
+
+<section class="coating-types">
+  <div class="image-container">
+      <img src="img3/bg4.jpg" alt="Coating Types">
+  </div>
+  <div class="container">
+      <h2>Types of Exterior Coatings</h2>
+      <div class="gallery">
+          <div class="gallery-item">
+              <i class="fas fa-tint fa-3x"></i>
+              <h3>Silicone Paint</h3>
+              <p>Highly breathable and water-repellent, ideal for external walls to prevent moisture buildup and enhance durability.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-tint fa-3x"></i>
+              <h3>Acrylic Paint</h3>
+              <p>Water-based paint that dries quickly and provides excellent UV resistance, suitable for a wide range of exterior surfaces.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-tint fa-3x"></i>
+              <h3>Elastomeric Paint</h3>
+              <p>Provides a flexible, waterproof coating that can bridge hairline cracks and is ideal for masonry, stucco, and concrete surfaces.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-paint-roller fa-3x"></i>
+              <h3>Anti-Mold and Insect-Repellent Coating</h3>
+              <p>Formulated to resist mold, mildew, and insect infestations, ensuring a clean, healthy, and protected exterior surface over time.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-spray-can fa-3x"></i>
+              <h3>Metallic Paint</h3>
+              <p>Contains metallic particles that provide a unique look and added protection against corrosion for metal surfaces like fences and gates.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-tint fa-3x"></i>
+              <h3>Stone Coating</h3>
+              <p>A thick, textured coating that provides the appearance and durability of stone, suitable for walls, columns, and decorative elements.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-tools fa-3x"></i>
+              <h3>Exterior Plaster (Stucco)</h3>
+              <p>Offers a durable and weather-resistant finish, available in various textures and colors, ideal for masonry surfaces.</p>
+          </div>
+          <div class="gallery-item">
+              <i class="fas fa-brush fa-3x"></i>
+              <h3>Polyurethane Coating</h3>
+              <p>Highly durable and resistant to chemicals and abrasion, suitable for protecting concrete and metal surfaces.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
@@ -377,6 +461,40 @@
 </div>
 
   
+
+<div class="projects-section">
+  <h2 class="projects-title">Projects</h2> 
+<div class="swiper-container mySwiper" style="width: 100%; height: auto;">
+  <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="img3/exterior/1.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img3/exterior/11.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img3/exterior/111.jpg" alt="Project 1"></div>
+      <div class="swiper-slide"><img src="img3/exterior/1111.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img3/exterior/11111.jpg" alt="Project 2"></div>
+<!-- 
+      <div class="swiper-slide"><img src="img3/exterior/2.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img3/exterior/22.jpg" alt="Project 3"></div> -->
+      <div class="swiper-slide"><img src="img3/exterior/222.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img3/exterior/2222.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img3/exterior/222222.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img3/exterior/22222222.jpg" alt="Project 3"></div>
+        
+      <div class="swiper-slide"><img src="img3/exterior/3.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img3/exterior/33.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img3/exterior/333.jpg" alt="Project 2"></div>
+
+      <!-- <div class="swiper-slide"><img src="img3/exterior/istockphoto-1447708518-612x612.jpg" alt="Project 3"></div>
+      <div class="swiper-slide"><img src="img3/exterior/istockphoto-1354034882-612x612.jpg" alt="Project 2"></div>
+      <div class="swiper-slide"><img src="img3/exterior/istockphoto-1299954175-612x612.jpg" alt="Project 3"></div> -->
+      <!-- More slides as needed -->
+  </div>
+  <!-- Optional navigation -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+</div>
 
 <!-- Quote Section -->
 <section class="contact-form-section">
@@ -498,131 +616,125 @@
     <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
   </div>
   <script>
-    // Active menu and smooth scroll to section
     document.addEventListener('DOMContentLoaded', function() {
-      var currentUrl = window.location.href;
-      var menuLinks = document.querySelectorAll('.item-menu');
-      for (var i = 0; i < menuLinks.length; i++) {
-        var linkUrl = menuLinks[i].getAttribute('href');
-        if (currentUrl === linkUrl) {
-          menuLinks[i].classList.add('active');
-        }
-      }
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-      var toggles2 = document.querySelectorAll('.dropdown-toggle2');
-
-      toggles2.forEach(function(toggle) {
-        toggle.addEventListener('click', function(event) {
-          event.stopPropagation();
-          var menu = this.nextElementSibling;
-          if (menu.style.display === 'block') {
-            menu.style.display = 'none';
-          } else {
-            menu.style.display = 'block';
-          }
+        // Active menu and smooth scroll to section
+        const currentUrl = window.location.href;
+        const menuLinks = document.querySelectorAll('.item-menu');
+        menuLinks.forEach((link) => {
+            if (currentUrl === link.getAttribute('href')) {
+                link.classList.add('active');
+            }
         });
-      });
-
-      document.body.addEventListener('click', function(event) {
-        if (!event.target.closest('.dropdown2')) {
-          var menus = document.querySelectorAll('.mob-menu .dropdown-menu2');
-          menus.forEach(function(menu) {
-            menu.style.display = 'none';
-          });
-        }
-      });
+    
+        // Dropdown menus
+        document.querySelectorAll('.dropdown-toggle2').forEach(toggle => {
+            toggle.addEventListener('click', function(event) {
+                event.stopPropagation();
+                const menu = this.nextElementSibling;
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    
+        document.body.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown2')) {
+                document.querySelectorAll('.mob-menu .dropdown-menu2').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+            }
+        });
+    
+        // Mobile menu management
+        const refs = {
+            openMenuBtn: document.querySelector("[data-menu-open]"),
+            closeMenuBtn: document.querySelector("[data-menu-close]"),
+            menu: document.querySelector("[data-menu]"),
+            body: document.querySelector("body"),
+            menuList: document.querySelector(".mob-list"),
+        };
+    
+        refs.openMenuBtn.addEventListener("click", () => {
+            refs.menu.classList.toggle("is-hidden");
+            refs.body.classList.toggle("no-scroll");
+        });
+    
+        refs.closeMenuBtn.addEventListener("click", () => {
+            refs.menu.classList.add("is-hidden");
+            refs.body.classList.remove("no-scroll");
+        });
+    
+        // Scroll to top button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        };
+    
+        document.getElementById("backToTopBtn").addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    
+        // WhatsApp button delayed display
+        setTimeout(() => {
+            document.getElementById('whatsapp-icon').style.display = 'block';
+        }, 5000);
+    
+        document.getElementById('whatsapp-icon').addEventListener('click', () => {
+            document.getElementById('whatsapp-icon').style.display = 'none';
+        });
+    
+        // Initialize Swiper
+        const swiperContainer = document.querySelector('.mySwiper .swiper-wrapper');
+        const slides = swiperContainer.querySelectorAll('.swiper-slide');
+    
+        var swiper = new Swiper('.mySwiper', {
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            speed: 500,
+            slidesPerView: slides.length > 1 ? 3 : 'auto', // Adjusted for full width on single slide
+            spaceBetween: slides.length > 1 ? 30 : 0, // No space between slides if only one
+            centeredSlides: slides.length === 1, // Center the single slide
+            breakpoints: {
+              100: {
+                    slidesPerView: slides.length > 1 ? 1 : 'auto',
+                    spaceBetween: slides.length > 1 ? 10 : 0
+                },
+                320: {
+                    slidesPerView: slides.length > 1 ? 1 : 'auto',
+                    spaceBetween: slides.length > 1 ? 10 : 0
+                },
+                640: {
+                    slidesPerView: slides.length > 1 ? 2 : 'auto',
+                    spaceBetween: slides.length > 1 ? 20 : 0
+                },
+                1024: {
+                    slidesPerView: slides.length > 1 ? 3 : 'auto',
+                    spaceBetween: slides.length > 1 ? 30 : 0
+                }
+            }
+        });
+    
+        // Update swiper on window resizing
+        window.onresize = function() {
+            swiper.update();
+        };
     });
-
-    (() => {
-      const refs = {
-        openMenuBtn: document.querySelector("[data-menu-open]"),
-        closeMenuBtn: document.querySelector("[data-menu-close]"),
-        menu: document.querySelector("[data-menu]"),
-        body: document.querySelector("body"),
-        menuList: document.querySelector(".mob-list"),
-      };
-
-      refs.openMenuBtn.addEventListener("click", toggleMenu);
-      refs.closeMenuBtn.addEventListener("click", toggleMenu);
-      refs.menuList.addEventListener("click", removeMenu);
-
-      function toggleMenu() {
-        refs.menu.classList.toggle("is-hidden");
-        refs.body.classList.toggle("no-scroll");
-      }
-      function removeMenu() {
-        refs.menu.classList.add("is-hidden");
-        refs.body.classList.remove("no-scroll");
-      }
-    })();
-
-    // Scroll to top button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("backToTopBtn").style.display = "block";
-      } else {
-        document.getElementById("backToTopBtn").style.display = "none";
-      }
-    }
-
-    document.getElementById("backToTopBtn").addEventListener("click", function() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        let targetId = this.getAttribute('href');
-        let target = document.querySelector(targetId);
-        if (target) {
-          let headerHeight = document.querySelector('.header').offsetHeight;
-          let targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Mobile menu
-    document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const mobMenu = document.querySelector(".mob-menu");
-        mobMenu.classList.add("is-hidden");
-        document.body.classList.remove("no-scroll");
-
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (target) {
-          const headerHeight = document.querySelector('.header').offsetHeight;
-          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // WhatsApp button
-    window.onload = function() {
-      setTimeout(function() {
-        document.getElementById('whatsapp-icon').style.display = 'block';
-      }, 5000);
-    }
-
-    function closeWhatsAppIcon() {
-      document.getElementById('whatsapp-icon').style.display = 'none';
-    }
-  </script>
+    
+    </script>
+        
+        
 </body>
 </html>
