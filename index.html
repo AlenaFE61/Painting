@@ -6,13 +6,16 @@
   <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Painting Services</title>
   <style>
-    .text_block {
-  background-color: black;
+  .text_block {
+  background-image: url('istockphoto-1277609453-612x612.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: white;
   padding: 250px 20px;
   text-align: center;
@@ -27,24 +30,29 @@
 }
 .image_block {
   position: relative;
-  height: 400px; /* Adjust as needed */
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -200px; /* Adjust to position correctly */
-  z-index: 1; /* Ensure image is above sections */
+  margin-top: -200px;
+  z-index: 1;
 }
 .image_block img {
   max-width: 100%;
   border-radius: 10px;
 }
+
+
+
+
+
 .block_about {
-   padding: 60px 20px 50px;
-   text-align: center;
-position: relative;
-z-index: 0;
-width: 40%;
-margin: 0 auto;
+  padding: 60px 20px 50px;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  width: 40%;
+  margin: 0 auto;
 }
 .block_about .about_title {
   font-size: 28px;
@@ -60,43 +68,75 @@ margin: 0 auto;
   text-align: justify;
   text-justify: inter-word;
 }
+
+
+
+.image_block2 img{
+  width: 100%;
+  height: 700px;
+}
+
+
+
+.why-choose-us .container {
+  text-align: left;
+  max-width: 40%;
+  margin: 50px auto;
+}
+.why-choose-us h2 {
+  padding: 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+.why-choose-us li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.why-choose-us i {
+  color: #577a8f;
+  margin-right: 20px;
+  font-size: 24px;
+}
+.why-choose-us p {
+  margin-top: 0;
+  color: #666;
+}
+.why-choose-us .container ul li h3{
+  width: 40%;
+}
+.why-choose-us .container ul li p{
+  width: 60%;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #353232;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+
+
+
 .what-we-do-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
   text-align: center;
+  background-color: #222222;
 }
 .section-title {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333;
+  color: #fff;
 }
 .section-description {
   font-size: 18px;
   margin-bottom: 40px;
-  color: #666;
-}
-.swiper-container {
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  max-width: 40%; 
-  height: 1300px;
-}
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  height: calc(100% / 3);
-  box-sizing: border-box;
-}
-.swiper-slide:hover {
-  transform: scale(1.05);
+  color: #ccc;
 }
 .service-image {
   width: 90%;
@@ -104,63 +144,6 @@ margin: 0 auto;
   object-fit: cover;
   border-radius: 8px;
 }
-.service-title {
-  font-size: 20px;
-  margin-top: 15px;
-  color: #333;
-}
-.service-description {
-  font-size: 14px;
-  margin-top: 10px;
-  color: #666;
-  text-align: center;
-}
-.swiper-pagination {
-  margin-top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #41657a; /* Колір стрілочок */
-}
-.swiper-button-next, .swiper-button-prev,
-.swiper-button-up, .swiper-button-down {
-  color: #333;
-  position: absolute;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  background-color:transparent;
-}
-.swiper-button-up {
-  left: 98%;
-  top: calc(51% - 70px);
-  transform: translate(-50%, -50%);
-}
-.swiper-button-down {
-  left: 98%;
-  bottom: calc(48% - 70px);
-  transform: translate(-50%, 50%);
-}
-.swiper-button-up i, .swiper-button-down i {
-    color: #41657a; /* Колір стрілочок */
-    font-size: 24px; /* Розмір стрілочок */
-    cursor: pointer; /* Курсор у вигляді руки при наведенні */
-}
-
-.swiper-button-up, .swiper-button-down {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px; /* Ширина контейнера */
-    height: 40px; /* Висота контейнера */
-
-    background-color:transparent;
-}
-  
-
 
 
 .modal {
@@ -207,7 +190,7 @@ margin: 0 auto;
 }
 .modal-image {
 width: 100%;
-height: 300px; /* Adjust the height to fit your needs */
+height: 300px;
 object-fit: cover;
 border-radius: 15px 15px 0 0;
 }
@@ -224,8 +207,192 @@ border-radius: 15px 15px 0 0;
   text-decoration: none;
   cursor: pointer;
 }
+.swiper-container {
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #577a8f;
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  width: 300px;
+  box-sizing: border-box;
+}
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.service-title {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.mySwiper {
+  max-height: 600px;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.swiper-pagination {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #577a8f;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #577a8f;
+}
+
+
+
+
+
+.our-achievements {
+  text-align: center;
+  margin: 40px auto;
+  width: 40%;
+  font-family: 'Arial', sans-serif; /* Замініть на ваш шрифт */
+  color: #353232; /* Основний колір тексту */
+}
+.our-achievements h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #000000; /* Основний колір заголовка */
+}
+.our-achievements p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #666666; /* Колір опису */
+}
+.achievements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+.achievement {
+  text-align: center;
+}
+.achievement i {
+  font-size: 50px;
+  color: #577a8f; /* Колір іконок */
+  margin-bottom: 10px;
+}
+.achievement p {
+  font-size: 16px;
+  color: #353232; /* Колір тексту опису */
+}
+.progress-bars {
+  margin-top: 30px;
+}
+.progress-bar {
+  margin-bottom: 20px;
+}
+.progress-bar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #353232; /* Колір заголовка прогрес-бару */
+}
+.bar {
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fill {
+    height: 20px;
+    background-color: #577a8f; /* Колір заповнення прогрес-бару */
+    border-radius: 5px;
+}
+
+
+
+
+.techniques-section {
+  width: 100%;
+  background-color: #222222;
+  color: #fff;
+  padding: 50px 0 100px 0;
+  text-align: center;
+}
+.techniques-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.technique-item {
+  background: #577a8f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+.technique-item:hover {
+  transform: scale(1.05);
+}
+.techniques-title {
+  font-size: 28px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.techniques-description {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+.technique-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
 .brands-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background-color: #222222;;
   text-align: center;
 }
@@ -258,105 +425,24 @@ border-radius: 15px 15px 0 0;
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.techniques-section {
-  width: 100%;
-  background-color: #222222;
-  color: #fff;
-  padding: 50px 0 100px 0;
-  text-align: center;
+.work-process ol li::before {
+  content: '✔';
+  color: #577a8f;
 }
-.techniques-title {
-  font-size: 28px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-.techniques-description {
-  font-size: 18px;
-  color: #ccc;
-  margin-bottom: 40px;
-  padding: 0 10px;
-}
-.techniques-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.technique-item {
-  background: #577a8f;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  transition: transform 0.3s ease;
-  color: #fff;
-}
-.technique-item:hover {
-  transform: scale(1.05);
-}
-.technique-title {
-  font-size: 18px;
-  color: #fff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.technique-description {
-  font-size: 14px;
-  color: #ccc;
-}
-.technique-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-.image_block2 img{
-  width: 100%;
-  height: 700px;
+.boldtext {
+    min-width: 280px;
 }
 
-.why-choose-us .container {
-            text-align: left;
-            max-width: 40%;
-            margin: 50px auto;
-        }
-        .why-choose-us h2 {
-          padding: 20px;
-          font-size: 28px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .why-choose-us ul {
-            list-style: none;
-            padding: 0;
-        }
-        .why-choose-us li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .why-choose-us i {
-            color: #577a8f;
-            margin-right: 20px;
-            font-size: 24px;
-        }
 
-        .why-choose-us p {
-            margin-top: 0;
-            color: #666;
-        }
-        .why-choose-us .container ul li h3{
-width: 40%;
-}
-.why-choose-us .container ul li p{
-width: 60%;
-font-size: 1.2em;
-line-height: 1.5;
-color: #353232;
-text-align: justify;
-text-justify: inter-word;
-}
 
+
+
+
+
+.contact-form {
+  width: 30%;
+  margin: 0 auto;
+}
 .contact-form-container {
   display: flex;
   justify-content: center;
@@ -366,20 +452,15 @@ text-justify: inter-word;
   text-align: center;
   padding: 50px;
 }
-
-.contact-form {
-  width: 30%;
-margin: 0 auto;
-}
 .contact-form h2 {
   margin-bottom: 28px;
   font-size: 1.5em;
 }
 .contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: bold;
 }
 .contact-form input,
 .contact-form textarea {
@@ -401,142 +482,164 @@ margin: 0 auto;
   background-color: #333;
 }
 
+
+
+
+
+
 @media screen and (max-width: 1600px){
 .image_block2 img {
   width: 100%;
   height: 600px;
 }
-.why-choose-us .container {
-    max-width: 60%;
+.what-we-do-section {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #222222;
+}
+.mySwiper {
+  min-height: auto;
+  padding: 40px;
 }
 .contact-form {
         width: 40%;
     }
 }
-@media screen and (max-width: 1400px){
-  .swiper-container {
-    max-width: 40%;
-    height: 1300px;
-  }
-}
+
+
+
 
 @media screen and (max-width: 1200px){
-  .contact-form-container {
-    min-height: 580px;
-  }
-  
-.swiper-container {
-  max-width: 60%;
-}
+
 .block_about {
   padding: 30px 20px 30px;
-}
-.what-we-do-section {
-  padding: 30px 0;
-}
-.techniques-section {
-  padding: 30px 0 30px 0;
-}
-.brands-section {
-  padding: 30px 0;
+  width: 60%;
 }
 .image_block2 img {
   width: 100%;
   height: 500px;
 }
-.block_about {
-width: 60%;
-}
 .why-choose-us .container {
-    max-width: 80%;
+    max-width: 60%;
+    margin: 50px auto;
 }
+.our-achievements {
+    width: 60%;
 }
+.techniques-section {
+  padding: 30px 0 30px 0;
+}
+.service-title {
+    font-size: 16px;
+}
+.section-description {
+    margin-bottom: 0px;
+}
+.brands-section {
+  padding: 30px 0;
+}
+.contact-form-container {
+    min-height: 580px;
+  }
+}
+
+
+
 
 @media screen and (max-width: 1000px){
-  .swiper-container {
-      max-width: 70%;
-  }
-  .image_block2 img {
-    width: 100%;
-    height: 400px;
+.image_block2 img {
+  width: 100%;
+  height: 400px;
+}
+.swiper-slide {
+  width: calc(50% - 20px);
 }
 .contact-form {
-        width: 60%;
-    }
+  width: 60%;
+  }
 }
 
+
+
+
 @media screen and (max-width: 800px){
-  .swiper-container {
-      max-width: 80%;
-  }
-  .text_block h1 {
-    font-size: 32px;
+.text_block h1 {
+  font-size: 32px;
+}
+.block_about {
+  width: 80%;
 }
 .why-choose-us .container {
-        text-align: center;
-    }
-    .why-choose-us li {
-    display: block;
-    padding-bottom: 20px;
+  max-width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+.why-choose-us li {
+  display: block;
+  padding-bottom: 20px;
 }
 .why-choose-us .container ul li h3 {
-    width: 100%;
-    padding: 10px 10px;
+  width: 100%;
+  padding: 10px 10px;
 }
 .why-choose-us .container ul li p {
   width: 100%;
 }
-
-  .block_about {
-    width: 80%;
-  }
-  .contact-form h2 {
-    margin-bottom: 24px;
-    font-size: 1.5em;
+.our-achievements {
+  width: 80%;
+}
+.contact-form h2 {
+  margin-bottom: 24px;
+  font-size: 1.5em;
+}
 }
 
-}
+
+
+
+
 @media screen and (max-width: 768px){
 .image_block2 img {
   width: 100%;
   height: 360px;
 }
 }
+
+
+
+
 @media screen and (max-width: 700px){
-  .swiper-container {
-      max-width: 90%;
-  }
-  .service-image {
-      height: 260px;
-  }
-  .section-title,
-  .brands-title,
-  .techniques-title{
-    font-size: 24px;
-  }
-  .swiper-container {
-    max-width: 80%;
-  }
-  .why-choose-us .container {
-    margin: 10px auto;
+.service-image {
+  height: 260px;
+}
+.section-title,
+.brands-title,
+.techniques-title{
+  font-size: 24px;
 }
 .contact-form {
-        width: 80%;
-    }
+  width: 80%;
+}
+.why-choose-us .container {
+  margin: 10px auto;
+}
+.work-process ol li {
+  display: block;  
+  text-align: center;
+}
+.boldtext {
+  padding: 10px;
+}
 }
 
+
+
 @media screen and (max-width: 669px){
-  .image_block {
-  position: relative;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -100px;
-  z-index: 1;
-}
-.text_block {
+  .text_block {
   padding: 160px 20px;
+}
+.text_block h1 {
+  font-size: 24px;
 }
 .image_block {
   position: relative;
@@ -551,9 +654,6 @@ width: 60%;
   max-width: 70%;
   border-radius: 10px;
 }
-.text_block h1 {
-  font-size: 24px;
-}
 .block_about {
   padding: 40px 20px 50px;
   text-align: center;
@@ -567,47 +667,54 @@ width: 60%;
   margin-bottom: 20px;
 }
 }
-@media screen and (max-width: 540px){
-  .image_block {
-    margin-top: -100px;
-}
-.service-image {
-  height: 160px;
-}
 
-.swiper-button-up {
-  left: 96%;
-}
-.swiper-button-down {
-  left: 96%;
+
+
+@media screen and (max-width: 540px){
+.image_block {
+  margin-top: -100px;
 }
 .swiper-container {
   height: 1000px;
 }
-  }
+.service-image {
+  height: 160px;
+}
+}
+
+
 @media screen and (max-width: 480px){
-  .block_about {
-    width: 90%;
-  }
-  .swiper-container {
-        max-width: 90%;
-    }
-    .technique-item {
-    width: 100%;
+.block_about {
+  width: 90%;
+}
+.why-choose-us .container {
+  max-width: 90%;
+  margin: 50px auto;
 }
 .why-choose-us h2 {
    padding: 0px;
-    font-size: 24px;
-  }
-  .contact-form-container {
-   padding: 0px 0px 20px 0px; 
+  font-size: 24px;
 }
-  .contact-form {
-        width: 90%;
-    }
+.our-achievements {
+  width: 90%;
 }
+.technique-item {
+  width: 100%;
+}
+.contact-form-container {
+  padding: 0px 0px 20px 0px; 
+}
+.contact-form {
+  width: 90%;
+}
+}
+
+
+
+
+
 @media screen and (max-width: 475px){
-  .image_block img {
+.image_block img {
   max-width: 90%;
   border-radius: 10px;
 }
@@ -615,24 +722,35 @@ width: 60%;
   padding: 130px 20px;
 }
 .image_block2 img {
-        width: 100%;
-        height: 200px;
-    }
+  width: 100%;
+  height: 200px;
 }
+}
+
+
+
 @media screen and (max-width: 475px){
-  .brands-logos {
-    gap: 10px;
+.brands-logos {
+  gap: 10px;
 }
+
 .brand-logo {
   width: 96%;
 }
 }
+
+
+
+
 @media screen and (max-width: 320px){
   .block_about {
   width: 96%;
   }
 }
-  </style>
+
+
+
+</style>
 </head>
 <body>
   <header class="header">
@@ -654,10 +772,6 @@ width: 60%;
               <li><a href="interior.html">Interior</a></li>
               <li><a href="exterior.html">Exterior</a></li>
               <li><a href="commercial.html">Commercial</a></li>
-              <li><a href="#wallpapering-decorating">Wallpapering & Decorating</a></li>
-              <li><a href="#furniture-painting-finishing">Furniture & Finishing</a></li>
-              <li><a href="#plastering-repairs">Plastering & Repairs</a></li>
-              <li><a href="#woodwork-metalwork-painting">Woodwork & Metalwork</a></li>
             </ul>
           </li>
           <li class="item">
@@ -689,10 +803,6 @@ width: 60%;
                 <li><a href="interior.html">Interior</a></li>
                 <li><a href="exterior.html">Exterior</a></li>
                 <li><a href="commercial.html">Commercial</a></li>
-                <li><a href="wallpapering.html">Wallpapering & Decorating</a></li>
-                <li><a href="furniture.html">Furniture & Finishing</a></li>
-                <li><a href="plastering.html">Plastering & Repairs</a></li>
-                <li><a href="woodwork.html">Woodwork & Metalwork</a></li>
               </ul>
             </li>
             <li class="mob-list_item">
@@ -724,54 +834,107 @@ width: 60%;
     <div class="image_block2">
       <img src="img/interior/7.jpg" alt="Painting Image">
     </div>
+
+    <section class="why-choose-us">
+      <div class="container">
+          <h2>Why choose us?</h2>
+          <ul>
+              <li><i class="fas fa-medal"></i><h3>Guaranteed quality:</h3> <p>We use only high-quality materials and the latest techniques to ensure top-notch finishes that last.</p></li>
+              <li><i class="fas fa-comments"></i><h3>Free consultation:</h3> <p>Get started with a no-obligation consultation to discuss your needs and how we can meet them.</p></li>
+              <li><i class="fas fa-cogs"></i><h3>Comprehensive services:</h3> <p>From initial assessment to the final touch-up, we manage every aspect of your project, ensuring a seamless experience.</p></li>
+              <li><i class="fas fa-user-cog"></i><h3>Custom solutions:</h3> <p>Every space is unique, and so are your needs. We offer tailored solutions that perfectly suit your requirements.</p></li>
+              <li><i class="fas fa-leaf"></i><h3>Environmentally friendly options:</h3> <p>We are committed to sustainability, offering eco-friendly paint options and practices.</p></li>
+              <li><i class="fas fa-users"></i><h3>Experienced professionals:</h3> <p>Our team comprises experienced professionals who are skilled in various techniques and styles.</p></li>
+              <li><i class="fas fa-clock"></i><h3>Timely completion:</h3> <p>We respect your time. Our projects are always completed on schedule without compromising on quality.</p></li>
+          </ul>
+      </div>
+    </section>
+
+
     <section id="what-we-do" class="what-we-do-section">
       <div class="container">
         <h2 class="section-title">What we do?</h2>
         <p class="section-description">We demonstrate our painting services and showcase our full spectrum of expertise to bring your spaces to life.</p>
-        <div class="swiper-container">
+        <div class="swiper-container mySwiper"  style="width: 100%; height: auto;">
           <div class="swiper-wrapper">
             <div id="interior-painting" class="swiper-slide service-item">
-              <img src="img2/istockphoto-1264981589-612x612.jpg" alt="Interior Painting" class="service-image">
+              <img src="serv/istockphoto-1264981589-612x612.jpg" alt="Interior Painting" class="service-image">
               <h3 class="service-title">Interior painting</h3>
-              <p class="service-description">We provide high-quality interior painting services, transforming your indoor spaces with precision and care.</p>
             </div>
             <div id="exterior-painting" class="swiper-slide service-item">
               <img src="serv/2.jpg" alt="Exterior Painting" class="service-image">
               <h3 class="service-title">Exterior painting</h3>
-              <p class="service-description">Our exterior painting services enhance the curb appeal of your property, ensuring durability and style.</p>
             </div>
             <div id="commercial-painting" class="swiper-slide service-item">
-              <img src="img/comercial/bg3 (1).jpg" alt="Commercial Painting" class="service-image">
+              <img src="serv/bg3 (1).jpg" alt="Commercial Painting" class="service-image">
               <h3 class="service-title">Commercial painting</h3>
-              <p class="service-description">We specialize in commercial painting projects, delivering professional results for businesses of all sizes.</p>
             </div>
             <div id="wallpapering-decorating" class="swiper-slide service-item">
-              <img src="serv/4.webp" alt="Wallpapering and Decorating" class="service-image">
+              <img src="serv/4.jpg" alt="Wallpapering and Decorating" class="service-image">
               <h3 class="service-title">Wallpapering and decorating</h3>
-              <p class="service-description">Professional wallpaper installation and decorating services to enhance your interior spaces.</p>
             </div>
             <div id="furniture-painting-finishing" class="swiper-slide service-item">
-              <img src="serv/5.webp" alt="Furniture Painting and Finishing" class="service-image">
-              <h3 class="service-title">Furniture Painting and finishing</h3>
-              <p class="service-description">Custom painting and finishing services for furniture, ensuring a personalized and durable look.</p>
+              <img src="serv/5.jpg" alt="Furniture Painting and Finishing" class="service-image">
+              <h3 class="service-title">Furniture and finishing</h3>
             </div>
             <div id="plastering-repairs" class="swiper-slide service-item">
-              <img src="serv/7.webp" alt="Plastering and Repairs" class="service-image">
+              <img src="serv/7.jpg" alt="Plastering and Repairs" class="service-image">
               <h3 class="service-title">Plastering and repairs</h3>
-              <p class="service-description">Professional plastering services for walls and ceilings, including repair work.</p>
             </div>
             <div id="woodwork-metalwork-painting" class="swiper-slide service-item">
-              <img src="serv/6.webp" alt="Woodwork and Metalwork Painting" class="service-image">
-              <h3 class="service-title">Woodwork and metalwork painting</h3>
-              <p class="service-description">Expert painting services for wooden and metal surfaces, ensuring a high-quality and durable finish.</p>
+              <img src="serv/6.jpg" alt="Woodwork and Metalwork Painting" class="service-image">
+              <h3 class="service-title">Woodwork and metalwork</h3>
             </div>
           </div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-up"><i class="fas fa-arrow-up"></i></div>
-          <div class="swiper-button-down"><i class="fas fa-arrow-down"></i></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
+
+
+    <div class="our-achievements">
+      <h2>Our achievements</h2>
+      <p>Our company provides high-quality services in the field of construction and renovation. We have many years of experience and work with the best specialists in the industry.</p>
+      <div class="achievements">
+          <div class="achievement">
+              <i class="fas fa-project-diagram"></i>
+              <p>200+ Successful Projects</p>
+          </div>
+          <div class="achievement">
+              <i class="fas fa-smile"></i>
+              <p>150+ Satisfied Clients</p>
+          </div>
+          <div class="achievement">
+              <i class="fas fa-history"></i>
+              <p>11 Years of Experience</p>
+          </div>
+      </div>
+      <div class="progress-bars">
+          <div class="progress-bar">
+              <h3>Quality</h3>
+              <div class="bar">
+                  <div class="fill" style="width: 100%;"></div>
+              </div>
+          </div>
+          <div class="progress-bar">
+              <h3>Reliability</h3>
+              <div class="bar">
+                  <div class="fill" style="width: 100%;"></div>
+              </div>
+          </div>
+          <div class="progress-bar">
+              <h3>Innovation</h3>
+              <div class="bar">
+                  <div class="fill" style="width: 100%;"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+
 
     <section class="techniques-section">
       <div class="container">
@@ -802,18 +965,20 @@ width: 60%;
       </div>
     </section>
 
-    <section class="why-choose-us">
+    <section class="work-process">
       <div class="container">
-          <h2>Why choose us?</h2>
-          <ul>
-              <li><i class="fas fa-medal"></i><h3>Guaranteed quality:</h3> <p>We use only high-quality materials and the latest techniques to ensure top-notch finishes that last.</p></li>
-              <li><i class="fas fa-comments"></i><h3>Free consultation:</h3> <p>Get started with a no-obligation consultation to discuss your needs and how we can meet them.</p></li>
-              <li><i class="fas fa-cogs"></i><h3>Comprehensive services:</h3> <p>From initial assessment to the final touch-up, we manage every aspect of your project, ensuring a seamless experience.</p></li>
-              <li><i class="fas fa-user-cog"></i><h3>Custom solutions:</h3> <p>Every space is unique, and so are your needs. We offer tailored solutions that perfectly suit your requirements.</p></li>
-              <li><i class="fas fa-leaf"></i><h3>Environmentally friendly options:</h3> <p>We are committed to sustainability, offering eco-friendly paint options and practices.</p></li>
-              <li><i class="fas fa-users"></i><h3>Experienced professionals:</h3> <p>Our team comprises experienced professionals who are skilled in various techniques and styles.</p></li>
-              <li><i class="fas fa-clock"></i><h3>Timely completion:</h3> <p>We respect your time. Our projects are always completed on schedule without compromising on quality.</p></li>
-          </ul>
+          <h2>Our work process</h2>
+          <ol>
+              <li class="smoltext"><h3 class="boldtext">Contact with client:</h3> <p>Initial communication to understand the client's needs and preferences.</p></li>
+              <li class="smoltext"><h3 class="boldtext">Requirement gathering:</h3> Detailed discussion to gather specific requirements and expectations.</li>
+              <li class="smoltext"><h3 class="boldtext">Site inspection:</h3> Visit the site to assess the condition and take necessary measurements.</li>
+              <li class="smoltext"><h3 class="boldtext">Proposal submission:</h3> Provide a detailed proposal outlining the scope of work, materials, and costs.</li>
+              <li class="smoltext"><h3 class="boldtext">Approval of work:</h3> Obtain client approval on the proposed plan and budget.</li>
+              <li class="smoltext"><h3 class="boldtext">Commencement of work:</h3> Start the project with thorough surface preparation and initial painting or plastering.</li>
+              <li class="smoltext"><h3 class="boldtext">Progress updates:</h3> Regular updates to the client on the progress of the work.</li>
+              <li class="smoltext"><h3 class="boldtext">Final inspection:</h3> Ensure all work is completed to the client's satisfaction and address any final touch-ups.</li>
+              <li class="smoltext"><h3 class="boldtext">Completion and handover:</h3> Complete the project and hand over the site to the client, ensuring everything is clean and tidy.</li>
+          </ol>
       </div>
     </section>
 
@@ -832,10 +997,6 @@ width: 60%;
         </div>
       </div>
     </section>
-
-    <!-- <div class="image_block2">
-      <img src="fone2.jpeg" alt="Painting Image">
-    </div> -->
 
     <section class="contact-form-section">
       <div class="contact-form-container">
@@ -874,12 +1035,12 @@ width: 60%;
     </div>
   </div>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
       const swiper = new Swiper('.swiper-container', {
-        direction: 'vertical',
+        direction: 'horizontal',
         grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 3,
+        centeredSlides: false,
+        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
         autoplay: {
@@ -891,11 +1052,25 @@ width: 60%;
           clickable: true,
         },
         navigation: {
-          nextEl: '.swiper-button-down',
-          prevEl: '.swiper-button-up',
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1000: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }
       });
-
+    
       const servicesContent = {
         'interior-painting': {
           image: 'serv/1.webp',
@@ -1019,7 +1194,7 @@ width: 60%;
           `
         }
       };
-
+    
       for (const [id, content] of Object.entries(servicesContent)) {
         const element = document.getElementById(id);
         if (element) {
@@ -1027,12 +1202,12 @@ width: 60%;
           element.setAttribute('data-modal-image', content.image);
         }
       }
-
+    
       const modal = document.getElementById("modal");
       const modalText = document.getElementById("modal-text");
       const modalImage = document.getElementById("modal-image");
       const closeModal = document.getElementsByClassName("close")[0];
-
+    
       document.querySelectorAll('.swiper-slide').forEach(slide => {
         slide.addEventListener('click', function() {
           modalText.innerHTML = this.getAttribute('data-modal-content');
@@ -1041,20 +1216,38 @@ width: 60%;
           setTimeout(() => modal.style.opacity = 1, 50); // Smooth fade-in effect
         });
       });
-
+    
       closeModal.onclick = function() {
         modal.style.opacity = 0;
         setTimeout(() => modal.style.display = "none", 300); // Smooth fade-out effect
       }
-
+    
       window.onclick = function(event) {
         if (event.target == modal) {
           modal.style.opacity = 0;
           setTimeout(() => modal.style.display = "none", 300); // Smooth fade-out effect
         }
       }
+    
+      // New horizontal swiper for testimonials
+      const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+        direction: 'horizontal', // Set the direction to horizontal
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
     });
-
+    
     document.addEventListener('DOMContentLoaded', function () {
       var currentUrl = window.location.href;
       var menuLinks = document.querySelectorAll('.item-menu');
@@ -1065,10 +1258,10 @@ width: 60%;
         }
       }
     });
-
+    
     document.addEventListener("DOMContentLoaded", function() {
       var toggles2 = document.querySelectorAll('.dropdown-toggle2');
-
+    
       toggles2.forEach(function(toggle) {
         toggle.addEventListener('click', function(event) {
           event.stopPropagation();
@@ -1080,7 +1273,7 @@ width: 60%;
           }
         });
       });
-
+    
       document.body.addEventListener('click', function(event) {
         if (!event.target.closest('.dropdown2')) {
           var menus = document.querySelectorAll('.mob-menu .dropdown-menu2');
@@ -1090,7 +1283,7 @@ width: 60%;
         }
       });
     });
-
+    
     (() => {
       const refs = {
         openMenuBtn: document.querySelector("[data-menu-open]"),
@@ -1099,11 +1292,11 @@ width: 60%;
         body: document.querySelector("body"),
         menuList: document.querySelector(".mob-list"),
       };
-
+    
       refs.openMenuBtn.addEventListener("click", toggleMenu);
       refs.closeMenuBtn.addEventListener("click", toggleMenu);
       refs.menuList.addEventListener("click", removeMenu);
-
+    
       function toggleMenu() {
         refs.menu.classList.toggle("is-hidden");
         refs.body.classList.toggle("no-scroll");
@@ -1113,10 +1306,10 @@ width: 60%;
         refs.body.classList.remove("no-scroll");
       }
     })();
-
+    
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-
+    
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("backToTopBtn").style.display = "block";
@@ -1124,16 +1317,16 @@ width: 60%;
         document.getElementById("backToTopBtn").style.display = "none";
       }
     }
-
+    
     document.getElementById("backToTopBtn").addEventListener("click", function() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     });
-
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-
+    
         let targetId = this.getAttribute('href');
         let target = document.querySelector(targetId);
         if (target) {
@@ -1146,17 +1339,17 @@ width: 60%;
         }
       });
     });
-
+    
     // Mobile menu
     document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         console.log("Navigating to: ", this.getAttribute('href'));
-
+    
         const mobMenu = document.querySelector(".mob-menu");
         mobMenu.classList.add("is-hidden");
         document.body.classList.remove("no-scroll");
-
+    
         const targetId = this.getAttribute('href');
         if (targetId.startsWith('#')) {
           const target = document.querySelector(targetId);
@@ -1173,18 +1366,19 @@ width: 60%;
         }
       });
     });
-
+    
     // WhatsApp button
     window.onload = function() {
       setTimeout(function() {
         document.getElementById('whatsapp-icon').style.display = 'block';
       }, 5000);
     }
-
+    
     function closeWhatsAppIcon() {
       document.getElementById('whatsapp-icon').style.display = 'none';
     }
-  </script>
+    </script>
+  
 </body>
 <footer class="footer_bg">
   <div class="footer-block">

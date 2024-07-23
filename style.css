@@ -338,6 +338,52 @@ font-size: 16px;
   box-sizing: border-box;
   position: relative;
 }
+.work-process {
+  background: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.work-process .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.work-process .container h2{
+  padding-bottom: 30px;
+}
+.work-process ol {
+  list-style: none;
+  padding: 0;
+}
+
+.work-process ol li {
+  background: #f7f7f7;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  text-align: justify; /* Justify text alignment for descriptions */
+}
+
+.work-process ol li::before {
+  margin-right: 10px;
+}
+
+.work-process img {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+.work-process_text{
+padding: 20px;
+text-align: left;
+}
+.boldtext {
+min-width: 260px;
+padding: 0px 20px;
+}
 
 
 /* ВАТСАП  */
